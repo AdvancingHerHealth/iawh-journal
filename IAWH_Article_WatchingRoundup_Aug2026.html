@@ -10,7 +10,7 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --plum:#4A1942; --plum-deep:#35102f; --gold:#C9A84C; --gold-light:#e2c97e; --navy:#1B2A4A; --cream:#F8F5F0; --white:#ffffff; --text:#2a2a2a; --muted:#6b6b6b; }
-  html { overflow: hidden; }
+  html { overflow-x: hidden; }
   body { font-family:'DM Sans',Arial,sans-serif; background:var(--cream); color:var(--text); -webkit-font-smoothing:antialiased; }
   .article-wrapper { max-width:780px; margin:0 auto; background:#FAF7F2; }
   .article-header { background:var(--navy); padding:3rem 3rem 2.4rem; border-bottom:3px solid var(--gold); }
@@ -21,7 +21,7 @@
   .article-byline span { color:var(--gold-light); }
 
   /* HERO */
-  .hero-placeholder { width:100%; height:420px; background:linear-gradient(160deg,#1B2A4A 0%,#35102f 50%,#1B2A4A 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+  .hero-placeholder { width:100%; height:420px; background:linear-gradient(160deg,#1B2A4A 0%,#35102f 50%,#1B2A4A 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow-x:hidden; }
   .hero-placeholder::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center,rgba(201,168,76,0.1) 0%,transparent 70%); }
   .hero-placeholder-label { font-family:'DM Sans',Arial,sans-serif; font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:rgba(226,201,126,0.75); text-align:center; padding:0.8rem 1.6rem; position:relative; z-index:1; border:1px solid rgba(201,168,76,0.25); }
   .hero-caption { font-family:'DM Sans',Arial,sans-serif; font-size:0.68rem; color:var(--muted); font-style:italic; text-align:center; padding:0.6rem 3rem; background:#FAF7F2; }
@@ -41,7 +41,7 @@
   .watch-section a { color:var(--plum); }
 
   /* INLINE FULL-BLEED */
-  .inline-image-wrap { margin:2rem -3rem; overflow:hidden; }
+  .inline-image-wrap { margin:2rem -3rem; overflow-x:hidden; }
   .inline-placeholder { width:100%; height:280px; background:linear-gradient(135deg,rgba(27,42,74,0.08) 0%,rgba(74,25,66,0.08) 100%); display:flex; align-items:center; justify-content:center; }
   .inline-placeholder span { font-family:'DM Sans',Arial,sans-serif; font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); text-align:center; padding:1rem 2rem; border:1px dashed rgba(27,42,74,0.15); }
   .inline-caption { font-family:'DM Sans',Arial,sans-serif; font-size:0.68rem; color:var(--muted); font-style:italic; text-align:center; padding:0.5rem 3rem 1.5rem; }
