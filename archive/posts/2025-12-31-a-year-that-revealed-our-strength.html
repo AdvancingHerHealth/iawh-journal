@@ -59,6 +59,12 @@
   .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
   .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
   .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .read-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.4rem 0 2rem; }
+  .read-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .read-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(53,16,47,0.12); }
+  .article-body .read-card img { width: 100%; height: 150px; object-fit: cover; margin: 0; display: block; max-width: 100%; }
+  .read-card span { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; color: var(--plum); padding: 0.7rem 0.8rem 0.9rem; }
+  @media (max-width: 600px) { .read-grid { grid-template-columns: 1fr 1fr; } .article-body .read-card img { height: 110px; } .read-card span { font-size: 0.95rem; } }
   .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
   .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
   .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
@@ -110,32 +116,7 @@
 <p><strong>Cheryl &amp; Janine</strong></p>
 <p>Co-Executive Directors, IAWH</p>
 <h2>Be sure to re-visit some of the IAWH monthly messages that trended in 2025.</h2>
-<p><img alt="" src="../media/621b05_0ca5507087b74713a563eb6f5134ba77~mv2.jpeg" />
-<img alt="" src="../media/621b05_51cdec1f147f439fa0f9dec1a8e089c5~mv2.png" />
-<img alt="" src="../media/621b05_39688df7a0304779b86f3c38a61e0684~mv2.jpg" />
-<img alt="" src="../media/621b05_3b9a1a90ff054b94b841a510c69a52da~mv2.jpg" />
-<img alt="" src="../media/621b05_4f9092371fb44297970483ecb72bb8e4~mv2.jpg" />
-<img alt="" src="../media/621b05_9262d3478c964d43b0b21ae2b4eaae62~mv2.png" /></p>
-<ol>
-<li>
-<p><a href="2025-11-28-prioritize-your-health-essential-screenings-for-women-40-85-especially-when-life.html">Prioritize Your Health: Essential Screenings for Women 40–85, Especially When Life Feels Overwhelming</a></p>
-</li>
-<li>
-<p><a href="2025-09-28-iawh-brief-tylenol-acetaminophen-use-in-pregnancy-autism-what-women-need-to-know.html">IAWH Brief: Tylenol (Acetaminophen) Use in Pregnancy &amp; Autism — What Women Need to Know Now</a></p>
-</li>
-<li>
-<p><a href="2025-04-04-in-times-like-these.html">In Times Like These...</a></p>
-</li>
-<li>
-<p><a href="2025-05-21-aging-forward-wellness-for-women-in-motion.html">Aging Forward: Wellness for Women in Motion</a></p>
-</li>
-<li>
-<p><a href="2024-11-11-a-special-message-from-iawh.html">A Special Message from IAWH</a></p>
-</li>
-<li>
-<p><a href="2025-07-18-running-on-empty-what-women-around-the-world-are-saying-about-stress-and-how-the.html">Running on Empty: What Women Around the World Are Saying About Stress — and How They're Taking Their Power Back</a></p>
-</li>
-</ol>
+<div class="read-grid"><a class="read-card" href="2025-11-28-prioritize-your-health-essential-screenings-for-women-40-85-especially-when-life.html"><img src="../media/621b05_0ca5507087b74713a563eb6f5134ba77~mv2.jpeg" alt="" loading="lazy" /><span>Prioritize Your Health: Essential Screenings for Women 40–85, Especially When Life Feels Overwhelming</span></a><a class="read-card" href="2025-09-28-iawh-brief-tylenol-acetaminophen-use-in-pregnancy-autism-what-women-need-to-know.html"><img src="../media/621b05_51cdec1f147f439fa0f9dec1a8e089c5~mv2.png" alt="" loading="lazy" /><span>IAWH Brief: Tylenol (Acetaminophen) Use in Pregnancy &amp; Autism — What Women Need to Know Now</span></a><a class="read-card" href="2025-04-04-in-times-like-these.html"><img src="../media/621b05_39688df7a0304779b86f3c38a61e0684~mv2.jpg" alt="" loading="lazy" /><span>In Times Like These...</span></a><a class="read-card" href="2025-05-21-aging-forward-wellness-for-women-in-motion.html"><img src="../media/621b05_3b9a1a90ff054b94b841a510c69a52da~mv2.jpg" alt="" loading="lazy" /><span>Aging Forward: Wellness for Women in Motion</span></a><a class="read-card" href="2024-11-11-a-special-message-from-iawh.html"><img src="../media/621b05_4f9092371fb44297970483ecb72bb8e4~mv2.jpg" alt="" loading="lazy" /><span>A Special Message from IAWH</span></a><a class="read-card" href="2025-07-18-running-on-empty-what-women-around-the-world-are-saying-about-stress-and-how-the.html"><img src="../media/621b05_9262d3478c964d43b0b21ae2b4eaae62~mv2.png" alt="" loading="lazy" /><span>Running on Empty: What Women Around the World Are Saying About Stress — and How They&#x27;re Taking Their Power Back</span></a></div>
     <p class="archive-note">This article first appeared on the IAWH Health blog on December 31, 2025 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
     <div class="post-nav"><a class="prev" href="2025-11-28-prioritize-your-health-essential-screenings-for-women-40-85-especially-when-life.html">&larr; Prioritize Your Health: Essential Screenings for Women 40–85, Especially When Life Feels Overwhelming</a><a class="next" href="2026-01-27-you-re-not-losing-your-mind-you-re-just-buffering.html">You&#x27;re Not Losing Your Mind, You’re Just Buffering. &rarr;</a></div>
     <p class="back"><a href="../2025.html">&larr; All 2025 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>

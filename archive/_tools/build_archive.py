@@ -110,6 +110,12 @@ ARTICLE_CSS = """
   .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
   .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
   .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .read-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.4rem 0 2rem; }
+  .read-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .read-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(53,16,47,0.12); }
+  .article-body .read-card img { width: 100%; height: 150px; object-fit: cover; margin: 0; display: block; max-width: 100%; }
+  .read-card span { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem; font-weight: 500; line-height: 1.3; color: var(--plum); padding: 0.7rem 0.8rem 0.9rem; }
+  @media (max-width: 600px) { .read-grid { grid-template-columns: 1fr 1fr; } .article-body .read-card img { height: 110px; } .read-card span { font-size: 0.95rem; } }
   .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
   .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
   .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
@@ -239,6 +245,24 @@ def relink(body):
     return re.sub(r'https?://(?:www\.)?iawh\.org/post/([\w%\-]+)', sub, body)
 
 
+def cardify(body):
+    # A row of images followed by a matching list of article links becomes clickable cards
+    # (image above its title), instead of a bare image strip with a separate list below.
+    pat = re.compile(r'((?:!\[[^\]]*\]\([^)]+\)\n){2,})\n((?:(?:\d+\.|-) \[[^\]]+\]\([^)]+\)\n*){2,})')
+
+    def sub(m):
+        imgs = re.findall(r'!\[[^\]]*\]\(([^)]+)\)', m.group(1))
+        links = re.findall(r'(?:\d+\.|-) \[([^\]]+)\]\(([^)]+)\)', m.group(2))
+        if len(imgs) != len(links):
+            return m.group(0)
+        cards = ''.join(
+            f'<a class="read-card" href="{href}"><img src="{img}" alt="" loading="lazy" />'
+            f'<span>{html.escape(title)}</span></a>'
+            for img, (title, href) in zip(imgs, links))
+        return f'\n<div class="read-grid">{cards}</div>\n\n'
+    return pat.sub(sub, body)
+
+
 def tidy_emphasis(body):
     # Wix often put spaces inside bold/italic runs ("**Sources: **"), which Markdown won't render.
     body = body.replace(' ', ' ')
@@ -262,7 +286,7 @@ for i, p in enumerate(posts):
     if p.get('cover_video'):
         hero += f'  <p class="hero-video"><a href="{p["cover_video"]}" target="_blank">&#9654; Watch the featured video</a></p>\n'
     md.reset()
-    body_html = md.convert(tidy_emphasis(relink(body)))
+    body_html = md.convert(tidy_emphasis(cardify(relink(body))))
     body_html = body_html.replace('<a href="http', '<a target="_blank" rel="noopener" href="http')
     # Remove any leftover emphasis markers Wix's formatting left unpaired (never real text).
     body_html = re.sub(r'(>[^<]*)', lambda m: m.group(1).replace('**', ''), body_html)
