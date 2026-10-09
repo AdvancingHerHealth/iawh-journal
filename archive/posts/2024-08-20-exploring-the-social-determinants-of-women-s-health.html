@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Exploring the Social Determinants of Women&#x27;s Health | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Exploring the Social Determinants of Women&#x27;s Health</h1>
+    <p class="article-byline">Originally published <span>August 20, 2024</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_24d0a476c1f14c20b31e602fea7455f1~mv2.png" alt="Exploring the Social Determinants of Women&#x27;s Health" /></div>
+  <div class="article-body">
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_22af1ee8e4224713bd642c11a6767603~mv2.png" /></p>
+<p>It is August 2024, and women in the United States have some highly consequential decisions to make around the leadership for the future of this county and about personal choices for our health and wellbeing. Most of the time IAWH focuses on the clinical, physical/mental health of women. This month we are stepping back a few paces to examine how we live - the circumstances and context that create our health outcomes and health status – the social determinants of women’s health. We are mothers, daughters, sisters, wives, partners, and always caregivers. Sure, we can ask if you’ve already had or plan to schedule your well woman visit for this year, but when was the last time that you were thoughtful about your health status? What are the factors that contribute to your individual health outcomes?</p>
+<p>Social Determinants of Women's Health are a complex interplay of factors that can significantly impact both the physical and mental well-being of women 1. Income level, race, age, where we live, our level of education, relationship status, our exposure to adverse childhood experiences (ACEs), our visibility in the community and society, our civic engagement, and our health literacy are major determinants of our health 2. How we negotiate and manage these factors of our lives can determine our health status and life expectancy. This constellation of determinants do not exist isolated in a vacuum, rather each factor interacts with other factors at the same time, creating the ever-present, always changing, but perpetual background and music of our lives 2.</p>
+<p><strong>Income, Race, Age</strong></p>
+<p><em>(Has age, race, and income ever impacted your health?)</em></p>
+<p>Age, race, and income level are significant social determinants that can have profound impacts on our health. Studies have shown that these factors can influence our access to healthcare, the quality of care we receive, and our overall health outcomes. For instance, socio-economic disparities often result in differences in the prevalence of certain health conditions such as hypertension, type-2 diabetes, high cholesterol, many preventable infectious diseases, and the effectiveness of treatments 3.</p>
+<p><strong>Hypertension Prevalence by Income Level -</strong></p>
+<ul>
+<li><strong>Low-Income Women</strong>: The prevalence of hypertension among adults with household incomes less than 200% of the Federal Poverty Line (FPL) is approximately <strong>32% </strong>4.</li>
+<li><strong>Middle-Income Women</strong>: The prevalence of hypertension among adults with household incomes equal to or greater than 400% of the FPL is approximately <strong>26%</strong> 4.</li>
+</ul>
+<p><strong>Type 2 Diabetes Prevalence by Income Level -</strong></p>
+<ul>
+<li><strong>Low-Income Women</strong>: Approximately <strong>20%</strong> of women with household incomes less than 130% of the Federal Poverty Level (FPL) are diagnosed with diabetes 4.</li>
+<li><strong>Middle-Income Women</strong>: The prevalence of diabetes among women with household incomes between 200% and 400% of the FPL is approximately <strong>12% </strong>4.</li>
+</ul>
+<p><strong>COVID-19 Prevalence by Income Level</strong></p>
+<ul>
+<li><strong>Low-Income Women</strong>: Approximately <strong>35%</strong> of non-elderly adults with household incomes below $15,000 are at higher risk of serious illness if infected with COVID-19 4.</li>
+<li><strong>Middle-Income Women</strong>: Adults with household incomes greater than $50,000 have a lower risk, with about <strong>16%</strong> at higher risk of serious illness if infected with COVID-19 4.</li>
+</ul>
+<p>Women from lower-income backgrounds may experience barriers to accessing healthcare, often leading to delayed diagnoses and treatment. How many times have we heard, “if only they had caught the cancer earlier.” “She had high blood pressure.” “She might lose her toes or her foot.” Financial instability can limit access to nutritious food, safe housing, and quality healthcare, directly influencing women's physical health and increasing stress levels, which can exacerbate mental health challenges.</p>
+<p>Additionally, racial and ethnic disparities can contribute to different health challenges and outcomes. Minority groups often face higher rates of certain diseases and lower life expectancy. 5.</p>
+<ul>
+<li><strong>Black Women</strong>: Approximately 20% of Black women report being in fair or poor health, and they face significant barriers to accessing healthcare. They are nearly three times more likely to die from pregnancy-related complications compared to White women 6.</li>
+<li><strong>Hispanic Women</strong>: About 19% of Hispanic women report being in fair or poor health. They also face challenges in accessing healthcare services, often due to language barriers and lack of insurance 6.</li>
+<li><strong>White Women</strong>: Around 12% of White women report being in fair or poor health. They generally have better access to healthcare services compared to minority groups 6.</li>
+<li><strong>Asian Women</strong>: Only 9% of Asian women report being in fair or poor health, indicating relatively better access to healthcare services 6.</li>
+</ul>
+<p>Race can further compound these health issues, with women of color often facing systemic barriers such as implicit biases that get expressed in the quality of care delivered and received, lack of or limited access to healthcare, leading to disparities in health outcomes. Here are a few examples:</p>
+<ul>
+<li>
+<p><strong>Cardiovascular Interventions</strong> - Non-white patients, including women, receive fewer cardiovascular interventions compared to their white counterparts. This disparity can lead to worse health outcomes for women of color 14.</p>
+</li>
+<li>
+<p><strong>Pain Management</strong> - Non-white patients, including women, are less likely to be prescribed pain medications, both non-narcotic and narcotic. This can result in inadequate pain management and poorer overall health outcomes 14.</p>
+</li>
+<li>
+<p><strong>Maternal Mortality</strong> - The maternal mortality rate for Black women is more than three times higher than that for white women. Implicit bias and systemic racism in healthcare contribute to this alarming disparity. A notable example is tennis star Serena Williams, who nearly died from a pulmonary embolism during childbirth after her concerns were initially ignored by medical staff 14,15.</p>
+</li>
+</ul>
+<p>Age also plays a crucial role, as health risks increase with age. As we get older, we can face unique health issues such as endometriosis, uterine fibroids, maternal health challenges, menopause, an increased risk of osteoporosis, and heart disease 7,8.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_22af1ee8e4224713bd642c11a6767603~mv2.png" /></p>
+<p><strong>Where we Live –</strong></p>
+<p><em>(Have you ever thought about where you grew up – what city – what part of town? What were the circumstances that made you live where you lived as a child? How did you choose where you currently live? Did your health and life expectancy factor into that decision?)</em></p>
+<p>Where we live can significantly impact our health outcomes. A zip code can be a predictor of health outcomes. All neighborhoods and communities are not and were not created equal. For example, a child born in New Orleans can vary as much as 25 years between neighborhoods just a few miles apart. In Boston, the Census tract with the lowest life expectancy, 58.9 years, is located in</p>
+<p>Roxbury 16. Why is that? A number of factors play a role in this stark difference in life opportunity. Largely segregated neighborhoods can indicate greater levels of unemployment, less access to high-quality preventive healthcare, unstable housing, generations of poverty and unwell, less access to healthier foods, safe spaces to play, workout, and just exist, away from violence, drugs, and economic stress 17. Altogether this can create a sense of generational “learned ‘<em>healthlessness’</em>”.</p>
+<ul>
+<li>
+<p><strong>Urban andRural</strong> - Where we live, whether in urban or rural communities, access to health care can be very different. In more isolated rural areas of the country, there could be over 100 miles between you and a hospital or medical office, there may be fewer healthcare facilities to serve a community, public transportation may be limited, and service hours restricted. Whether urban or rural, access to nutritious food and food deserts are possible and safe spaces for movement and recreation may be non-existent. All of these factors can lead to poorer health and shorter lifespans .</p>
+</li>
+<li>
+<p><strong>Environmental factors</strong> can have an impact on our health, even more so as the climate changes and we are exposed to more extreme weather emergencies, wildfires, poor air quality, toxins, and lack of green spaces. Areas with higher pollution levels and fewer green spaces are associated with increased rates of respiratory diseases, cardiovascular conditions, and mental health issues.</p>
+</li>
+<li>
+<p><strong>Economic Investment</strong> - Communities with strong economic investment and infrastructure tend to have better health outcomes. Investments in community development, such as building hospitals and improving public services like community libraries, neighborhood recreation facilities, grocery and other stores, dedicated park spaces, can lead to healthier populations.</p>
+</li>
+<li>
+<p><strong>Social and Built Environment</strong> - The social and built environment, including the quality of housing, availability of healthy food options, and safety of neighborhoods, plays a crucial role in determining health outcomes. Up to 60% of health is determined by these factors rather than your heredity 16.</p>
+</li>
+</ul>
+<p><strong>On Relationships -</strong></p>
+<p>As the country ponders unscientific accusations, ignorant assumptions, and mindless musings about the societal value of single women, childless women, post-menopausal women, marriage, and investment in the future, there are some interesting more evidence-based facts about women’s relationship status and our health.</p>
+<p>Studies have shown that women engaged in long-term, committed non-platonic relationships can experience positive effects on health outcomes, including mental health, but do also experience stress. Some data show that these relationships increase the likelihood of sharing the burden of managing everything from the mundane of housework to the more impactful job of child rearing. Women in relationships can use that relationship to share emotions and burdens ostensibly having a dedicated someone in their corner. And there is the data that suggests that women in committed relationships are more likely to health insurance coverage. Conversely, women who are single, divorced, or widowed may experience different stressors than women in long-term committed relationships and have a different set of social supports, affecting both their physical and mental health. <em>These factoids will certainly generate discussion and we will soon open our online forum to hear from you.</em></p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_22af1ee8e4224713bd642c11a6767603~mv2.png" /></p>
+<p><strong>Education Level -</strong></p>
+<p>Here are the facts. Higher education levels are associated with better well-being, but do not inoculate women from poor health outcomes. Reduced psychological distress, and healthier behaviors can mediate the connection between education and health. Furthermore, maternal education is linked to lower maternal mortality and better health outcomes for offspring 18.</p>
+<p><strong>Adverse Childhood Events (ACEs) -</strong></p>
+<p>Adverse Childhood Experiences (ACEs) are potentially traumatic events that occur during childhood (0-17 years) 9. These events can include experiencing violence, abuse, or neglect, witnessing violence in the home or community, having a family member attempt or die by homicide or suicide, growing up in a household with substance use problems, mental health issues, or instability due to parental separation or incarceration 10. The toxic stress from ACEs can change brain development and affect how the body responds to stress, leading to long-term health issues 11. ACEs experienced as children can have long-term impacts on our adult health, impact how we interface with opportunity, and our overall well-being. ACEs can be linked to chronic health problems, mental illness, and substance misuse in adulthood. Preventing ACEs can help children and adults thrive by reducing the risk of conditions like depression, asthma, cancer, and diabetes 11.</p>
+<p>In an evaluation, each ACE is assigned a numerical value and scores. To learn more about ACEs and how they are scored in evaluation, see the resources from the Center for Disease Control and Prevention below. Women with higher ACE scores are more likely to face pregnancy complications, gestational diabetes, and high blood pressure, and their children are at greater risk for developmental delays. Addressing these factors comprehensively is essential for improving women's health outcomes and developing and maintaining well-being across the lifespan 11.</p>
+<p><strong>Social Visibility and Civic Engagement -</strong></p>
+<p>A woman’s social visibility and civic engagement, or the extent to which she is seen and recognized in society, can significantly impact her health outcomes in various ways. Women who are more socially visible are often better able to advocate for themselves and access healthcare services. This can lead to earlier detection and treatment of health issues. Social visibility can influence mental health positively by providing a sense of belonging and support. Women who are active in their communities and have strong social networks are less likely to experience depression and anxiety. Conversely, lack of social visibility can lead to feelings of isolation and loneliness, which negatively impact mental health. Social visibility can challenge and change harmful cultural and gender norms that negatively impact women’s health. By being visible and vocal, women can advocate for policies and practices that promote gender equality and better health outcomes 19.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_22af1ee8e4224713bd642c11a6767603~mv2.png" /></p>
+<p><strong>Health Literacy -</strong></p>
+<p>Health literacy plays a crucial role in our health by influencing her ability to understand and use health information to make informed decisions and advocate for others 12. Women with higher health literacy are better prepared to weigh their treatment options, weed out misinformation, and more likely to engage in preventive health behaviors, such as regular screenings and vaccinations. A study found that health literacy, self-efficacy, and cues to action significantly predicted preventive behaviors among women. Health literacy contributes to women’s empowerment by enabling them to adopt healthier behaviors and have greater control over their bodies 13.</p>
+<p>In conclusion, it is always important for us to be able to understand our health status based on our numbers, knowing how to read and interpret systolic and diastolic blood pressure, hemoglobin a1c, and body mass index (BMI), but these numbers are not the only data available to us. It is also equally if not more important that we understand and appreciate the context in which these data exist. This means understanding our health status based on who we are by age, race, and income, where we live in relationship with quality of life factors such as air quality, physical safety, available/affordable healthy food, our relationships with others and our community, events that we may have experienced in childhood that could have a lingering impact, and our ability to understand and use health information to make informed decisions and advocate for others. The Institute for the Advancement of Women's Health strongly encourages you to spend quality time exploring the social determinants of your personal health.</p>
+<p><strong>References:</strong></p>
+<ol>
+<li>The Social Context of Women’s Health</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://bmcwomenshealth.biomedcentral.com/articles/10.1186/1472-6874-4-S1-S2">https://bmcwomenshealth.biomedcentral.com/articles/10.1186/1472-6874-4-S1-S2</a></p>
+<ol start="2">
+<li>Closing the women’s health gap: A $1 trillion opportunity to improve lives and economies</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.mckinsey.com/mhi/our-insights/closing-the-womens-health-gap-a-1-trillion-dollar-opportunity-to-improve-lives-and-economies">https://www.mckinsey.com/mhi/our-insights/closing-the-womens-health-gap-a-1-trillion-dollar-opportunity-to-improve-lives-and-economies</a></p>
+<ol start="3">
+<li>Epi Data Brief</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.nyc.gov/assets/doh/downloads/pdf/epi/databrief135.pdf">https://www.nyc.gov/assets/doh/downloads/pdf/epi/databrief135.pdf</a></p>
+<ol start="4">
+<li>Percentage of adults in the U.S. with diabetes from 2017 to March 2020, by family income relative to federal poverty level</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.statista.com/statistics/790678/diabetes-prevalence-us-by-income/">https://www.statista.com/statistics/790678/diabetes-prevalence-us-by-income/</a></p>
+<ol start="5">
+<li>Racial and Ethnic Differences in Social Determinants of Health and Health-Related Social Needs Among Adults — Behavioral Risk Factor Surveillance System, United States, 2022</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.cdc.gov/mmwr/volumes/73/wr/mm7309a3.htm">https://www.cdc.gov/mmwr/volumes/73/wr/mm7309a3.htm</a></p>
+<ol start="6">
+<li>Low-Income and Communities of Color at Higher Risk of Serious Illness if Infected with Coronavirus</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.kff.org/coronavirus-covid-19/issue-brief/low-income-and-communities-of-color-at-higher-risk-of-serious-illness-if-infected-with-coronavirus/">https://www.kff.org/coronavirus-covid-19/issue-brief/low-income-and-communities-of-color-at-higher-risk-of-serious-illness-if-infected-with-coronavirus/</a></p>
+<ol start="7">
+<li>Differences in Health Care Access and Use by Gender, Race, Income, Age and Employment among Residents of the Rural South</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://muse.jhu.edu/article/882024">https://muse.jhu.edu/article/882024</a></p>
+<ol start="8">
+<li>US Women Face Worst Health Access, Outcomes Among High-Income Nations</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.ajmc.com/view/us-women-face-worst-health-access-outcomes-among-high-income-nations">https://www.ajmc.com/view/us-women-face-worst-health-access-outcomes-among-high-income-nations</a></p>
+<ol start="9">
+<li>Adverse Childhood Experiences (ACEs) Preventing early trauma to improve adult health</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.cdc.gov/vitalsigns/aces/index.html">https://www.cdc.gov/vitalsigns/aces/index.html</a></p>
+<ol start="10">
+<li>About Adverse Childhood Experiences</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.cdc.gov/aces/about/index.html">https://www.cdc.gov/aces/about/index.html</a></p>
+<ol start="11">
+<li>Everything you need to know about adverse childhood experiences</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.medicalnewstoday.com/articles/adverse-childhood-experiences">https://www.medicalnewstoday.com/articles/adverse-childhood-experiences</a></p>
+<ol start="12">
+<li>The role of health beliefs and health literacy in women's health promoting behaviours based on the health belief model: a descriptive study</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://bmcwomenshealth.biomedcentral.com/articles/10.1186/s12905-021-01564-2">https://bmcwomenshealth.biomedcentral.com/articles/10.1186/s12905-021-01564-2</a></p>
+<ol start="13">
+<li>Importance of Social Determinants of Health and Cultural Awareness in the Delivery of Reproductive Health Care</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/01/importance-of-social-determinants-of-health-and-cultural-awareness-in-the-delivery-of-reproductive-health-care">https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/01/importance-of-social-determinants-of-health-and-cultural-awareness-in-the-delivery-of-reproductive-health-care</a></p>
+<ol start="14">
+<li>
+<p>Quick Safety 23: Implicit bias in health care <a target="_blank" rel="noopener" href="https://www.jointcommission.org/resources/news-and-multimedia/newsletters/newsletters/quick-safety/quick-safety-issue-23-implicit-bias-in-health-care/implicit-bias-in-health-care/">https://www.jointcommission.org/resources/news-and-multimedia/newsletters/newsletters/quick-safety/quick-safety-issue-23-implicit-bias-in-health-care/implicit-bias-in-health-care/</a></p>
+</li>
+<li>
+<p>What is implicit bias? The invisible racism that makes Black women dread the doctor's office</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.today.com/health/what-implicit-bias-invisible-racism-hurts-black-women-doctor-s-t189105">https://www.today.com/health/what-implicit-bias-invisible-racism-hurts-black-women-doctor-s-t189105</a></p>
+<ol start="16">
+<li>
+<p>"Defeating The ZIP Code Health Paradigm: Data, Technology, And Collaboration Are Key", Health Affairs Blog, August 6, 2015. <a target="_blank" rel="noopener" href="https://www.healthaffairs.org/content/forefront/defeating-zip-code-health-paradigm-data-technology-and-collaboration-key">https://www.healthaffairs.org/content/forefront/defeating-zip-code-health-paradigm-data-technology-and-collaboration-key</a></p>
+</li>
+<li>
+<p>Your Zip Code is More Important than Your Genetic Code</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://ncrc.org/your-zip-code-is-more-important-than-your-genetic-code/">https://ncrc.org/your-zip-code-is-more-important-than-your-genetic-code/</a></p>
+<ol start="18">
+<li>What you need to know about education for health and well-being</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.unesco.org/en/health-education/need-know">https://www.unesco.org/en/health-education/need-know</a></p>
+<ol start="19">
+<li>Women’s health outcomes: Is there a gender gap?</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://lordslibrary.parliament.uk/womens-health-outcomes-is-there-a-gender-gap/">https://lordslibrary.parliament.uk/womens-health-outcomes-is-there-a-gender-gap/</a></p>
+<hr />
+<p><strong>Cheryl J. Thompson, MSPHCo-Director, IAWH</strong></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on August 20, 2024 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice. Has unpublished edits in Wix; the editor shows the edited version, which may differ from what was live.</p>
+    <div class="post-nav"><a class="prev" href="2024-07-28-breaking-the-silence-urinary-tract-infections-in-women-the-why-symptoms-menopaus.html">&larr; Breaking the Silence: Urinary Tract Infections in Women: The “Why,” Symptoms, Menopause, and Treatments</a><a class="next" href="2024-08-30-which-health-issues-are-currently-impacting-your-life-poll.html">Which Health Issues are Currently Impacting Your Life? (Poll) &rarr;</a></div>
+    <p class="back"><a href="../2024.html">&larr; All 2024 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

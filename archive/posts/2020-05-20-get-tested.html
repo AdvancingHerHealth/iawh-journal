@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Tested | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Get Tested</h1>
+    <p class="article-byline">Originally published <span>May 20, 2020</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_5f9f235695cb4c7594eef8dc4a439643~mv2.png" alt="Get Tested" /></div>
+  <div class="article-body">
+<p>Just a few months ago, CNN did a story about sexually transmitted disease that I wish we all would read, digest, and then commit to bring about change. The article shed light on the impact of sexually transmitted infections (<em>STIs) among women (below is a link to the CNN story). It’s now 2020 and according to the annual </em>Sexually Transmitted Disease (<em>STD) Surveillance Report</em> released by the Centers for Disease Control and Prevention (CDC), combined cases of syphilis, gonorrhea, and chlamydia reached an all-time high in the United States in 2018 (<a target="_blank" rel="noopener" href="https://www.cdc.gov/nchhstp/newsroom/2019/2018-STD-surveillance-report-press-release.html">since 1991</a>); and women with chlamydia that goes untreated will likely develop pelvic inflammatory disease (PID; see CDC Fact Sheets).</p>
+<p>So, let’s talk about why the rates are so high – because it didn’t “just” happen. According to the CDC, there are multiple reasons for the overall increase that include decreased condom use. Also, in recent years, more than half of local programs have experienced budget cuts, resulting in clinic closures, reduced screenings, staff loss, thus reduced patient follow-up and linkage to care services (see below, CDC, Rise of Sexually Transmitted Infections). See for yourself how devastating the impact of STDs are in this country. Find and <a target="_blank" rel="noopener" href="https://www.innerbody.com/std-testing/std-statistics">compare your city’s STD rates</a> with those provided below that represent national rates and for the metropolitan areas of “The DMV” (District of Columbia, Maryland, and Virginia).</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_1c672104f2944e29aa346d392d7f06fe~mv2.png" /></p>
+<p><strong>More facts</strong></p>
+<p>In 2018:</p>
+<ul>
+<li>Diagnoses of chlamydia, gonorrhea, and syphilis all increased for the fifth year in a row.</li>
+<li>There were more than 2.4 million diagnosed cases of chlamydia, gonorrhea, and      syphilis.</li>
+<li>There were over 200,000 more cases of these STDs than the previous record set in 2017.</li>
+</ul>
+<p>From 2014-2018:</p>
+<ul>
+<li>Syphilis cases increased by 81%.</li>
+<li>Gonorrhea cases increased by 67%.</li>
+<li>Chlamydia remained at record highs.</li>
+<li>Congenital syphilis cases more than doubled.</li>
+</ul>
+<p><em>Centers for Disease Control and Prevention</em> </p>
+<p>Here’s the thing ladies, our anatomy places us at a unique risk for STIs. When compared to a man’s anatomy, the vagina lining is thinner and more delicate than the skin on a penis, so it’s easier for bacteria and viruses to penetrate. Now, let’s just pause there. Our bodies are more susceptible to STIs than men, and on top of that, our vaginas also maintain a moist environment where bacteria can grow.</p>
+<p><strong>Did you know that we’re also less likely to have symptoms of an STI compared to men, and if symptoms do occur, they can go away unnoticed even though the infection may remain?</strong> These are ways STIs impact women differently from men and are reasons for us to get tested. It’s the same call to action related to HIV/AIDS – the only way to know is to <a target="_blank" rel="noopener" href="http://www.gettested.cdc.gov/">GetTested</a> because you can’t rely on “symptoms” to tell whether you have HIV – even though you know your body better than anyone.</p>
+<p><strong>So, what do we do now?</strong> </p>
+<p>The <a target="_blank" rel="noopener" href="http://www.iawh.org/">Institute for the Advancement of Women’s Health</a>, in partnership with women like you all across the nation, are offering a response to the increase of STIs, we’re saying to each other</p>
+<p><strong>Get Yourself Tested #GYT</strong>. Do you have an STI or not? Resolve to get answers. Sisters, we carry the weight of the world on our shoulders with life, family, school, caregiving, relationships, STIs, and <strong><em>_</em></strong>_ (you fill in the blank)</p>
+<p><strong>Do!</strong></p>
+<p>First, start the delicate conversation with yourself, and then with your daughter, niece, cousin and friend by sharing this blog with them today. Just FWD this email and say something like, “Hey Rochelle, check out this info that you may find interesting, or feel free to share with someone else.” <strong>We are one</strong>, and when a woman is without the information that she needs to be her best, we lose a little bit of our own strength.</p>
+<h1></h1>
+<p>Feel free to use the following handles and hashtags via Instagram or Twitter to let us know you’ve locked arms with us for this cause. IAWH will engage with you along the way:</p>
+<p>@AdvancingHerHealth | #GYT (Get Yourself Tested) | #STDMonth | #TalkTestTreat</p>
+<p><strong>…Sooo, What’s the Bottomline?</strong></p>
+<p>If you are sexually active, have an honest and open talk with your clinic or health care provider and ask whether you should be tested for STIs. Antibiotics can cure syphilis, gonorrhea, and chlamydia. However, left untreated, STIs can be transmitted to others and produce adverse health outcomes such as infertility, ectopic pregnancy, and increased HIV risk. Congenital syphilis – syphilis passed from a mother to her baby during pregnancy – can lead to miscarriage, stillbirth, newborn death, and severe lifelong physical and neurological problems. #GYT</p>
+<p><em>The Institute for the Advancement of Women’s Health (IAWH.org) is a non-profit organization, based in Northern Virginia. It was created to conduct and apply community-based, public health research that leads to women becoming more knowledgeable and better-informed participants in their health care and well-being.​From puberty through post-menopause and every stage across the life course of a woman, IAWH is invested in the education and training of women and others in women’s health. [[Subscribe]] to IAWH.org updates because we need you to help all of us make a difference in each other’s lives.</em></p>
+<p><strong>RESOURCES</strong></p>
+<p>Article: <a target="_blank" rel="noopener" href="https://www.cnn.com/2019/10/24/health/stds-are-sexist-against-women-wellness/index.html">STDs are sexist, and women are the losers. Here's why (by Sandee LaMotte, CNN</a>)</p>
+<p>CDC Report: <a target="_blank" rel="noopener" href="https://www.cdc.gov/std/stats18/default.htm">STDs Continue to rise in the U.S</a>.</p>
+<p>CDC Report: <a target="_blank" rel="noopener" href="https://www.cdc.gov/std/stats18/2018-Surveillance-Report-EMBARGOED-FINAL-State-Ranking-Tables.pdf">CDC 2018 STD Surveillance Report: State Ranking Tables (released in 2019)</a></p>
+<p>CDC Fact Sheets:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cdc.gov/std/chlamydia/Chlamydia-FS.pdf">Chlamydia</a>  is a common STD that can infect both men and women. It can cause serious, permanent damage to a woman’s reproductive system. This can make it difficult or impossible for her to get pregnant later on. Chlamydia can also cause a potentially fatal ectopic pregnancy (pregnancy that occurs outside the womb).</li>
+<li><a target="_blank" rel="noopener" href="https://www.cdc.gov/std/pid/stdfact-pid.htm">Pelvic Inflammatory Disease</a> occurs in the upper part of the genital tract affecting the uterus, fallopian tubes and surrounding tissues in those areas. Untreated sexually transmitted diseases (STDs) can cause pelvic inflammatory disease (PID), a serious condition, in women. 1 in 8 women with a history of PID experience difficulties getting pregnant. You can prevent PID if you know how to protect yourself. This can cause infertility, with cases of acute PID being particularly damaging to fertility.</li>
+<li><a target="_blank" rel="noopener" href="https://www.cdc.gov/std/gonorrhea/Gonorrhea-FS.pdf">Gonorrhea</a> is a STD that can infect both men and women. Any sexually active person can get gonorrhea through unprotected anal, vaginal, or oral sex. It can cause infections in the genitals, rectum, and throat. It is a very common infection, especially among young people ages 15-24 yrs. You can get gonorrhea by having anal, vaginal, or oral sex with someone who has gonorrhea. A pregnant woman with gonorrhea can give the infection to her baby during childbirth.</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.cdc.gov/std/syphilis/syphilis-factsheet.pdf">Syphilis</a> is a sexually transmitted infection that can cause serious health problems if it is not treated. You can get syphilis by direct contact with a syphilis sore during vaginal, anal, or oral sex. You can find sores on or around the penis, vagina, or anus. You can also find them in the rectum, on the lips, or in the mouth. Syphilis can spread from an infected mother to her unborn baby.</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://beforeplay.org/the-difference-between-stds-and-stis/">The Difference Between STDs and STIs</a>: STD stands for sexually transmitted disease—but you probably knew that part already. “STD” is the most commonly used term for the collection of medical infections that are transmitted through sexual contact. But that’s just the thing. People who become <em>infected</em>, don’t always experience any symptoms or have their infection develop into a disease. That’s where the more modern term “STI” comes from.</p>
+</li>
+</ul>
+<p>· <a target="_blank" rel="noopener" href="https://www.cdc.gov/std/healthcomm/fact_sheets.htm">Additional CDC STD Facts Sheets (in English and Spanish)</a></p>
+<p>· <a target="_blank" rel="noopener" href="https://www.cdc.gov/std/health-disparities/stds-women-042011.pdf">10 Ways STDs Impact Women Differently from Men</a></p>
+<p>· <a target="_blank" rel="noopener" href="http://www.gettested.cdc.gov/">www.GetTested.CDC.gov</a></p>
+<p>· <a target="_blank" rel="noopener" href="https://www.prioritystdtesting.com/blog/how-often-should-i-get-tested-for-stds/">How Often Should I Get Tested?</a></p>
+<h1></h1>
+<h1></h1>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on May 20, 2020 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.<br />Topics: gyt, stdmonth, talktesttreat</p>
+    <div class="post-nav"><a class="next" href="2020-05-20-have-you-ever.html">Have You Ever... &rarr;</a></div>
+    <p class="back"><a href="../2020.html">&larr; All 2020 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

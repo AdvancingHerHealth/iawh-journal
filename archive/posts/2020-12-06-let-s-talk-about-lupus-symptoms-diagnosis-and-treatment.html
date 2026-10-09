@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Let&#x27;s Talk About Lupus: Symptoms, Diagnosis, and Treatment | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Let&#x27;s Talk About Lupus: Symptoms, Diagnosis, and Treatment</h1>
+    <p class="article-byline">Originally published <span>December 6, 2020</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_151bab5f3f5447ed9cac324c283b3177~mv2.jpg" alt="Let&#x27;s Talk About Lupus: Symptoms, Diagnosis, and Treatment" /></div>
+  <div class="article-body">
+<p>So, what do multi – Grammy Award winning singer, producer, and actress Toni Braxton, singer and actress Selena Gomez, and singer and actor Lady Gaga all have in common? All three of these women live with Lupus – two of them are women of color.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_dd947765bef04c378f70b5076fc0832f~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_28e4a154cb2644fb84eb36694ab7208c~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_0afd8cc457cc4b259220e1f30c436f3f~mv2.jpg" /></p>
+<p><strong>Toni Braxton              Selena Gomez                Lady Gaga</strong></p>
+<p>Why is it important to note that two of them are women of color? Because from an evidence-based, public  health perspective, to acknowledge a disparity in health is to be able to identify demographic impact, shared biological and social determinants of health, and trends that could have an impact on prevention, treatment, and even the search for a cure.</p>
+<p>Approximately 5 million people live with lupus across the globe and of those, 1.5 million people in the U.S have lupus. According to the Lupus Foundation of America, 90% of people living with lupus are women. Lupus is two to three times more prevalent among women of color of child bearing age —African Americans, Hispanics/Latinos, Asians, Native Americans, Alaska Natives, Native Hawaiians and other Pacific Islanders—than among Caucasian women. Recent research indicates that lupus affects 1 in 537 young African American women.</p>
+<p><strong>What is Lupus?</strong></p>
+<p>Often misunderstood and misdiagnosed the first, second, and even third time medical advice is sought, lupus is a chronic autoimmune disease that can cause damage, including pain and inflammation in many parts of the body, including the joints, skin, kidneys, heart, lungs, blood vessels, nervous system, and brain. An autoimmune disease occurs when the body’s immune system attacks itself because it cannot tell the difference between healthy tissue and foreign invaders, such as bacteria and viruses. There is no cure for lupus, but treatments can help you feel better and improve your symptoms.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/a27d24_71b4b92a41314905bf1a8c21850aab07~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_241a3d9b0c6747c4a6f17ba681651bbf~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_dfe6e12175b14b9a81b415cb86de1f3d~mv2.jpg" /></p>
+<p><strong>Gwen AlexanderCassandra HillIris CardenHow is Lupus Diagnosed?</strong></p>
+<p>Symptoms of lupus are often the same experienced with a common cold, the flu, gout, overexertion, bronchitis, and now even COVID-19. Gwen Alexander, who has well earned her advanced degree in, “lupology” – the study of all things lupus, is the founder and creator of the <a target="_blank" rel="noopener" href="https://podcasts.apple.com/us/podcast/the-lupus-living-podcast/id1445263792">Lupus Living podcast</a>. She believes her journey to diagnosis may have begun with migraines she experienced back in 2005. She also recalls experiencing shortness of breath, unexplained swollen achy joints, muscle aches, and debilitating fatigue that would flare up unpredictably. Officially diagnosed in 2017, after two hospital stays in three weeks time, in retrospect, she says "the swollen joints, sore ankles, fatigue, fever, rashes, alopecia... I didn't think to tell my doctors about all of the other things I was experiencing," and therefore no one connected the dots between symptoms until 2016. Alexander now hosts the very relatable autobiographic-styled podcast where she shares her experiences, discoveries, and a host of resources for anyone living with or anyone who knows anyone living with lupus. "Don't give up on living your life, just live it differently", she says.</p>
+<h2>Lupus is not contagious—you can’t “catch” lupus or give it to someone else.</h2>
+<p>Cassandra Hill’s diagnosis did not come as a surprise. A gerontologist and now also the founder of <a target="_blank" rel="noopener" href="https://cassandrarhill.com/">Holistic Living Consulting, LLC</a>, she is a full-time holistic wellness coach. Cassandra was diagnosed with lupus in 2014 after experiencing ‎many of the trademark symptoms such as rash, joint pain, and extreme fatigue. “Initially I was the first to suspect that I had an autoimmune condition. I requested an ANA test (an antinuclear antibody (ANA) test is used as a primary test to help evaluate a person for autoimmune disorders) from my doctor. I was expecting the test to come back positive and when it did, I was relieved to finally have an answer,” she said. Learn more about Cassandra’s story and the life-altering changes she made to improve her quality of life when she joins IAWH in the Women’s Wellness Lounge on Saturday, January 23, 2021 – <a target="_blank" rel="noopener" href="https://www.iawh.org/events"><strong>REGISTER HERE</strong></a>.</p>
+<h2><strong>9 out of 10 people with lupus are women.</strong></h2>
+<p>People live with lupus around the world. Iris Carden, a minister and former journalist, living in Brisbane Australia, was finally diagnosed with lupus in 2006 after experiencing symptoms and for years nobody connecting the dots. Carden authors a very active blog called <a target="_blank" rel="noopener" href="http://www.sometimesitislupus.com/">Sometimes, it is Lupus</a>, where she affectionately refers to her readers as “Lovely Lupies”. She engages readers with personal stories and allows others to post their stories on what is known as the Warrior Wall. More than anything else Iris provides supportive resources and a community of encouragement for anyone experiencing symptoms of lupus, just diagnosed, and connects with long time “lupies” for check-ins and updates. She is a divorced single mom with two adult children.</p>
+<p><strong>How Does Lupus Change Your Life?</strong></p>
+<p>Although the symptoms of lupus may go into remission, it does not go away like a cold or a bad bug. It is a disease that presents itself with life-long effects. In addition to the physical impairment that lupus can cause, the mental toll can be overwhelming including experiencing depression, anxiety, low self-esteem, and the impact of social isolation. On one of Alexander's podcast episodes, where she talks about living with lupus and COVID-19, she humorously remarks that social distancing, constantly reaching for disinfectant wipes, hand sanitizer, and wearing face masks to avoid getting sick was a thing for people living with lupus long before COVID-19 because maintaining a barrier from infection is foundational to staying healthy. For Alexander, lupus impacts her food choices, sleeping patterns, her ability to work, and can deplete her energy and stamina for extended periods of time, but she watches what she eats, has back away from the high-intensity workouts she used to do, makes sure she gets adequate sleep, and manages her stress in order to stay healthy.</p>
+<p>There is so much more to learn about lupus. <strong>That means you just have to join us in the IAWH Women's Wellness Lounge on Saturday,  January 23, 2021</strong>, to learn more from the Director of the Lupus Center at Johns Hopkins University and Nurse educators from the Lupus Foundation of America. <a target="_blank" rel="noopener" href="https://www.iawh.org/events"><strong>REGISTER HERE</strong></a></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on December 6, 2020 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2020-09-01-making-the-connection-women-reducing-loneliness-and-self-isolation.html">&larr; Making the “Connection”: Women Reducing Loneliness and Social-Isolation</a><a class="next" href="2021-04-03-how-s-your-health-literacy.html">How’s your Health Literacy? &rarr;</a></div>
+    <p class="back"><a href="../2020.html">&larr; All 2020 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

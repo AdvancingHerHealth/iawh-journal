@@ -1,0 +1,40 @@
+name: Save archive images from Wix
+
+# Downloads every Wix-hosted image used by the journal archive into archive/media/
+# and updates the pages to use those copies, so nothing depends on Wix.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'archive/**'
+      - '.github/workflows/archive-images.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-images
+  cancel-in-progress: false
+
+jobs:
+  localize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download images and update pages
+        run: python3 archive/_tools/localize_images.py
+      - name: Commit saved images
+        run: |
+          git config user.name "IAWH archive bot"
+          git config user.email "advancingherhealth@iawh.org"
+          git add archive
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "Save archive images locally (from Wix)"
+            git push
+          fi

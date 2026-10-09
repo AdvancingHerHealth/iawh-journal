@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Hidden Poverty in America | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">The Hidden Poverty in America</h1>
+    <p class="article-byline">Originally published <span>October 13, 2021</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_8494f309232547419e4f0633243cfa11~mv2.png" alt="The Hidden Poverty in America" /></div>
+  <div class="article-body">
+<p><strong>Guest Blog by Anika Kumar</strong></p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_8494f309232547419e4f0633243cfa11~mv2.png" /></p>
+<p><strong>What is Period Poverty?</strong></p>
+<p>When we think of the word poverty, what normally comes to mind are groups of people who have a lack of basic necessities like food, clothing, and shelter. The classification of what is a basic necessity is where our problem starts to arise.</p>
+<p><a target="_blank" rel="noopener" href="https://www.amwa-doc.org/period-poverty/">Period Poverty</a> is defined as the inadequate access to menstrual hygiene tools and education, including but not limited to sanitary products, washing facilities, and waste management. People often forget or do not classify menstrual hygiene products as a basic necessity which causes inaccessibility to these products. Along with this, there is also a large amount of stigma around the topic of periods, causing a lack in education about the topic for young women. So when thinking about period poverty, let us think about the lack of education of, and accessibility to necessary menstrual products to live a healthy life.</p>
+<p><strong>Who does Period Poverty Affect?</strong></p>
+<p>Imagine that you are at the store shopping for groceries. You pick up all the food you need for the week and some menstrual products because you have just started your period. As you start walking towards the checkout you realize that you do not have enough money to buy everything in your cart. What do you choose? Food or menstrual products?</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_7276b256f3db4a2f869185ce7953cff9~mv2.jpg" /></p>
+<p>This scenario is not a decision women should have to make but, due to period products being titled as luxury products, is something that women face everyday. Specifically, women who are low income and homeless experience this scenario at a higher rate than any other group. While these groups have support through assistance programs like food stamps, they often don’t take into account the fact that women have to buy menstrual products. For example, while food stamps can help cover costs for food, they do not cover the costs of period products. To make things harder, around thirty to thirty-five states still have a tax on period products because they are labeled as “non-essential.” Due to the fact that period products are classified as nonessential items, the product is taxed under the “pink tax” or “tampon tax.” This causes an increase in inaccessibility to menstrual products, especially for those who are low income and homeless.</p>
+<p><strong>Period Poverty and COVID</strong></p>
+<p>The Coronavirus pandemic has worsened the issue of period poverty. With many people losing their jobs and housing, women have been struggling to access these necessities. Different organizations have been reporting about the increase in demand for period products. For example, <a target="_blank" rel="noopener" href="https://isupportthegirls.org/">I Support The Girls</a> reported that they had a 35% increase in demand for period products while another organization, called <a target="_blank" rel="noopener" href="https://www.nomoresecretsmbs.org/">No More Secrets</a>, had to increase distribution from eighty to two-hundred people per week. COVID overall has exacerbated the issue of period poverty, leaving communities of people who are already struggling to purchase these products, with more stress and worries.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_4fdd3720a55a41b697fd3b67b9528d20~mv2.png" /></p>
+<p><strong>Where do we go from here?</strong> </p>
+<p>If you take one thing away from this article, it’s that period products are not a luxury, they are a necessity. Women do not have a choice on whether they have their period, so why should our society and government treat it as such? While the United States has taken strides towards helping women, COVID has set back the development of policy and plans that could help while further damaging the living situations of women nationwide. We cannot expect women to deal with their periods by using toilet paper or newspaper as a substitute for pads, nor should women feel like that is the only option. To put it bluntly, women deserve better. They deserve to have access to products that protect their health and to educational resources that better educate on periods. Pushing for legislation that focuses on solving this issue and making period products readily available are a key component in making the future a healthier place for women.</p>
+<hr />
+<p><strong>Take a quiz on Period Poverty - Test your knowledge and learn so much more.</strong></p>
+<p><a target="_blank" rel="noopener" href="https://forms.gle/NNunvE2JZS44gtgVA">HERE</a></p>
+<hr />
+<p><em>This guest blog was written by Anika Kumar, First - Year Public Health Scholar at American University in Washington, DC.</em></p>
+<hr />
+<p><strong>Sources:</strong> </p>
+<p><a target="_blank" rel="noopener" href="https://www.amwa-doc.org/period-poverty/"><em>https://www.amwa-doc.org/period-poverty/</em></a></p>
+<p><a target="_blank" rel="noopener" href="https://online.regiscollege.edu/blog/period-poverty/"><em>https://online.regiscollege.edu/blog/period-poverty/</em></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.statnews.com/2020/07/07/pandemic-health-disparity-period-poverty/"><em>https://www.statnews.com/2020/07/07/pandemic-health-disparity-period-poverty/</em></a></p>
+<p><a target="_blank" rel="noopener" href="https://isupportthegirls.org/"><em>https://isupportthegirls.org/</em></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.nomoresecretsmbs.org/"><em>https://www.nomoresecretsmbs.org/</em></a></p>
+<p><strong>Photo/Image Credits:</strong></p>
+<p><em>1st picture-</em> <a target="_blank" rel="noopener" href="https://www.nursing.upenn.edu/details/news.php?id=1485"><em>https://www.nursing.upenn.edu/details/news.php?id=1485</em></a></p>
+<p><em>2nd picture-</em> <a target="_blank" rel="noopener" href="https://broadview.org/period-poverty-is-a-serious-issue-in-canada/"><em>https://broadview.org/period-poverty-is-a-serious-issue-in-canada/</em></a></p>
+<p><em>3rd picture-</em> <a target="_blank" rel="noopener" href="http://thequakercampus.org/opinions/period-poverty/"><em>http://thequakercampus.org/opinions/period-poverty/</em></a></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on October 13, 2021 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2021-04-03-how-s-your-health-literacy.html">&larr; How’s your Health Literacy?</a><a class="next" href="2021-10-20-let-s-talk-about-maternal-mortality-in-the-united-states-and-beyond.html">Let’s Talk about Maternal Mortality  in the United States and Beyond &rarr;</a></div>
+    <p class="back"><a href="../2021.html">&larr; All 2021 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

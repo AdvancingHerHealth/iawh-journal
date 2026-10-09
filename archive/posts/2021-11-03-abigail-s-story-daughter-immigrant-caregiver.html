@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abigail&#x27;s Story: Daughter, Immigrant, Caregiver | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive &nbsp;|&nbsp; HERStories</p>
+    <h1 class="article-title">Abigail&#x27;s Story: Daughter, Immigrant, Caregiver</h1>
+    <p class="article-byline">Originally published <span>November 3, 2021</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_9cd5fefe2d284421b4fb4d9a668163d1~mv2.jpg" alt="Abigail&#x27;s Story: Daughter, Immigrant, Caregiver" /></div>
+  <div class="article-body">
+<p><strong>This HERStory is presented by Amber Sampson, as told to her by her mother, Abigail.</strong> </p>
+<p>Abigail is a 51 year old Ghanaian immigrant residing in New York City. She was born and raised in Ghana until she decided that she wanted to venture into new opportunities that her home country could not provide her with. Leaving behind everything she knew at the age of 19 for the chance of new opportunities was by no means an easy thing to do, but she understood that becoming independent required such a momentous change. With the support of family members that already lived in the United States, her transition to life in</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_9cd5fefe2d284421b4fb4d9a668163d1~mv2.jpg" /></p>
+<p>America went over quite well. She resided with her father who worked in a local nursing home. In order to venture more into adulthood, Abigail took up a job offer at the nursing home where she would work in the kitchen for several months. Slightly later on, an administrative worker recommended that she take classes to become a Certified Nursing Assistant (CNA). Heeding this worker’s suggestion, Abigail went on to become a Certified Nursing Assistant at this nursing home and has been working as one for 31 years. Upon coming to America, Abigail did not necessarily have a lifelong dream of becoming a healthcare worker as her main area of interest was beauty. However, she grew to love working as a CNA as seen in the passion displayed in her daily work life.</p>
+<p>Read more below to learn more about Abigail’s story through an interview with her:</p>
+<p><strong>Healthcare was not a field that you considered venturing into prior to moving to the United States. What were some of the things that fostered a love for the field in you?</strong></p>
+<ul>
+<li>As I worked in the kitchen of the nursing home, I witnessed interactions between workers and patients and was touched. Working as a CNA often means that the compensation does not match up with the arduous duties of the job, but the feeling that comes with successfully caring for patients, building relationships with them, and listening to their stories will always be worth more than any amount of money. I have grown so much as a woman through getting to know my patients and would not trade that experience for the world.</li>
+</ul>
+<p><strong>What are some of the duties of being a CNA?</strong></p>
+<ul>
+<li>My typical day starts at 3pm and ends at 11pm. Throughout this time period, I make rounds with nurses and listen to what exactly that need done for the patients, I make them aware of any changes within the patients, I take vital signs, ensure that the patients are able to eat their meals, take care of their basic hygiene needs, and go on rounds independently to monitor the condition of my patients. I also help train any newcomers as I have been working there for 31 years.</li>
+</ul>
+<p><strong>Your father has had quite a difficult struggle with diabetes. What has this experience been like for you as his daughter?</strong></p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_5f9f03299ab24258ae48a7ecd2d3fb16~mv2.jpg" /></p>
+<ul>
+<li>Seeing him struggle with diabetes has always felt deeply personal. I have to be extra careful with my diet so that I do not have to go through the same things he did. Living as a double amputee is an extremely difficult thing to do for him. He is almost completely dependent on the support of others and that takes a mental toll on people after a while. He has done so much for me and because I have the experience necessary to care for him, I devoted much of my time to acting as his caregiver and have been doing so for 4 years now. He has expressed feelings of uselessness as a result of his condition and always tells me to stay proactive to avoid this in my own life.</li>
+</ul>
+<p><strong>What tasks do you perform as your father’s caregiver?</strong></p>
+<ul>
+<li>The tasks are really quite similar to the ones I perform at my nursing home job. I typically help him around the house, ensure that he practices walking with his prosthetic legs, ensure that his basic hygiene is taken care of, help him take his insulin, bring him to doctor’s appointments, help him eat his meals, and ensure that his medication is taken.</li>
+</ul>
+<p><strong>Are there any other health-related tasks that you have had to perform while caring for your father?</strong></p>
+<ul>
+<li>Because I have to monitor my sugar-intake for my own diabetes I have a good understanding of what foods should be avoided. I try my best to implement this into his life and monitor his diet accordingly. There was also an instance in which he underwent a diabetic coma while I was with him.​​ This coma was of a hypoglycemic nature. His sugar was dangerously low, so I had to mix sugar with orange juice for him to drink. This stabilized his condition prior to going to the hospital.</li>
+</ul>
+<p><strong>What has your own experience with diabetes been like?</strong></p>
+<ul>
+<li>I have had struggles with my eyesight because of diabetes. Every single day, I have to check my sugar levels with a diabetic lancet finger-pricking tool and take medication for it. Monitoring my diet has been quite difficult as many of my cultural foods do not align well with my needs. Some Ghanaian foods are high in carbohydrates which does not make out to be ideal for diabetics. I have to trade out some of my favorite foods for healthier alternatives. I always have to keep a sugary snack with me just in case my sugar level is low. Living with diabetes has caused me plenty of stress as I have seen the effects it unleashed on my family members, but at least I am fully aware of what must be done to prevent it from worsening.</li>
+</ul>
+<p><strong>What advice would you give to another woman in the same position as you?</strong></p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_91afddeafc044158959e05fc3097b9a4~mv2.jpg" /></p>
+<ul>
+<li>Any profession in healthcare is by no means an easy thing to do. You will bear witness to plenty of heavy sights, but if caring for others is something that speaks to you, you will not regret your decision to pursue it. If you have a family member or know of someone in need of a caregiver and you have the resources to act as one for them, know that it requires attentiveness and dedication.</li>
+</ul>
+<p>If you know that you are predisposed to a condition due to genetics, do anything you can to pursue preventative measures. Eating the right things and drinking water is more important than most people care to realize.</p>
+<p>Across the country and even on a global-scale, many women share similar stories with Abigail. For more information on working as a CNA, working as a caregiver, and living with diabetes, refer to the resources below.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.wgu.edu/blog/what-cna-job-description-career-guide2008.html">https://www.wgu.edu/blog/what-cna-job-description-career-guide2008.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://nursejournal.org/cna/reasons-to-choose-a-career-as-a-cna/">https://nursejournal.org/cna/reasons-to-choose-a-career-as-a-cna/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.caregiver.org/resource/caregiver-statistics-work-and-caregiving/">https://www.caregiver.org/resource/caregiver-statistics-work-and-caregiving/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444">https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444</a></li>
+</ul>
+<hr />
+<p>Amber Sampson is a first-year Public Health Scholar studying at American University, in Washington, DC.</p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on November 3, 2021 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2021-10-26-health-for-a-college-woman.html">&larr; Health for a College Woman</a><a class="next" href="2021-11-30-frequently-un-asked-questions-on-world-aids-day-2021.html">Frequently &quot;Un-Asked&quot; Questions on World AIDS Day 2021 &rarr;</a></div>
+    <p class="back"><a href="../2021.html">&larr; All 2021 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

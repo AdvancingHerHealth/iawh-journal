@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Greet 2022 with Open Arms | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Greet 2022 with Open Arms</h1>
+    <p class="article-byline">Originally published <span>December 29, 2021</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/11062b_569024b29ab54e5a91aeb64ee95bd85e~mv2.jpg" alt="Greet 2022 with Open Arms" /></div>
+  <div class="article-body">
+<p>​</p>
+<p><img alt="" src="https://static.wixstatic.com/media/11062b_569024b29ab54e5a91aeb64ee95bd85e~mv2.jpg" /></p>
+<p>The new year is finally here. We've all seen and received lists of ways to make 2022 better than last year, but we think this list will offers some brilliant and thoughtful suggestions and personal challenges for the new year. Keeping a gratitude journal is not on our list. Keep reading - you'll see.</p>
+<p><strong>1.  Start now and Enjoy the Outdoors</strong>. The Twindemic season - COVID-19 (including variants) and flu season- will collide this winter but consider the National Parks as one way to get outdoors and still be safe. You can be assured that public health measures are in place across the National Park System, including capacity limits, entrance reservations, one-way trails, and/or temporary closures. Check with individual <a target="_blank" rel="noopener" href="https://www.nps.gov/findapark/index.htm">park websites</a> or download the <a target="_blank" rel="noopener" href="https://www.nps.gov/subjects/digital/nps-apps.htm">NPS App</a> for specific details about their operations.</p>
+<p><strong>2.  Stay Indoors and Learn a New Language</strong>: Step 1) Peruse <a target="_blank" rel="noopener" href="https://www.babyquip.com/blog/best-travel-magazines">this site</a> for some fun travel magazines; Step 2) Spend some time being swept away with ideas for travel when you are ready or when current public health concerns are better managed; Step 3) If necessary, learn a new language on your own through <a target="_blank" rel="noopener" href="https://www.babbel.com/">Babbel</a>, <a target="_blank" rel="noopener" href="https://www.duolingo.com/">Duolingo</a>, or check out this list of <a target="_blank" rel="noopener" href="https://www.inc.com/larry-kim/9-places-to-learn-a-new-language-online-for-fre.html">9 Places to Learn a New Language Online for Free</a>. In a few months, write<a target="_blank" rel="noopener" href="http://advancingherhealth@gmail.com/"> @advancingherhealth</a> to share where you allowed your mind to soar.</p>
+<p><strong>3.  Make your medical appointments and keep them.</strong> Yea Yea, we know it is the right thing to do, but… Since the onset of the COVID-19 pandemic hundreds of thousands of medical appointments have been cancelled, missed, and put off until a time when “things get better”. For those reasons health outcomes are likely to slip and conditions that could be identified early in development could progress to much more serious cases. If it is offered, consider telehealth, to stay in touch with your health care provider. When was the last time that you had your provider’s face to face, eye to eye attention and felt like you were being seen, heard, and understood? Telehealth does not require you to strip down, wear a poorly fitting gown, sit on the edge of a paper-covered examining table, feeling vulnerable and exposed. You can provide your provider with a journal of blood pressure, blood glucose, and body weight measurements if you are tracking chronic conditions like hypertension, type 2 diabetes, or overweight/obesity issues and telehealth can be ideal for mental health consultations. You can discuss symptoms, the effectiveness and side effects of medications and more. Learn more about the availability and effective uses of telehealth <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41591-021-01447-x">HERE</a> – and keep that appointment.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_33048de321c44569be82d857df661bd0~mv2.png" /></p>
+<p><strong>4.  Consider Therapy.</strong> It finally feels like the stigma long associated with seeking support for mental wellbeing is fading and soon, well in the frame of our rear view mirror. This might be due to the wide-spread onset of fear, anxiety, depression, and other mental health concerns as we try to “hold it together” while the world around us is spinning out of our control. Today there are many options for support, online using a virtual meeting platform, via smart device app, walk and talk therapy now moved to outdoor spaces like parks to observe social distancing, and of course the traditional in office consults. Visit Mental Health America to learn how to <a target="_blank" rel="noopener" href="https://www.mhanational.org/finding-help-when-get-it-and-where-go">Find Help: When To Get It And Where To Go</a>.</p>
+<p><strong>5.  Wiggle Your Heart and Change Your Mood with Music</strong>. According to Northshore.org – a teaching affiliate of the University of Chicago Pritzker School of Medicine, when music is played, blood flows more easily. We boost dopamine production in our brain (which relieves the feelings of anxiety and depression), and so many other benefits.</p>
+<p>Fall in love with these <a target="_blank" rel="noopener" href="https://clark.com/technology/free-music-online/">15 Places To Listen to Free Music Online</a> that has something for everyone.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/11062b_d0300008747441df87016a4595aceb01~mv2.jpeg" /></p>
+<p><strong>6.  Learn to Do-It-Yourself</strong>. You may have seen remodeling hacks on social media like how to transform a worn-out coffee table into something to showcase in your living room. Perhaps, these folks started out with free online classes like those available at a big box store or on YouTube. For you wanna-be (and shall be) do-it-yourselfers, <a target="_blank" rel="noopener" href="https://www.homedepot.com/c/diy_projects_and_ideas?mtc=SEM-B-F_Brand-G-Multi-Multi-Multi-NA-NA-ETA-NA-NA-THD_BT2_Resources&amp;cm_mmc=SEM-B-F_Brand-G-Multi-Multi-Multi-NA-NA-ETA-NA-NA-THD_BT2_Resources-71700000002452738-58700000047554738-43700003817007469&amp;gclid=CjwKCAiAtouOBhA6EiwA2nLKH4jKo294bfrNh4l3tNdxCt0ss6cwbzlVGET7jYvtwXbNJW_tIbn4ZhoCae8QAvD_BwE&amp;gclsrc=aw.ds">Home Depot</a> has a host of online classes for people like you that want to empower themselves to complete home projects before going in search of help. Their library includes activities with the kids, indoor and outdoor home décor, and so much more – and most are available on your smartphone or desktop. Come on, check them out and <a target="_blank" rel="noopener" href="http://advancingherhealth@gmail.com/">write us</a> (including pics if you have them) of your latest masterpiece.</p>
+<p><strong>7. Ask for help</strong> - You simply cannot do it all alone. Filing back taxes, taking care of yard work, shuttling children between activities, even grocery shopping when things are chaotic. There is no harm in asking for help and it doesn't make you any less of a woman or person for admitting that you need support. In an article in The Verge, Psychologist Heidi Grant says that, <a target="_blank" rel="noopener" href="https://www.theverge.com/2018/6/22/17475134/heidi-grant-reinforcements-help-social-psychology"><em>We wildly underestimate how likely people are to help</em></a> and explains why it is so hard to ask for help. She is also the author of the Harvard Business Review article, <a target="_blank" rel="noopener" href="https://hbr.org/product/reinforcements-how-to-get-people-to-help-you/10079-HBK-ENG">How to Get People to Help You</a>. Try it, and you will soon see that your ask for support is not as unique, embarrassing, or as belittling as you thought and you'll find satisfaction and comfort in finally getting that thing, whatever it is, done.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/11062b_a35c06b299a44f4bb5abb1c9231aa567~mv2.jpg" /></p>
+<p><strong>8.  Learn to Swim Again or for the First Time.</strong> According to the American Red Cross, close to 55% of Americans cannot swim to save their lives. Only roughly 33% of African Americans can perform all five basic swimming skills compared to 51% of whites. Learn to swim. Get comfortable enough to enjoy the “lightness of being”, unafraid of being overtaken by the wet wonder of smooth waves and currents lapping around you. Swimming or aqua classes like Zumba, Deep Water, and Aqua Fit can offer fantastic aerobic exercise and a calming of anxieties as you manipulate your way through the water or just let the water move you at its pace. The American Red Cross offers Adult Swim Lessons in their learn-at-your-own-pace <a target="_blank" rel="noopener" href="https://www.redcross.org/take-a-class/swimming/swim-lessons/adult-swim-lessons">Learn-to-Swim</a> program. Visit the <a target="_blank" rel="noopener" href="https://www.redcross.org/take-a-class/swimming/swim-lessons/adult-swim-lessons">site</a> and find a program near you.</p>
+<p><strong>9.  Choose Optimism.</strong> “Trouble don’t last always” is a common paraphrase of several actual verses in the Holy Bible that encourages looking for the light of something better to come. Trouble don’t last always unless you insist on wallowing in negative thoughts, overdosing on the negativity that cable news delivers with glee, focus on problems and not your ability to find solutions, being a sourpuss and hanging out with people that cosign your “sourpussness”. Check out Depak Chopra’s <a target="_blank" rel="noopener" href="https://chopra.com/articles/8-ways-to-choose-optimism-over-pessimism">Eight Ways to Choose Optimism over Pessimism</a> in a blog written by Karson McGinley.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/11062b_ee4c7e24ca2f45b789ecdf577e463c16~mv2.jpeg" /></p>
+<p><strong>10. Give</strong>. You’ve heard the saying that it’s better to give than to receive. Consider giving thought about supporting an organization (yes, like <a target="_blank" rel="noopener" href="https://www.iawh.org/copy-of-merchandise">@advancingherhealth</a>) whose work fall in line with your interest and desire to make a difference. According to the Cleveland Clinic, “studies show that giving can actually boost your physical and mental health, which is good news given the number of people that are suffering from the emotional complications of a global pandemic”. Here are more health benefits from giving: lowers blood pressure and stress levels, gain greater happiness and satisfaction, and reduces isolation. Added bonus - finding a habit that you enjoy is also found to reduce stress - check out this link to <a href="file://users/Janine/Downloads/Having%20a%20hobby%20that%20you%20enjoy%E2%80%94whether%20that%E2%80%99s%20crocheting%20a%20sweater%20for%20your%20bestie%E2%80%99s%20new%20baby,%20hitting%20the%20slopes%20to%20enjoy%20some%20fresh%20powder,%20or%20practicing%20pirouettes%20in%20ballet%20class%E2%80%94has%20all%20sorts%20of%20well-documented%20benefits,%20from%20lower%20levels%20of%20stress%20to%20an%20increased%20sense%20of%20belonging%20and%20purpose.">learn more</a>.</p>
+<hr />
+<p>Published January 1 2022.</p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on December 29, 2021 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2021-11-30-frequently-un-asked-questions-on-world-aids-day-2021.html">&larr; Frequently &quot;Un-Asked&quot; Questions on World AIDS Day 2021</a><a class="next" href="2022-02-04-can-better-sleep-help-regulate-blood-pressure.html">Can Better Sleep Help Regulate Blood Pressure? &rarr;</a></div>
+    <p class="back"><a href="../2021.html">&larr; All 2021 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

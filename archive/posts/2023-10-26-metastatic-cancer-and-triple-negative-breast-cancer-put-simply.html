@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Metastatic Cancer and Triple Negative Breast Cancer, Put Simply | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive &nbsp;|&nbsp; Breast Cancer</p>
+    <h1 class="article-title">Metastatic Cancer and Triple Negative Breast Cancer, Put Simply</h1>
+    <p class="article-byline">Originally published <span>October 26, 2023</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_aa21f74df0994dff90cfe1aaced59614~mv2.jpeg" alt="Metastatic Cancer and Triple Negative Breast Cancer, Put Simply" /></div>
+  <div class="article-body">
+<p>Cancer is a complex disease affecting various body parts, and understanding its different forms is crucial for effective treatment. In this blog, we delve into metastatic and triple-negative breast cancer concepts. This blog and short videos pulled from the IAWH-hosted webinar, “<em>Breast Health, By Any Means Necessary</em>,” with Dr. Geoffrey Ray, Radiation Oncology Specialist and Oncology Nurse Navigator Debra Rundles, are also included. View the entire webinar <a target="_blank" rel="noopener" href="https://youtu.be/Yukt5S3fzok">here</a>.</p>
+<p><strong>What Does it Mean for Cancer to be Metastatic?</strong></p>
+<p>Cancer often begins in a specific organ or tissue, referred to as its "origin." For example, breast cancer typically starts in the breast tissue. However, when cancer cells break away from their primary site and travel to other body parts, it becomes metastatic cancer.</p>
+<p>Metastatic cancer is especially concerning because it means the disease has spread to distant locations, making treatment more complex. Common sites where cancer cells metastasize include the bones and the brain, although metastasis can occur in different organs.</p>
+<p>The <a target="_blank" rel="noopener" href="https://cancerquest.org/cancer-biology/metastasis"><strong>process of metastasis</strong></a> involves cancer cells infiltrating the bloodstream or lymphatic system, allowing them to reach different areas of the body. Once cancer has metastasized, it requires a more aggressive treatment approach, often involving systemic therapies like chemotherapy.</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=-Wm3rIzdGrE">▶ Watch the video</a></p>
+<p><strong>The Unique Challenge of Triple Negative Breast Cancer</strong> </p>
+<p>Breast cancer is a heterogeneous disease with various subtypes with distinct characteristics. One such subtype is triple-negative breast cancer (TNBC). To understand TNBC, we must first understand the role of hormone receptors. According to the <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/types/breast-cancer/about/types-of-breast-cancer/triple-negative.html"><strong>American Cancer Society</strong></a>, triple-negative breast cancer (TNBC) accounts for 10-15% of all breast cancers. The term triple-negative breast cancer refers to the fact that the cancer cells don't have <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-hormone-receptor-status.html"><strong>estrogen or progesterone receptors</strong></a> (ER or PR) and don't make any or too much of the protein called <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-her2-status.html"><strong>HER2</strong></a>. (The cells test "negative" on all three tests.) These cancers are more common in Black women younger than 40 (pre-menopausal) or those with a <a target="_blank" rel="noopener" href="https://www.cdc.gov/genomics/disease/breast_ovarian_cancer/genes_hboc.htm#:~:text=Normally%2C%20the%20BRCA1%20and%20BRCA2,%2C%20ovarian%2C%20and%20other%20cancers."><strong><em>BRCA1 mutation</em></strong></a>. TNBC differs from other types of invasive breast cancer in that it tends to grow and spread faster, has fewer treatment options, and has a worse prognosis (outlook).</p>
+<p>"BRCA" is an abbreviation for "BReast CAncer gene." BRCA1 and BRCA2 are two genes that impact a person's chances of developing breast cancer. Tests like BRCA1 and BRCA2 genetic testing identify mutations in genes associated with a higher risk of breast and ovarian cancers. However, <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/risk-prevention/genetics/genetic-testing-for-cancer-risk/understanding-genetic-testing-for-cancer.html"><strong>understanding genetic testing</strong></a> and ensuring the accuracy of these tests is crucial.</p>
+<p>Even small TNBC tumors are considered high risk due to their aggressive nature, emphasizing the importance of early detection and prompt treatment. Dr. Geoff and Nurse Debra advise that early precautions and testing should be prioritized, especially in families with a TNBC or metastatic cancer history.</p>
+<p>Johns Hopkins Medicine states in their <a target="_blank" rel="noopener" href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/breast-cancer/triple-negative-breast-cancer"><strong>discussion</strong></a> about triple-negative breast cancer that “Surgery for triple-negative breast cancer does not always have to be a mastectomy. Effective chemotherapy done first opens up the possibility of less-invasive surgical options that are less of an ordeal for the patient. If the tumor is small enough after chemo, outpatient procedures or a lumpectomy may be possible.” The American Cancer Society provides <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/types/breast-cancer/treatment/treatment-of-triple-negative.html"><strong>treatment information</strong></a> for each triple-negative breast cancer stage that includes mastectomy as one of several interventions, which Dr. Geoff and Nurse Debra discusses in the video below.</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=z9dY_7-61sI">▶ Watch the video</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=iYL18RNrnZE">▶ Watch the video</a></p>
+<p>Visit these links to help define symptoms and treatments of <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/managing-cancer/advanced-cancer/what-is.html"><strong>Metastatic</strong></a> and <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/types/breast-cancer/about/types-of-breast-cancer/triple-negative.html"><strong>triple-negative</strong></a> breast cancer – each highlights the complexity of cancer, which is why understanding their intricacies is crucial for effective diagnosis and treatment. Research continues to advance in these areas, offering hope for improved therapies and outcomes for those facing these challenging diagnoses.</p>
+<p><strong>Resources</strong></p>
+<p><a target="_blank" rel="noopener" href="https://acsjournals.onlinelibrary.wiley.com/doi/pdf/10.3322/canjclin.41.5.301"><strong>The Process of Metastasis</strong></a></p>
+<p><a target="_blank" rel="noopener" href="https://cancerquest.org/cancer-biology/metastasis"><strong>How Cancer Spreads</strong></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4493381/"><strong>Triple Negative Breast Cancer Current Treatment Trends</strong></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6316530/"><strong>Triple Negative Breast Cancer in African-American women</strong></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.mayoclinic.org/tests-procedures/mastectomy/about/pac-20394670#:~:text=Your%20doctor%20may%20recommend%20a,cancer%20after%20a%20breast%20biopsy."><strong>Mayo Clinic: Overview of Mastectomy</strong></a></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on October 26, 2023 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.<br />Topics: Breast Cancer, Breast Health, Genetic Testing, Radiation Treatment, Metastatic Breast Cancer, Triple Negative Breast Cancer, Mastectomy</p>
+    <div class="post-nav"><a class="prev" href="2023-10-17-navigating-breast-cancer-radiation-indication-and-genetic-test-accuracy.html">&larr; Navigating Breast Cancer: Radiation Indication and Genetic Test Accuracy</a><a class="next" href="2023-11-10-nurturing-your-well-being-breast-awareness-healthy-habits-and-tracking-your-heal.html">Nurturing Your Well-being: Breast Awareness, Healthy Habits, and Tracking Your Health &rarr;</a></div>
+    <p class="back"><a href="../2023.html">&larr; All 2023 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Have You Ever... | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Have You Ever...</h1>
+    <p class="article-byline">Originally published <span>May 20, 2020</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_0cd5cf4525984340adefe0f58a736daa~mv2.jpg" alt="Have You Ever..." /></div>
+  <div class="article-body">
+<p>… been afraid to toss and turn too much in the bed for fear of messing up your sheets, getting them soiled with blood or had to contort your body to the side and slide out of bed just to be sure not to stain your sheets getting up?</p>
+<p>… had someone, a complete stranger, come up and whisper that you had a stain on the back of your dress or outfit?</p>
+<p>… had to wear the super-size, bulky, and long feminine pads, that were designed for overnight, during the day?</p>
+<p>… waited until everyone else leaves before you do so you can check the chair, the sofa, the car seat you’ve been sitting in to be sure you didn’t bleed through your clothes and ruin it?</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_0cd5cf4525984340adefe0f58a736daa~mv2.jpg" /></p>
+<p>If you are shaking your head in the affirmative you must know what it is like to live with the unpredictable consequences of uterine fibroids. Maybe you can identify with some of these scenarios, but you haven’t been diagnosed. If that is the case, you might benefit from having a frank discussion with your health care provider.</p>
+<p><strong>When Was the Last Time You...</strong></p>
+<p>… had menstrual cramps so bad that they are physically debilitating?</p>
+<p>… looked and felt inexplicably bulky and bloated?</p>
+<p>… made the mistake of standing up too quickly after having been seated for a while, in church, in class, in a meeting, only to feel a sudden gush then knowing full well that the protection that you were wearing couldn’t possibly absorb or hold what just happened.</p>
+<p>Uterine fibroids are noncancerous tumors that develop in the muscle layer of the <strong>uterus. They</strong> occur in about 70% of white women and close to 80% of black women by the time they reach the age of 50. Uterine fibroids are so common place that it is nothing to learn that celebrities like America’s first black super model to make the cover of Vogue magazine, Beverly Johnson and Real Housewives of Atlanta and New York, Cynthia Bailey and Bethany Frankel all were diagnosed with fibroids and have been treated. African American women are nearly three times more likely to develop uterine fibroids and suffer with more severe symptoms like heavy menstrual bleeding, anemia, and pelvic pain and will wait longer, more than five years, before seeking medical treatment compared to whites. The cause of uterine fibroids is still unknown and despite the high incidence among women, it remains a low priority medical research question.</p>
+<p>Uterine fibroids “run in my family”. They are indeed hereditary. So if your mother, grandmother, aunts, and sisters have fibroids, with 7 - 8 out of 10 women having them, you’re very likely to have them too. Besides <strong>Family History</strong>, there are other risk factors for developing fibroids. <strong>Age </strong>– fibroids are more common in women as we grow older, through our 30’s, 40’s, and through menopause in our 50’s. After menopause most fibroids shrink some due to natural hormonal shifts. <strong>Race </strong>– African American women are more likely than white women to develop fibroids. <strong>Weight </strong>– Women who have overweight and obesity are two to three times more likely to develop fibroids. <strong>Diet</strong> – While research isn’t conclusive, excessive consumption of red meat is linked with fibroids, while diets full of leafy green vegetables are more protective from fibroids.</p>
+<p>Fibroids are not always problematic. If they remain small and insignificant to our health and wellness, some health providers suggest - “if they don’t bother you, don’t bother them”. But for those of us who are dealing with tumors the size of grapefruits and sometimes larger – managing pain and discomfort, bloating, anemia and unexplained fatigue, heavy non-stop bleeding, and even miscarriage, you will want to consult your health provider to explore and select the right treatment option for you.</p>
+<p>Depending you your desired outcome, where you are in your reproductive life and timeline, your overall health, the size and location of the tumor(s), and the quality of life that you want for yourself, treatments can range from orally administered hormone therapies to surgical removal of the uterus with different levels of invasive surgeries in between, yielding different results.</p>
+<p>Treatment options for fibroids fall into four main categories:</p>
+<p><strong>Watch and Wait</strong> – exactly as it sounds. Fibroids are evaluated and are continuously monitored to measure any change in condition.</p>
+<p><strong>Medical Management</strong> – This is the use of hormones to regulate fibroids, often delivered via birth control methods, used to manage heavy blood flow and irregular periods. This treatment offers no relief from bulk or bloat.</p>
+<p><strong>Interventional Radiologic Treatment</strong> – a less invasive quasi-surgical approach that can be effective for managing heavy and irregular periods and the reduction of bulk and bloat. Through <em>Uterine Fibroid Embolization</em> (UFE) the blood sources to the fibroids is blocked thereby choking them off shrinking the fibroids, reducing the bulk and bloat that they cause and also regulate menstrual blood flow and cycle. Additionally in this category is a newer treatment, <em>Magnetic Resonance-Guided Focused Ultrasound</em> (MRgFUS), which is a non-invasive procedure that uses ultrasonic pulses to heat up and destroy fibroid tumors.</p>
+<p><strong>Surgery</strong> – These procedures offer the removal of individual fibroids, keeping the uterus intact called a myomectomy or the removal of the entire uterus, called a hysterectomy.</p>
+<p>The journey from diagnosis to treatment and recovery takes time, but now that so many women are learning about uterine fibroids and making the choice not to suffer in silence, health care providers are now also more knowledgeable and treatments for fibroids are now a lot more accessible.</p>
+<p><strong>Love Yourself</strong> – Love all of you, even the fibroids. They may be making you tired, sore, bloated right now, but love yourself enough to explore and learn as much as you can about your condition and the treatment options available to you. What you learn you can someday share with another woman.</p>
+<p><strong>Be Gentle with Yourself</strong> – You may feel bloated and bulky, can’t stand to have anything with a waistband touching you. You messed up your bed some office furniture, and even embarrassed yourself in front of others at a function with friends. It happens. Go easy on yourself. Don’t internalize the feelings that can plague you in this situation, rather know that you are not the only woman experiencing this AND you can do something to change your situation.</p>
+<p><strong>Be Patient with Yourself and the Process</strong> – The process of properly diagnosing uterine fibroids, getting treatment, recovery and follow up take some time. From the initial manual exam in stirrups, followed by ultrasounds and MRIs, the surgical or non-surgical treatment, recovery time and then the follow up exams via ultrasound and MRI you will be missing school, work, church, and a few other functions too. But think of the outcome that you want. Prepare to schedule leave from work. Make time to read about your chosen treatment option, watch videos, read comments online from those who have gone through the same treatment. This is the time to learn and to allow youself to heal.</p>
+<p><strong>Ask Questions</strong> – Ask questions about every aspect of your condition. Ask to see your ultrasound and have the images explained to you, before and after treatment. Ask about any medications you are prescribed, are they necessary, are they addictive, will they interact with other medications you may be taking?</p>
+<p><strong>Allow Yourself to Fully Recover</strong> – Regardless the treatment option you choose, time for recovery and the ability to measure and witness improvement may take a while. It will be important to rest, be still, complete all prescriptions given even if you start to feel better, and allow both mind and body to recuperate.</p>
+<p>To learn more about uterine fibroids and treatment options please visit the <a target="_blank" rel="noopener" href="https://medlineplus.gov/uterinefibroids.html">MedLine Plus</a> information page and watch this video from <a target="_blank" rel="noopener" href="https://youtu.be/l0JvYTBObVY">Brigham and Women’s Hospital</a>, Boston, featuring Mobolaji Ajao, MD, Division of Minimally Invasive Gynecologic Surgery.</p>
+<p>You can share your story with IAWH. Send comments to <a href="mailto:AdvancingHerHealth@gmail.com">AdvancingHerHealth@gmail.com</a>. We look forward to reading your comments.</p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on May 20, 2020 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2020-05-20-get-tested.html">&larr; Get Tested</a><a class="next" href="2020-06-15-just-how-gritty-have-you-allowed-yourself-to-get-during-self-quarantine.html">Just How Gritty Have You Allowed Yourself to Get During Self-quarantine? &rarr;</a></div>
+    <p class="back"><a href="../2020.html">&larr; All 2020 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

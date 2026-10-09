@@ -345,6 +345,17 @@
     margin-left: 0.6rem;
   }
 
+    /* ── FROM THE ARCHIVE (2020–2026 blog) ── */
+  .past-section { padding: 0 2rem 3.4rem; background: var(--cream); }
+  .past-inner { max-width: 660px; margin: 0 auto; }
+  .past-intro { font-family: Georgia, serif; font-size: 0.96rem; line-height: 1.75; color: var(--text); margin-bottom: 1.6rem; }
+  .year-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+  .year-tile { display: block; background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--gold); padding: 1.1rem 1rem 1rem; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .year-tile:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(53,16,47,0.12); }
+  .year-tile-year { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; font-weight: 500; color: var(--plum); line-height: 1; }
+  .year-tile-count { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.4rem; }
+  @media (max-width: 680px) { .past-section { padding: 0 1.6rem 2.6rem; } }
+
   /* ── SUBSCRIBE STRIP ── */
   .subscribe-strip {
     background: var(--plum);
@@ -724,6 +735,44 @@
     </div>
 
     </div><!-- /archive-inner -->
+  </div>
+
+    <!-- FROM THE ARCHIVE: posts from the original IAWH blog, 2020–2026 -->
+  <div class="past-section">
+    <p class="archive-heading">From the Archive &middot; 2020&ndash;2026</p>
+    <div class="past-inner">
+      <p class="past-intro">Before the journal found its monthly home, IAWH published 70 articles on our original blog, from heart health and hypertension to HERStories from the women in our programs. Choose a year to browse.</p>
+      <div class="year-tiles">
+        <a class="year-tile" href="https://advancingherhealth.github.io/iawh-journal/archive/2026.html">
+          <div class="year-tile-year">2026</div>
+          <div class="year-tile-count">2 articles</div>
+        </a>
+        <a class="year-tile" href="https://advancingherhealth.github.io/iawh-journal/archive/2025.html">
+          <div class="year-tile-year">2025</div>
+          <div class="year-tile-count">15 articles</div>
+        </a>
+        <a class="year-tile" href="https://advancingherhealth.github.io/iawh-journal/archive/2024.html">
+          <div class="year-tile-year">2024</div>
+          <div class="year-tile-count">19 articles</div>
+        </a>
+        <a class="year-tile" href="https://advancingherhealth.github.io/iawh-journal/archive/2023.html">
+          <div class="year-tile-year">2023</div>
+          <div class="year-tile-count">3 articles</div>
+        </a>
+        <a class="year-tile" href="https://advancingherhealth.github.io/iawh-journal/archive/2022.html">
+          <div class="year-tile-year">2022</div>
+          <div class="year-tile-count">17 articles</div>
+        </a>
+        <a class="year-tile" href="https://advancingherhealth.github.io/iawh-journal/archive/2021.html">
+          <div class="year-tile-year">2021</div>
+          <div class="year-tile-count">8 articles</div>
+        </a>
+        <a class="year-tile" href="https://advancingherhealth.github.io/iawh-journal/archive/2020.html">
+          <div class="year-tile-year">2020</div>
+          <div class="year-tile-count">6 articles</div>
+        </a>
+      </div>
+    </div>
   </div>
 
   <!-- SUBSCRIBE -->

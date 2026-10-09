@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2025 Archive | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .page-wrapper { max-width: 1000px; margin: 0 auto; }
+  .journal-masthead { background: var(--plum-deep); padding: 3.4rem 3rem 2.8rem; text-align: center; border-bottom: 4px solid var(--gold); }
+  .masthead-eyebrow { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
+  .masthead-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 3.2rem; font-weight: 400; color: var(--white); line-height: 1.05; }
+  .masthead-rule { width: 48px; height: 1px; background: var(--gold); margin: 1rem auto; opacity: 0.7; }
+  .masthead-tagline { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; font-style: italic; font-weight: 300; color: rgba(255,255,255,0.82); }
+  .year-bar { padding: 1.6rem 1.6rem 0.4rem; }
+  .list-section { padding: 2rem 2rem 3rem; }
+  .list-inner { max-width: 720px; margin: 0 auto; }
+  .entry { display: flex; gap: 1.2rem; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: padding-left 0.2s ease; }
+  .entry:hover { padding-left: 0.4rem; }
+  .entry:hover .entry-title { color: var(--plum); }
+  .thumb { flex: 0 0 104px; height: 78px; background: linear-gradient(135deg, var(--plum) 0%, var(--navy) 100%); overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .entry-date { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+  .entry-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 500; color: var(--text); line-height: 1.25; }
+  .entry-meta { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.06em; margin-top: 0.3rem; }
+  .list-foot { padding: 0 1.6rem 2.6rem; }
+  .back { text-align: center; font-size: 0.8rem; margin-top: 1.4rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .journal-masthead { padding: 2.6rem 1.4rem 2.2rem; }
+    .masthead-title { font-size: 2.3rem; }
+    .list-section { padding: 1.4rem 1.2rem 2.4rem; }
+    .thumb { flex-basis: 76px; height: 64px; }
+    .entry-title { font-size: 1.12rem; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="page-wrapper">
+  <div class="journal-masthead">
+    <p class="masthead-eyebrow">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="masthead-title">2025</h1>
+    <div class="masthead-rule"></div>
+    <p class="masthead-tagline">15 articles published in 2025</p>
+  </div>
+  <div class="year-bar"><div class="year-nav"><a href="2026.html">2026</a><span class="current">2025</span><a href="2024.html">2024</a><a href="2023.html">2023</a><a href="2022.html">2022</a><a href="2021.html">2021</a><a href="2020.html">2020</a></div></div>
+  <div class="list-section">
+    <div class="list-inner">
+      <a class="entry" href="posts/2025-12-31-a-year-that-revealed-our-strength.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_a95892c5571b4d739eef216736df0db2~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">December 31, 2025</div>
+          <div class="entry-title">A Year That Revealed Our Strength</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-11-28-prioritize-your-health-essential-screenings-for-women-40-85-especially-when-life.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_0ca5507087b74713a563eb6f5134ba77~mv2.jpeg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">November 28, 2025</div>
+          <div class="entry-title">Prioritize Your Health: Essential Screenings for Women 40–85, Especially When Life Feels Overwhelming</div>
+          <div class="entry-meta">#WomensHealthMatters #KnowYourNumbers #PreventiveCare #PutYourHealthFirst</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-10-28-the-masks-we-wear-mental-health-authenticity.html">
+        <div class="thumb"></div>
+        <div>
+          <div class="entry-date">October 28, 2025</div>
+          <div class="entry-title">The “Masks We Wear” -  Mental Health &amp; Authenticity</div>
+          <div class="entry-meta">Mental Health, Unmasking Truths, Mental Wellness, Authentic Living</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-09-28-staying-up-to-date-on-covid-flu-rsv-and-childhood-vaccines.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/11062b_5fda4a987fe242ab8eefab855972ac51~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">September 28, 2025</div>
+          <div class="entry-title">Staying Up to Date on COVID, Flu, RSV, and Childhood Vaccines</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-09-28-iawh-brief-tylenol-acetaminophen-use-in-pregnancy-autism-what-women-need-to-know.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_51cdec1f147f439fa0f9dec1a8e089c5~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">September 28, 2025</div>
+          <div class="entry-title">IAWH Brief: Tylenol (Acetaminophen) Use in Pregnancy &amp; Autism — What Women Need to Know Now</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-09-28-a-clearer-view-why-eye-health-can-t-be-overlooked.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_4cb369c8c9914c0c8040e5913e0da535~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">September 28, 2025</div>
+          <div class="entry-title">A Clearer View: Why Eye Health Can’t Be Overlooked</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-08-27-embracing-resilience-how-to-thrive-at-any-age-amidst-life-s-challenges.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_1d5b3ec110724c66a1033a2eecb42df8~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">August 27, 2025</div>
+          <div class="entry-title">Embracing Resilience: How to Thrive at Any Age Amidst Life&#x27;s Challenges</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-07-18-running-on-empty-what-women-around-the-world-are-saying-about-stress-and-how-the.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_45355f5cad594c25b0e522814db2cf7c~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">July 18, 2025</div>
+          <div class="entry-title">Running on Empty: What Women Around the World Are Saying About Stress — and How They&#x27;re Taking Their Power Back</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-06-08-when-the-heart-and-mind-collide-stress-cardiovascular-health-dementia.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_b432014852b3447d8be61bf13c5c0615~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">June 8, 2025</div>
+          <div class="entry-title">When the Heart and Mind Collide: Stress, Cardiovascular Health &amp; Dementia</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-05-21-aging-forward-wellness-for-women-in-motion.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_3b9a1a90ff054b94b841a510c69a52da~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">May 21, 2025</div>
+          <div class="entry-title">Aging Forward: Wellness for Women in Motion</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-04-04-in-times-like-these.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_39688df7a0304779b86f3c38a61e0684~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">April 4, 2025</div>
+          <div class="entry-title">In Times Like These...</div>
+          <div class="entry-meta">Anxiety, Self-Care</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-03-12-empowered-women-enhancing-financial-and-wellness-journeys.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_2cf1632f4c0046a4bf0fdc44b1d3501c~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">March 12, 2025</div>
+          <div class="entry-title">Empowered Women: Enhancing Financial and Wellness Journeys</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-02-20-navigating-paralyzing-fear-and-uncertainty-women-s-heart-health.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_d2a1ec85fa8f4b84805451e8868a60f0~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">February 20, 2025</div>
+          <div class="entry-title">Navigating Paralyzing Fear and Uncertainty: Women&#x27;s Heart Health</div>
+          <div class="entry-meta">Mental Health, Heart Health, Stress</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-01-13-it-s-time-to-break-silence-on-cervical-cancer-and-the-social-conditions-which-br.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_d8109365186f49c1b06ab42b8717c67f~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">January 13, 2025</div>
+          <div class="entry-title">“It’s “time to break silence” on cervical cancer and the social conditions which breed and perpetuate it.”</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2025-01-13-a-global-eye-toward-cervical-cancer-prevention-and-treatment.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_555ec60e819c47bf822213a0c043d1f4~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">January 13, 2025</div>
+          <div class="entry-title">United in Health: Championing Women&#x27;s Health in the Fight Against Cervical Cancer in the U.S. and Highlighting Interventions in Zambia</div>
+          
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="list-foot">
+    <div class="year-nav"><a href="2026.html">2026</a><span class="current">2025</span><a href="2024.html">2024</a><a href="2023.html">2023</a><a href="2022.html">2022</a><a href="2021.html">2021</a><a href="2020.html">2020</a></div>
+    <p class="back"><a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">&larr; Back to the IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

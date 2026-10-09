@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>All Heart, Health, and Hope - Catching Up with Carlotta | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive &nbsp;|&nbsp; HERStories</p>
+    <h1 class="article-title">All Heart, Health, and Hope - Catching Up with Carlotta</h1>
+    <p class="article-byline">Originally published <span>July 1, 2022</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_5cb449ac483d4852b57f0cea56825370~mv2.jpg" alt="All Heart, Health, and Hope - Catching Up with Carlotta" /></div>
+  <div class="article-body">
+<p>​</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_5cb449ac483d4852b57f0cea56825370~mv2.jpg" /></p>
+<p>Welcome to the next in a series of IAWH HerStories, featuring participants of the 2022 Self-Measured Blood Pressure (SMBP) hypertension control program. These stories are heart-warming and informative and are shared to inspire you as you travel along your health improvement journey. This HerStory profiles the health journey of Carlotta Hughes- Culp, a mental health professional, counselor, a cancer survivor, and a women's health inspiration.</p>
+<p><strong>Q:  Tell us about yourself. For example, where were you born, what you do for a living, your hobbies/interests/activities, how long have you lived where you live now? If you are not native to where you currently live, what brought you there?</strong></p>
+<p>A:  I was born in a small town in Tennessee about 50 miles outside of Nashville.  I attended public schools and eventually graduated from the University of Tennessee, Martin with a degree in social work.  Upon graduating from college I lived and worked in Nashville before returning to school for a Master’s Degree in Social Work.  The next few years would take me to Louisville, KY, Albuquerque, NM and Atlanta before marriage and a return to Nashville for the next ten years.  I currently live in Reynoldsburg, OH, a suburb of Columbus.</p>
+<p>My husband’s work brought us to Ohio; however, with the flexibility of having social work experience and past employment with the American Red Cross, I was soon able to find employment with the Greater Columbus ARC where I would be for the next seven years.</p>
+<p>Upon my daughter graduating from high school and starting college, I decided to pursue another Master’s degree from the University of Dayton, this time in Counseling.</p>
+<p>My career has been a journey lending me the opportunity to increase my experience and skills in mental health counseling, tobacco cessation, grief counseling and facilitating health and wellness programs.  I am a behavioral health provider and a licensed professional counselor.</p>
+<p>When I am not working, I am actively involved in community outreach programs, my church health ministry and an advocate for breast cancer awareness.  My leisure time is spent sewing, crafting, reading, home gardening (houseplants), and yoga.</p>
+<blockquote></blockquote>
+<p><strong>Q:  When were you first diagnosed with hypertension? Many people immediately vow to make changes in their lives and to their lifestyles to avoid taking medication. Some people are shocked and had no idea that they had high blood pressure. What was your reaction?</strong></p>
+<p>A:  I don’t recall exactly when I was diagnosed with hypertension, but it was soon following a diagnosis of fibromyalgia.  I recall that each time that I visited  the health care provider that I had at the time, my blood pressure would read as elevated. I attributed it to the relationship that I had with that provider that was by no means the best.  Her bedside manner was not pleasant and I couldn’t wait to get out of her office.  It wasn’t very long after that I changed providers. I was in my early 40’s and had a great deal of stress in my life at the time.</p>
+<p>I actually thought that I would not succumb to hypertension, because of early changes I made in my life to try and avoid the disease. I always avoided extra salt, but perhaps what I didn’t do was change my lifestyle and some forbidden foods that are high in sodium content.  Before I knew it, I was on medication and although my blood pressure was always normal at my doctor visits, there was never a discussion of removing me from the medication.  I was devastated by the diagnosis, but in the next 10 years I would be diagnosed with breast cancer.  At this point, survival was the focal point of my life.  My mother died of breast cancer one year after my graduation from college. I wanted to live to see my daughter graduate college, get married and make me a grandmother.</p>
+<p><strong>Q:  Were you surprised by your diagnosis of hypertension? Do you have a family history of hypertension or other chronic conditions? Do you know anyone else diagnosed with hypertension?</strong></p>
+<p>A:  I was initially surprised by my diagnosis thinking that being conscious of my diet would make a difference. My maternal grandmother and later my father both had hypertension and my mother changed the way that we ate at home. With my picky eating habits, it was easy to continue some of the practices.  Unfortunately, regular exercise wasn’t one of them. Years afterwards, my only sibling, a sister, would also have a diagnosis of hypertension about 10 years prior to my diagnosis.</p>
+<p><strong>Q:  What steps did you initially take (with or without your health provider) to get your hypertension under control? Were these methods at all successful? Often health providers provide basic information on health conditions. Where did and do you look for information to learn more and stay current on hypertension control?</strong></p>
+<p>A:  I don’t think initially I thought about changing the course of reversing my hypertension and getting off medication, especially when I would go for medical visits and was told it was normal.  I was then focused on my breast cancer diagnosis and the fibromyalgia.</p>
+<p>I don’t feel that health care providers really give the information that people need to manage their blood pressure or other diagnosis for that matter.  I have read and learned lots of information on my own.  In fact, I was trained to facilitate a self-management program for chronic conditions, diabetes and pain that have educated me on much more than I learned from my primary care.  Because I am interested in women’s health, I try to stay informed through reading and support programs.</p>
+<blockquote></blockquote>
+<p><strong>Q:  How has your lifestyle changed since ? (What was your diet before diagnosis vs. after? Has your physical activity changed? How has your awareness and knowledge about your health changed?)</strong></p>
+<p>A:  After the birth of my daughter, I didn’t lose the so-called baby weight gain.  I was shocked the first time I saw “obesity” as a diagnosis on my medical record.  I’ve tried diets, evidenced-based diet programs and even exercise to try and lose weight, but I am usually easily bored and lose the motivation to continue.</p>
+<p>Before COVID, I was involved in an intense exercise program for cancer survivors and a collaborative lifestyle intervention program for knee osteoarthritis.  I worked out 4 to 5 days per week in addition to learning the importance of healthy eating.  These programs unfortunately ended during COVID and I am only gradually returning to the gym.  What I miss most is the support from other participants.  I am not as motivated to do things alone.</p>
+<p><strong>Q:  How did you learn about IAWH’s SMBP Program? What made you interested in participating? What have you gained from this program?</strong></p>
+<p>A:  I have been a follower of IAWH programs for at least two years.  I am a member of the NANBPWC, Inc., which I believe is an affiliate partner with IAWH.  I was actually on a zoom meeting when the SMBP Program was introduced.  I had hoped that NANBPWC, Inc. would apply to be one of the affiliates and that it would trickle down to the local clubs.  As a member of the Health Committee of my local club, I was hoping that we would be able to qualify as a program affiliate.</p>
+<p>I have gained enormously from the program.  Measuring my blood pressure daily has been insightful and has increased my awareness of the disease.  While I am not in the DC area where the other members are, I still feel a connection to the other ladies in my group and look forward to their input.  I regret that I can’t participate in the physical activities that they do in a group and that is the missing piece.</p>
+<blockquote></blockquote>
+<p><strong>Q:  How and why did you decide to do this program?</strong></p>
+<p>A:  I decided to do the program because first I was aware of the contents and benefits of participating. I was afraid at first since I wasn’t in the DC  area that I might not be allowed to participate.  I am so thankful that the consideration was made to include me.</p>
+<p><strong>Q:  Do you have an accountability partner or partners for your SMBP hypertension control efforts and/or other things about your health? If yes, do you give each other reminders? How? Give some specific examples.</strong></p>
+<p>A:  I feel that from my group, Carolyn Woods has been one of the most supportive.  She has reached out to me by email, phone and sharing information with the group.  I would like to build on developing partners for accountability.  While I have friends and acquaintances in Columbus who have the same diagnosis, it has been difficult getting together.  While we have discussions on the phone, I need a partner to encourage and motivate me to exercise.</p>
+<p><strong>Q:  What have you gained from participating in this SMBP program? (What knowledge has been validated? What is something new that you learned or gained?</strong></p>
+<p>A:  I have gained a lot of knowledge from the professional presenters as well as the informal discussion in the small group meetings.  All of the presenters for “lunch and learn” have been great.  I was especially impressed with the presentation by Dr.Yola and her recommendations for taking control of blood pressure by adding some supplements.  She also confirmed what I knew about looking for reliable resources when researching information on media sites.</p>
+<p>I was also very pleased when, unfortunately for the group, the breath and meditation activity was done virtually.  It gave me a chance to participate.  Yoga and then meditation are right up my alley.  I have also learned lots about plant-based eating.  It has helped me to make some significant changes in my diet.</p>
+<p><strong>Q:  How are you approaching and understanding the management of our blood pressure differently now that you've been in the IAWH program?</strong></p>
+<p>A:  When the program is over, I know that I will continue to monitor my blood pressure more often, no doubt still daily.  I will continue to focus on increasing exercise and making lifestyle changes permanently instead of temporarily.</p>
+<p><strong>Q:  Where would you like to be healthwise in five years?</strong></p>
+<p>A:  In 5 years, I hope to reach and maintain a healthy weight.  I also hope that I will be able to decrease the medication that I am taking.  As my age and other chronic conditions will allow, I would like to remain physically active every day.</p>
+<p><strong>Q:  What advice would you give to others who may be considering, just beginning, restarting, or continuing on a health improvement or a hypertension control journey?</strong></p>
+<p>A:  I think it is important to research and study as much as possible about healthy living practices, including diet, nutrition, exercise, lifestyle and managing stress.  Not only are these things important in avoiding hypertension, but also in controlling hypertension.  Find an accountability partner.  This is not always the person you are living with, so reach out to friends or get involved in a program.  There are many programs and studies out there if you seriously look for them.</p>
+<hr />
+<p><strong>Executive DirectorsWriter/Editor</strong></p>
+<p>Janine E. Payne, MPH                            Melissa Kluczynski, MS</p>
+<p>Cheryl J. Thompson, M.S.P.H.</p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on July 1, 2022 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.<br />Topics: Hypertension, Mental Health, SMBP, Women&#x27;s Health</p>
+    <div class="post-nav"><a class="prev" href="2022-06-24-life-partners-in-love-and-health.html">&larr; Partners in Life, Love, and Health</a><a class="next" href="2022-07-09-mini-is-maximizing-her-health.html">Mini is Maximizing Her Health &rarr;</a></div>
+    <p class="back"><a href="../2022.html">&larr; All 2022 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>In Times Like These... | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">In Times Like These...</h1>
+    <p class="article-byline">Originally published <span>April 4, 2025</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_39688df7a0304779b86f3c38a61e0684~mv2.jpg" alt="Belting out a song" /></div>
+  <div class="article-body">
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_53cb2f00f7ba4f2fb8a6958a7a7ce30e~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_39688df7a0304779b86f3c38a61e0684~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_40e9a84d5a2f4f0ca96900ef16862eba~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_4e14c0bb8e444aff82edc210642638c8~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_03e28e61d52c4cab886f986ad6be9140~mv2.jpg" />
+<img alt="" src="https://static.wixstatic.com/media/621b05_60e2f260bfb349049a5fcaa3b9d3c33f~mv2.jpg" /></p>
+<p>“In times like these, you learn to live again.” The Foo Fighters' lyrics ring truer now than ever. We are living in a moment of profound uncertainty—where the stability we once relied on seems to shift by the day. Job losses, political turmoil, the erosion of long-standing public health protections, and the weight of simply existing in a world that often feels like it’s unraveling can leave us feeling exhausted, overwhelmed, and unsure of where to turn. But in times like these, we also find ourselves again, we find strength, and new ways to reclaim control over our well-being.</p>
+<p>The Institute for the Advancement of Women's Health presents these <strong>10 Tips</strong> as a guide to navigating this turbulent era with intention, purpose, and care. These aren’t just about self-care in the trendy, fleeting sense, but about real, actionable ways to stay grounded, connected, and empowered. It might take a little time, work, and commitment, but it will be well spent. From choosing an issue to follow and support to reconnecting with community, prioritizing health, and even trying something completely new, each tip is a reminder that we still have power over how we move through this moment. This is about more than just surviving—it’s about thriving, despite the uncertainty.</p>
+<p><strong>Click the Arrow or Carrot Beside Each Tip Below.</strong></p>
+<h3>Tip 1: Choose An Issue to Study and Follow</h3>
+<p>In times of uncertainty, finding a cause that resonates with you can provide</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_35f21840031d4cd791570c30a8b09c9b~mv2.jpg" /></p>
+<p><strong><em>Online Information Gathering</em></strong></p>
+<p>both purpose and stability. Whether it’s the social safety net, foreign relations, following the fight for environmental justice, or keeping up with local politics, choosing an issue to follow and learning all you can about it, gives you a sense of agency in a world that often feels chaotic. Staying informed and taking action, whether through volunteering, donating, or simply spreading awareness, helps you stay connected to your values and build resilience. More importantly, investing in a cause that fulfills you fosters a sense of control, reminding you that even in turbulent times, your voice and efforts matter.</p>
+<h3>Tip 2: Get Your Hands in the Dirt</h3>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_4e14c0bb8e444aff82edc210642638c8~mv2.jpg" /></p>
+<p><strong><em>Gardening and Enjoying Nature</em></strong></p>
+<p>There’s something deeply healing about getting your hands into the earth, whether it’s planting a vegetable garden, tending to flowers, or simply pulling weeds. Gardening and outdoor work connect you to the rhythm of nature, offering a sense of grounding and peace in uncertain times. Beyond the physical benefits of fresh air and movement, caring for plants nurtures patience, resilience, and a reminder that growth often comes from struggle. Even if you don’t have a garden, spending time in nature, cleaning up trails, planting in community spaces, or simply walking in a park, can restore balance. And when you share your harvest, whether it’s tomatoes from your backyard or a bouquet of wildflowers, you’re not just cultivating plants, you’re cultivating connection, generosity, and joy.</p>
+<h3>Tip 3: Remember Where You Come From</h3>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_39688df7a0304779b86f3c38a61e0684~mv2.jpg" /></p>
+<p><strong><em>Belt out that song!</em></strong></p>
+<p>Before life became a never-ending cycle of responsibilities, stress, and emails, there was joy in the simple things. Take time to revisit the activities that once made you laugh, dream, and feel free. Play a game of jacks or checkers, dust off that old board game, or dive into a stack of comic books that once transported you to another world. Put on your favorite gospel song and belt it out like you’re the lead soloist in a packed church. Adult coloring books, vintage magazines, even flipping through childhood photo albums can be surprisingly therapeutic. These small, nostalgic moments remind you of who you are at your core, before the world told you who to be. Reclaiming that joy is not just self-care; it’s an act of self-preservation.</p>
+<h3>Tip 4: Listen to Someone Else</h3>
+<p>In the midst of your own struggles, it can be easy to get lost in your worries, but sometimes the best way to find clarity is by holding space for someone else. Right off this doesn't sound like self-care, but it can be. Be the person who truly listens, not to respond, not to compare struggles, but simply to</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_ca024982a0ac47f791883e9cb60bfc56~mv2.jpg" /></p>
+<p><strong><em>Cozy Coffee Shop Chat</em></strong></p>
+<p>hear. When a friend, family member, or colleague needs a sounding board, offer them your full attention. You don’t need to have solutions or advice; often, people just need to feel seen and heard. In doing so, you not only lighten their burden but also momentarily step outside of your own worries. Compassion is a two-way street, by being there for others, you cultivate deeper connections and remind yourself that none of us are in this alone.</p>
+<h3>Tip 5: Keep Social Justice Alive</h3>
+<p>Just because the government is trying to erase the language of diversity, equity, and inclusion doesn’t mean the fight is over, it means the fight is more important than ever. Women have always been the backbone of movements for change, and this moment is no different. If the powers that be think they can silence the issues that impact women, minorities, and</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_53cb2f00f7ba4f2fb8a6958a7a7ce30e~mv2.jpg" /></p>
+<p><strong><em>Keeping Social Justice Alive</em></strong></p>
+<p>marginalized communities, they are sorely mistaken. The policies may shift, but the need for justice, fairness, and human dignity remains. If anything, now is the time to dig in deeper.</p>
+<p>Stay involved. Speak up. Find grassroots organizations, local advocacy groups, or even online communities that are still doing the work, because the work is happening, whether the government acknowledges it or not. Support women’s health initiatives, amplify the voices of those being silenced, and use every tool available to keep the momentum alive. Change has never started from the top down; it has always been fueled by those who refuse to back down. Be one of those people. Keep pushing, keep showing up, and let them know that social justice isn’t a trend, it’s a necessity, and it’s here to stay.</p>
+<h3>Tip 6: Connect, Reconnect, or Create Community</h3>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_077cc6725e2c4e02a27d447bf4dbf94a~mv2.jpg" /></p>
+<p><strong><em>Book club with coffee</em></strong></p>
+<p>In times like these, when the world feels upside down, community is not just a luxury, it’s a lifeline. We thrive when we are connected, yet maintaining those connections can sometimes feel like just another task on an endless to-do list. But now, more than ever, we need each other. Reach out to the women in your neighborhood, reconnect with old friends, or build something new from the ground up. Whether it’s reviving a street club, organizing a block party, or starting a book club, these small acts of gathering can foster strength, laughter, and solidarity. Consider forming a "ladies who lunch" group to mix, mingle, and share ideas on everything from business to self-care. Start a skills-swap circle where women can teach each other everything from financial literacy to home gardening. Host a rotating Sunday supper club where everyone brings a dish and a story to share. Don't forget church worship and Bible study can count as community too. Community doesn’t have to be massive; it just has to be meaningful. When we stand together, listen to each other, and lift each other up, we remind ourselves that no matter what chaos is happening in the world, we are not alone.</p>
+<h3>Tip 7: Take Your Physical and Mental Health Seriously</h3>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_60e2f260bfb349049a5fcaa3b9d3c33f~mv2.jpg" /></p>
+<p><strong><em>One-on-one Telehealth Therapy Session</em></strong></p>
+<p>Your health, both physical and mental, is not a luxury; it’s a necessity. The weight of uncertainty, job loss, financial instability, tanking 401Ks and pensions, and the constant barrage of bad news can take a serious toll. Stress, anxiety, and fear don’t just live in your mind; they manifest in your body, tight shoulders, sleepless nights, headaches, and fatigue. Now is the time to prioritize yourself. Move your body, whether it’s through walking, yoga, dancing in your living room, or hitting the gym. Eat well, hydrate, and rest like your peace depends on it, because it does. And don’t hesitate to seek professional support. Therapy is not just for when things fall apart, it’s for staying whole. A licensed therapist can help you process emotions, develop coping strategies, and reclaim control over your well-being. But healing isn’t just in a therapist’s office. Try meditation, journaling, deep breathing exercises, or simply allowing yourself the space to feel and release. Check in with yourself daily and ask, <strong><em>What do I need today?</em></strong>  Then honor that answer. You are your greatest investment - take care of you.</p>
+<h3>Tip 8: Follow That Great Idea</h3>
+<p>That idea that keeps whispering in the back of your mind? It’s time to stop ignoring it and start chasing it. Whether it’s launching a business, writing that book, starting a podcast, or selling your handmade jewelry at the local farmer’s market, your passions are worth pursuing. The world needs what only <em>you</em> can create.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_5bb9809db62d475587930f9352023728~mv2.jpg" /></p>
+<p><strong><em>Selling Her Hand-made Jewelry at Farmers Market</em></strong></p>
+<p>Don’t let fear or self-doubt keep you stuck. Break it down: What do you need? Resources? A mentor? A community of like-minded women? Do the research, make a plan, and take the first step, no matter how small. Success doesn’t happen overnight, but consistency and courage will get you there. You are capable, brilliant, and powerful. So go ahead, follow that great idea, and watch it turn into something extraordinary!</p>
+<h3>Tip 9: Get Your Sleep</h3>
+<p>We hear it all the time: <em>Get more sleep!</em> Remember how happy and relieved Dorothy looked when she woke up at the end of the Wizard of Oz. Well, we don't want you to get knocked over the head by flying furniture from a cyclone or get to sleep by falling into a field of poppies, but we do encourage you to get some good deep sleep.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_079d3ed31193434f81a098fce4bc01c4~mv2.jpg" /></p>
+<p>Between work stress, family responsibilities, endless to-do lists, and the weight of the world, how realistic is that? Still, the truth remains, your body <strong>needs</strong> sleep just as much as it needs food and water. Chronic sleep deprivation has been linked to increased risks of heart disease, high blood pressure, obesity, depression, and even cognitive decline. For women, hormonal fluctuations throughout life, from pregnancy to menopause, can make sleep even more elusive, but that doesn't mean it should be ignored.</p>
+<p>So, what can you do? Create a nighttime routine, dim the lights, cut screen time before bed, and stick to a schedule. Try calming teas, white noise, or relaxation techniques like meditation and deep breathing. If sleep remains a struggle, don’t hesitate to consider a sleep study; conditions like sleep apnea or insomnia could be sabotaging your rest without you realizing it. Your energy, mental clarity, and overall well-being depend on quality sleep, so stop treating it as a luxury, it’s a necessity. Prioritize your rest and watch how everything else in your life improves.</p>
+<h3>Tip 10: Try Something New</h3>
+<p>Stepping outside of your comfort zone and trying something new can be a powerful way to reset your mind, body, and spirit. Whether it’s exploring a new wellness practice or deepening your connection to your body and the natural world, these experiences can be transformative. Here are a few unique ways to nourish yourself:</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_40e9a84d5a2f4f0ca96900ef16862eba~mv2.jpg" /></p>
+<p><strong><em>Being in Nature</em></strong></p>
+<ul>
+<li><strong>Forest Bathing (Shinrin-Yoku) </strong>– This Japanese practice isn’t about hiking or exercising but simply <strong>being in nature,</strong> walking slowly, breathing deeply, and fully absorbing the sights, sounds, and smells of the forest. Studies show that spending time among trees can lower blood pressure, reduce cortisol (the stress hormone), and boost the immune system.</li>
+<li><strong>Sound Bathing</strong> – Using vibrational sound therapy from instruments like gongs, singing bowls, and chimes, sound baths allow participants to enter a deep meditative state. The frequencies help calm the nervous system, reduce stress, and even promote better sleep. You don’t have to do anything, just lie down, listen, and let the waves of sound wash over you.</li>
+<li><strong>Group Yoga &amp; Facilitated Meditation</strong> – Moving your body through yoga postures or sitting in stillness during guided meditation in a group setting can provide both community support and personal growth. Whether you choose a gentle yin yoga class, a powerful vinyasa session, or a simple breathwork meditation, these practices enhance mental clarity, improve flexibility, and help regulate stress and anxiety.</li>
+<li><strong>No Meat Monday (or Any Day!) </strong>– Taking a break from meat even just once a week has both <strong>physical and environmental benefits</strong>. Eating more plant-based meals can lower cholesterol, reduce the risk of heart disease, and improve digestion. On a global scale, reducing meat consumption helps <strong>lower greenhouse gas emissions, conserve water, and reduce deforestation</strong>. Plus, it’s an opportunity to explore delicious new foods and creative, nutrient-rich meals.</li>
+</ul>
+<p>These holistic practices bring together <strong>community, self-care, and mindfulness</strong>, all of which contribute to <strong>better sleep, reduced stress, and improved overall health</strong>. If you’ve been feeling disconnected or overwhelmed, trying something new, whether it’s <strong>a calming sound bath, a rejuvenating forest walk, a fresh plant-based meal, or a collective meditation session</strong>, could be the key to revitalizing your mind and body. Step into a new experience, you might just find exactly what you’ve been needing.</p>
+<p>Share this message with a friend.</p>
+<hr />
+<p><strong>Cheryl Thompson, MSPHCo-Director, IAWH</strong></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on April 4, 2025 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.<br />Topics: Anxiety, Self-Care</p>
+    <div class="post-nav"><a class="prev" href="2025-03-12-empowered-women-enhancing-financial-and-wellness-journeys.html">&larr; Empowered Women: Enhancing Financial and Wellness Journeys</a><a class="next" href="2025-05-21-aging-forward-wellness-for-women-in-motion.html">Aging Forward: Wellness for Women in Motion &rarr;</a></div>
+    <p class="back"><a href="../2025.html">&larr; All 2025 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

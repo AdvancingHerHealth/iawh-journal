@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Navigating Breast Cancer: Radiation Indication and Genetic Test Accuracy | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive &nbsp;|&nbsp; Breast Cancer</p>
+    <h1 class="article-title">Navigating Breast Cancer: Radiation Indication and Genetic Test Accuracy</h1>
+    <p class="article-byline">Originally published <span>October 17, 2023</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_58d73534d5a64c67a04948c236b39ee0~mv2.jpeg" alt="Navigating Breast Cancer: Radiation Indication and Genetic Test Accuracy" /></div>
+  <div class="article-body">
+<p>Breast cancer treatment often involves a combination of therapies tailored to specific circumstances. Two critical aspects of breast cancer care are radiation therapy indications and genetic testing accuracy. This blog and short videos pulled from the IAWH-hosted webinar, “Breast Health, By Any Means Necessary,” with Dr. Geoffrey Ray, Radiation Oncology Specialist and Oncology Nurse Navigator Debra Rundles, are also included. View the entire webinar <a target="_blank" rel="noopener" href="https://youtu.be/Yukt5S3fzok">here</a>.</p>
+<h2><strong>Radiation Therapy Indication in Breast Cancer</strong></h2>
+<p>Radiation therapy plays a vital role in the treatment of breast cancer, and the decision to recommend radiation therapy depends on various factors:</p>
+<p>● Type and stage of breast cancer,</p>
+<p>● Tumor size,</p>
+<p>● Lymph node involvement, and</p>
+<p>● Other individual patient characteristics.</p>
+<h3><strong>Breast-conserving Surgery (Lumpectomy)</strong></h3>
+<p>A radiation oncologist may recommend radiation therapy if a woman undergoes breast-conserving surgery to remove the tumor (lumpectomy), which is an effort to ensure any remaining cancer cells in the breast are destroyed, reducing the risk of local recurrence. This surgical procedure preserves as much of the breast tissue as possible.</p>
+<h3><strong>Mastectomy</strong></h3>
+<p>In some cases, radiation therapy is still indicated after a mastectomy if there is a high risk of cancer returning. This decision depends on factors such as tumor size, lymph node involvement, and adverse features in the pathology report. Your doctor may suggest you have radiation therapy because you have cancer cells in the armpit (axilla) lymph nodes, cancer cells are seen close to the removed breast tissue, or the cancer is large (Cancer Research UK).</p>
+<p><a target="_blank" rel="noopener" href="https://www.cancercenter.com/community/blog/2021/09/lumpectomy-vs-mastectomy#:~:text=Lumpectomy%20surgery%20(also%20called%20breast,lymph%20nodes%20in%20the%20armpit).">Lumpectomy and Mastectomy</a> follow different procedures and yield different results. While every breast cancer patient can undergo a mastectomy, not every patient is eligible for a lumpectomy. During lumpectomies, an axillary lymph node dissection or a sentinel lymph node biopsy may be carried out to check if the cancer has spread to nearby lymph nodes. If the cancer has spread to nearby lymph nodes, radiation therapy targets the breast and the lymph node areas to eradicate residual cancer cells.</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=6npDtEbM0QQ">▶ Watch the video</a></p>
+<h3><strong>Reconstruction</strong></h3>
+<p>According to the National Breast Cancer Foundation (NBCF), "If you think you will opt for a breast reconstruction, you should speak with your medical team before you have the <a target="_blank" rel="noopener" href="https://www.nationalbreastcancer.org/lumpectomy">lumpectomy</a> or mastectomy, even if you plan to wait until later to have your breast reconstruction. More in-depth and well-researched information on this subject is found <a target="_blank" rel="noopener" href="https://www.nationalbreastcancer.org/breast-reconstruction/">here</a>. "Whether you undergo breast reconstruction, wear a prosthetic breast, or choose to embrace the changes you have experienced by allowing the breast removal to remain obvious, you should feel free to make whatever decision is right for you. The goal is to prevent the discomfort of unwanted change while enabling you to accept what has occurred and continue with your life." (NBCF, 2023)</p>
+<h2><strong>Genetic Testing Accuracy in Breast Cancer</strong></h2>
+<p>Genetic testing has revolutionized breast cancer care by providing valuable insights into an individual's risk of developing the disease. Tests like BRCA1 and BRCA2 genetic testing identify mutations in genes associated with a higher risk of breast and ovarian cancers. However, <a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/risk-prevention/genetics/genetic-testing-for-cancer-risk/understanding-genetic-testing-for-cancer.html">understanding genetic testing</a> and ensuring the accuracy of these tests is crucial. "BRCA" is an abbreviation for "BReast CAncer gene." BRCA1 and BRCA2 are two different genes that have been found to impact a person's chances of developing breast cancer.</p>
+<p>Genetic testing for breast cancer susceptibility has become highly reliable with advanced laboratory techniques and stringent quality control measures. According to cancer care Dr. Geoff Ray, Radiation Oncology Specialist, and Oncology Nurse Navigator Debra Rundles, the key is to choose a reputable testing laboratory and work with a qualified genetic counselor who will interpret your results accurately.</p>
+<p>Accurate genetic testing influences treatment decisions. For example, a positive BRCA mutation prompts women to consider preventive measures like risk-reducing surgeries or more frequent breast cancer screenings.</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=PNaaAnAOFTA">▶ Watch the video</a></p>
+<h3><strong>Familial Implications</strong></h3>
+<p>Genetic testing results also have implications for family members, and sometimes, genetic experts may suggest relatives undergo testing to assess their cancer risk, i.e., if a mutation is identified, which may raise the chance of being susceptible in the future. Radiation therapy indication and genetic testing accuracy are pivotal components of breast cancer management. An individualized treatment plan that considers the unique characteristics of the cancer and the patient's genetic profile guarantees effective treatment and improved outcomes.</p>
+<h3><strong>Resources</strong></h3>
+<p><a target="_blank" rel="noopener" href="https://www.cancercenter.com/community/blog/2021/09/lumpectomy-vs-mastectomy#:~:text=Lumpectomy%20surgery%20(also%20called%20breast,lymph%20nodes%20in%20the%20armpit).">Lumpectomies vs Mastectomies</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/types/breast-cancer/treatment/surgery-for-breast-cancer/breast-conserving-surgery-lumpectomy.html">Breast-Conserving Surgery</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cancer.org/cancer/risk-prevention/genetics/genetic-testing-for-cancer-risk/understanding-genetic-testing-for-cancer.html">Understanding Genetic Testing</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.nationalbreastcancer.org/what-is-breast-cancer/">National Breast Cancer Foundation, Inc.</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cancerresearchuk.org/">Cancer Research UK</a></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on October 17, 2023 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.<br />Topics: Breast Cancer, Breast Health, Genetic Testing, Radiation Treatment</p>
+    <div class="post-nav"><a class="prev" href="2022-11-03-your-medicine-can-cut-the-risk-of-dementia.html">&larr; Your Antihypertensive Medicine Can Cut Your Risk of Dementia</a><a class="next" href="2023-10-26-metastatic-cancer-and-triple-negative-breast-cancer-put-simply.html">Metastatic Cancer and Triple Negative Breast Cancer, Put Simply &rarr;</a></div>
+    <p class="back"><a href="../2023.html">&larr; All 2023 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

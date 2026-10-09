@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Staying Up to Date on COVID, Flu, RSV, and Childhood Vaccines | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Staying Up to Date on COVID, Flu, RSV, and Childhood Vaccines</h1>
+    <p class="article-byline">Originally published <span>September 28, 2025</span></p>
+  </div>
+  <div class="article-body">
+<p><img alt="A healthcare professional administers a vaccine to a masked patient, showcasing a critical moment in health and safety efforts." src="https://static.wixstatic.com/media/11062b_5fda4a987fe242ab8eefab855972ac51~mv2.jpg" /></p>
+<p><em>A healthcare professional administers a vaccine to a masked patient, showcasing a critical moment in health and safety efforts.</em></p>
+<p>As we head into another fall and winter season, vaccines remain one of the best ways to protect ourselves, our families, and our communities from serious illness. But with leadership changes at the Department of Health and Human Services (HHS) and new decisions about vaccine guidance, many people are left wondering: <em>What’s still recommended? What’s changed? And where can I find reliable information, I can trust?</em></p>
+<p>This IAWH brief clarifies what’s going on, highlights where guidance has shifted and points you toward evidence-based resources you can rely on - including professional societies that continue to provide steady, science and evidence-based guidance.</p>
+<hr />
+<h3>A new moment for vaccine guidance</h3>
+<p>With Robert F. Kennedy, Jr. now serving as HHS Secretary, the way federal vaccine recommendations are made is shifting. The Advisory Committee on Immunization Practices (ACIP) - the CDC’s panel that sets vaccine schedules, and the U.S. Preventive Services Task Force (USPSTF) are both under new oversight.</p>
+<p>Because of these changes, national vaccine policy can feel less clear, and states are playing a bigger role in determining access and eligibility. That means guidance may differ depending on where you live. To stay current, check both <a target="_blank" rel="noopener" href="http://Vaccines.gov">Vaccines.gov</a> and with your state health department.</p>
+<p>For evidence-based information outside of federal shifts, trusted sources include:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://health.clevelandclinic.org/vaccines-for-adults">Cleveland Clinic</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.mayoclinichealthsystem.org/topics/immunizations">Mayo Clinic</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/vaccines">Johns Hopkins Medicine</a></li>
+</ul>
+<p>Professional organizations like the <a target="_blank" rel="noopener" href="https://www.ama-assn.org/topics/vaccines-vaccinations-immunizations">American Medical Association</a> (AMA), <a target="_blank" rel="noopener" href="https://www.acponline.org/clinical-information/clinical-resources-products/adult-immunization">American College of Physicians</a> (ACP), <a target="_blank" rel="noopener" href="https://www.acog.org/news/news-releases/2025/08/acog-releases-updated-maternal-immunization-guidance-covid-influenza-rsv">American College of Obstetricians and Gynecologists</a> (ACOG), <a target="_blank" rel="noopener" href="https://www.aafp.org/family-physician/patient-care/prevention-wellness/immunizations-vaccines/immunization-schedules.html">American Academy of Family Physicians</a> (AAFP), and <a target="_blank" rel="noopener" href="https://www.aap.org/en/patient-care/immunizations/vaccination-recommendations-by-the-aap/">American Academy of Pediatrics</a> (AAP) continue to issue clear recommendations based on longstanding medical consensus.</p>
+<hr />
+<h3>Where things stand now: COVID, Flu, and RSV</h3>
+<h3>COVID-19 Vaccine &amp; COVID Booster</h3>
+<p><img alt="A COVID-19 vaccine vial." src="https://static.wixstatic.com/media/nsplsh_fa69b3d27c444480a74f96e61d106cec~mv2.jpg" /></p>
+<p><em>A COVID-19 vaccine vial.</em></p>
+<ul>
+<li>
+<p><strong>What is it? (quick refresher): </strong>COVID-19 is a virus that spreads through the air and ranges from mild cold-like illness to severe pneumonia, blood clots, and <strong>long COVID</strong>.</p>
+</li>
+<li>
+<p><strong>What does the COVID-19 vaccine do:</strong> The COVID-19 vaccine helps your immune system recognize the virus early, reducing your chance of getting severely sick, hospitalized, or dying - and continuing boosters helps maintain that protection as immunity wanes and variants evolve.</p>
+</li>
+</ul>
+<h3>What the science-based guidance says:</h3>
+<ul>
+<li>In <strong>2023–24 </strong>and again in <strong>2024–25</strong>, the CDC recommended <strong>updated COVID-19 vaccination for everyone ages 6 months and older</strong> to reduce hospitalizations and death. That universal recommendation was the basis for clinical practice and coverage. <a target="_blank" rel="noopener" href="https://www.cdc.gov/media/releases/2023/p0912-COVID-19-Vaccine.html">CDC+1</a></li>
+</ul>
+<h3></h3>
+<h3>Who should lean toward getting a booster now</h3>
+<ul>
+<li><strong>Adults 65+</strong>, and <strong>people of any age with chronic conditions </strong>(e.g., heart or lung disease, diabetes, kidney disease, immunocompromise). These groups have the <strong>highest risk</strong> for severe outcomes and stand to benefit most. <a target="_blank" rel="noopener" href="https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html">CDC</a></li>
+</ul>
+<p><img alt="A pregnant woman receives a vaccine at a healthcare facility, with a medical professional." src="https://static.wixstatic.com/media/nsplsh_906a4ec0b8c040508397fc647f0af2a8~mv2.jpg" /></p>
+<p><em>A pregnant woman receives a vaccine at a healthcare facility, with a medical professional.</em></p>
+<h3>“Original” vaccine vs. booster (how to think about it)</h3>
+<ul>
+<li><strong>If you’ve never been vaccinated </strong>(or are far behind): your clinician will discuss starting/finishing a <strong>primary series </strong>using the <strong>current 2025–26 formulation</strong> (it’s the same strain as the booster). <a target="_blank" rel="noopener" href="https://secure.medicalletter.org/TML-article-5121a">The Medical Letter</a></li>
+<li><strong>If you’re already vaccinated: </strong>talk with your clinician about getting a <strong>2025–26 booster dose </strong>under <strong>shared decision-making</strong>. <a target="_blank" rel="noopener" href="http://HHS.gov">HHS.gov</a></li>
+</ul>
+<hr />
+<h3>What changed (Sept 19, 2025):</h3>
+<ul>
+<li><strong>ACIP</strong> (the CDC committee) voted to change to the COVID vaccination schedule, making it a matter of shared clinical decision-making for everyone ages 6 months and older - i.e., you and your clinician/pharmacist decide based on your age, health conditions (risk), pregnancy, and exposure. ACIP emphasized the greatest benefit for adults 65+ and for people of any age with underlying conditions. <a target="_blank" rel="noopener" href="http://HHS.gov">HHS.gov</a></li>
+<li>This <strong>did not set a new minimum age</strong>—it kept <strong>≥6 months </strong>but changed the <strong>strength</strong> of the recommendation (from “everyone should” to “decide with your clinician”). <a target="_blank" rel="noopener" href="http://HHS.gov">HHS.gov</a></li>
+</ul>
+<h3>What medication is available if you get COVID:</h3>
+<p>If you get COVID, despite vaccination (or before you can get vaccinated), there are several medications that can help <em>reduce severity, hospitalizations, or death</em>. These are mostly for people at higher risk of complications. Examples include:</p>
+<ul>
+<li><strong>Paxlovid</strong> (nirmatrelvir + ritonavir) — an oral antiviral; when started early (within ~5 days of symptoms), it can sharply lower risk of severe disease/hospitalization. <a target="_blank" rel="noopener" href="https://www.yalemedicine.org/news/13-things-to-know-paxlovid-covid-19">Mayo Clinic+3Yale Medicine+3CDC+3</a></li>
+<li><strong>Molnupiravir</strong> (Lagevrio) — another oral antiviral, less potent than Paxlovid, used when Paxlovid can’t be used. <a target="_blank" rel="noopener" href="https://www.ama-assn.org/public-health/infectious-diseases/what-doctors-wish-patients-knew-about-covid-19-oral-antivirals">American Medical Association+2U.S. Food and Drug Administration+2</a></li>
+<li><strong>Remdesivir</strong> (Veklury) — intravenous antiviral used in certain moderate-to-severe cases. <a target="_blank" rel="noopener" href="https://www.mayoclinic.org/diseases-conditions/coronavirus/expert-answers/coronavirus-drugs/faq-20485627">Mayo Clinic+2Wisconsin Department of Health Services+2</a></li>
+</ul>
+<p><img alt="A doctor attentively listens and provides guidance during a patient consultation." src="https://static.wixstatic.com/media/621b05_e6876e6d59f0438d84df27ec05547570~mv2.png" /></p>
+<p><em>A doctor attentively listens and provides guidance during a patient consultation.</em></p>
+<p>These medications are <em><em><em>not substitutes</em> for vaccination — they are backup tools </em>after infection</em>, and timing is critical. For example, oral antivirals must be started early in the course to work best. <a target="_blank" rel="noopener" href="https://www.ama-assn.org/public-health/infectious-diseases/what-doctors-wish-patients-knew-about-covid-19-oral-antivirals">American Medical Association+2U.S. Food and Drug Administration+2</a></p>
+<p><strong>Discuss vaccine options with your physician.</strong></p>
+<hr />
+<h3>Influenza (Flu)</h3>
+<p>The flu is a contagious respiratory virus that can cause fever, cough, body aches, and fatigue. It spreads quickly and can be especially dangerous for older adults, young children, and people with chronic conditions.</p>
+<ul>
+<li><strong>Who:</strong> Everyone 6 months and older.</li>
+<li><strong>When:</strong> One dose each year; adults 65+ should ask about high-dose or adjuvanted versions.</li>
+</ul>
+<p>Source: <a target="_blank" rel="noopener" href="https://www.cdc.gov/flu/prevent/vaccines.htm">CDC – Flu Vaccine</a> • <a target="_blank" rel="noopener" href="https://www.ama-assn.org/topics/vaccines-vaccinations-immunizations">AMA Advocacy Update</a></p>
+<p><strong>Discuss vaccine options with your physician.</strong></p>
+<hr />
+<h3>RSV (Respiratory Syncytial Virus)</h3>
+<p>RSV usually causes cold-like symptoms, but in infants, older adults, and people with chronic heart or lung conditions, it can lead to pneumonia or hospitalization.</p>
+<ul>
+<li><strong>Who:</strong> Adults 75+; adults 50–74 with risk factors; pregnant women in their third trimester (to protect newborns); infants (through an antibody shot).</li>
+<li><strong>When: </strong>Adults receive a <strong>one-time dose</strong>; infants receive an <strong>antibody injection per RSV season</strong>.</li>
+</ul>
+<p>Sources: <a target="_blank" rel="noopener" href="https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/adults.html">CDC – RSV Guidance</a> • <a target="_blank" rel="noopener" href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-drug-prevent-rsv-babies-and-toddlers">FDA – Infant antibody approval</a> • <a target="_blank" rel="noopener" href="https://www.acog.org/news/news-releases/2025/08/acog-releases-updated-maternal-immunization-guidance-covid-influenza-rsv">ACOG Maternal Immunization Update</a></p>
+<p><strong>Discuss vaccine options with your physician.</strong></p>
+<hr />
+<h3>MMR/MMRV: what these vaccines protect against, and what changed (Childhood Vaccine Schedule)</h3>
+<p><strong>MMR </strong>protects against <strong>Measles, Mumps, and Rubella</strong>; <strong>MMRV </strong>also covers <strong>Varicella (chickenpox)</strong>.</p>
+<ul>
+<li><strong>Measles</strong>: high fever, cough, rash; can lead to pneumonia or brain swelling. Eliminated in the U.S. in 2000, but now resurging.</li>
+<li><strong>Mumps</strong>: swelling of jaw/cheeks, sometimes infertility or hearing loss.</li>
+<li><strong>Rubella</strong>: usually mild, but in pregnancy can cause miscarriage or birth defects. Eliminated in 2004, but at risk of return.</li>
+<li><strong>Varicella (chickenpox)</strong>: often mild but can cause serious infection, and shingles* later in life.</li>
+</ul>
+<p><img alt="A young child sits quietly on a medical examination table while a healthcare professional places a bandage after giving a vaccine. " src="https://static.wixstatic.com/media/nsplsh_0e4e5b9ad56d4364b408996f961daed1~mv2.jpg" /></p>
+<p><em>A young child sits quietly on a medical examination table while a healthcare professional places a bandage after giving a vaccine.</em></p>
+<p><strong>Before September 2025: </strong>The use of the <strong>MMRV combination vaccine for both doses </strong>at 12–15 months and 4–6 years was supported by <strong>evidence-based recommendations from leading medical societies</strong>, including the <strong>American Academy of Pediatrics (AAP) </strong>and the <strong>American Academy of Family Physicians (AAFP)</strong>. These recommendations emphasized the strong protection provided by the vaccine and the benefit of fewer injections for young children. Research showed MMRV to be safe and effective.</p>
+<h3>What has changed?</h3>
+<p>In September 2025, the new <strong>ACIP (heavily populated by anti-vaccine advocates) voted to stop recommending the MMRV combination shot for children under age 4. </strong>Instead, doctors are now advised to give<strong> separate MMR and varicella vaccines</strong> for the first dose at 12–15 months, resulting in more jabs. The overall schedule has <em>not</em> changed: two doses remain — one at <strong>12–15 months, </strong>and the second at<strong> 4–6 years.</strong></p>
+<h3>Who Should Get the MMR-V Vaccine?</h3>
+<ul>
+<li><strong>Who:</strong> All children (with catch-up vaccination available for older kids and adults who missed doses).</li>
+<li><strong>When:</strong> Two doses - 12–15 months and 4–6 years.</li>
+<li><strong>Note:</strong> MMRV may still be used for the second dose at school age.</li>
+</ul>
+<p><strong>Sources</strong>: <a target="_blank" rel="noopener" href="https://www.cidrap.umn.edu/childhood-vaccines/new-cdc-advisers-scale-back-recommendations-mmrv-vaccine-young-kids">CIDRAP coverage</a> • <a target="_blank" rel="noopener" href="https://www.cdc.gov/measles/data-research/index.html">CDC – Measles Data</a> • <a target="_blank" rel="noopener" href="https://publications.aap.org/aapnews/news/33401">AAP News</a></p>
+<h3>What is the relationship between Chickenpox and Shingles?*</h3>
+<p><strong>Chickenpox and shingles are caused by the same virus — varicella-zoster. </strong>After someone has chickenpox (or even after the chickenpox vaccine), the virus can stay dormant in the body and reappear years later as shingles, causing a painful rash and sometimes lasting nerve pain. That’s why adults <strong>age 50 and older</strong> are recommended to get the shingles vaccine: it strengthens immunity and lowers the risk of shingles and its complications, even if you’ve had chickenpox or the chickenpox vaccine in the past.</p>
+<p><strong>Discuss vaccine options with your physician.</strong></p>
+<h3>Closing Thoughts</h3>
+<p>Vaccine guidance may feel more complicated this year with new leadership at HHS and changes in how recommendations are made, but the core message remains steady: vaccines are one of the best tools we have to prevent serious illness and protect our families. COVID-19 boosters are now a matter of shared decision-making, flu shots continue to be recommended each year, RSV protection is available for the most vulnerable groups, and MMR/MMRV vaccines remain essential for children.</p>
+<p>For people living with chronic conditions, staying current on vaccines is especially important. The good news is that you don’t have to navigate this alone. Clinicians, pharmacists, and respected medical societies like the AMA, ACP, AAP, AAFP, and ACOG continue to provide clear, evidence-based guidance. By leaning on trusted resources and your own care team, you can make the best decisions for yourself and those you care for.</p>
+<p><em>As always, at IAWH, our goal is to share information that provides context and content to inform your discussions with your care provider, ultimately supporting your decision-making process</em>.</p>
+<hr />
+<p><strong>Cheryl Thompson, MSPH &amp;Janine E. Payne, MPHCo-Executive Directors</strong></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on September 28, 2025 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2025-09-28-iawh-brief-tylenol-acetaminophen-use-in-pregnancy-autism-what-women-need-to-know.html">&larr; IAWH Brief: Tylenol (Acetaminophen) Use in Pregnancy &amp; Autism — What Women Need to Know Now</a><a class="next" href="2025-10-28-the-masks-we-wear-mental-health-authenticity.html">The “Masks We Wear” -  Mental Health &amp; Authenticity &rarr;</a></div>
+    <p class="back"><a href="../2025.html">&larr; All 2025 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

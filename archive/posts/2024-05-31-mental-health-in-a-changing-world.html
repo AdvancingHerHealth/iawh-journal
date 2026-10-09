@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mental Health in a Changing World | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Mental Health in a Changing World</h1>
+    <p class="article-byline">Originally published <span>May 31, 2024</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_00601c97d63a4e21835ca6ab6cd16c64~mv2.png" alt="Mental Health in a Changing World" /></div>
+  <div class="article-body">
+<p><strong>How Can We Empower Pregnant Women and Cultivate Better Health Outcomes: We Are the Lifeline to Life?</strong></p>
+<p>Mental Health in a Changing World is the 2024 Mental Health Awareness Month theme. IAWH aims to help break the stereotypes and stigmas that plague the topic for everyone, but particularly those we serve—you. Women often prioritize the well-being of their families and friends but may overlook their self-care. Many new mothers are missing out on postpartum care.</p>
+<p><strong><em>IAWH trigger warning: Mentions of mental health distress, self-harm, and suicide in this and adjoining materials or links</em>.</strong></p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_2f1e6db97c8c4317976f67432c2a29ff~mv2.png" /></p>
+<p>When I gave birth to my first child (1989), I lived and worked in the United Kingdom, England, and therefore was afforded insurance through the National Health System. My OB/GYN referred me to a local midwifery service that came to my home and discussed "new mum" care, including breastfeeding, nutrition, and other topics related to caring for my son and myself. It was a wonderful experience and benefited me throughout motherhood.</p>
+<p>However, it was a rude awakening to return to the United States and realize little support post-pregnancy- that was in 1992. I was fortunate to have received such excellent support and guidance for my son, and I carried over what I’d learned to my daughter a few years later.</p>
+<p>According to <a target="_blank" rel="noopener" href="http://Healthline.com">Healthline.com</a>, the U.S. focuses primarily on the birth plan and nursery, while postpartum-positive countries (Finland, Spain, the Netherlands, and the U.K.), incorporate postpartum teaching and preparation into antepartum care – we need to enhance our focus to align our care accordingly.</p>
+<p><strong>So why do women in the United States suffer from such high maternal mortality rates?</strong> The increased risk of pregnancy complications leading to maternal death can be attributed to factors such as advanced maternal age, disparities in healthcare, and the prevalence of chronic health conditions. However, data from state committees [on health] suggests that about 84% of pregnancy-related deaths are preventable. In particular, "Women with pregnancy-related health complications may not always recognize the early warning signs of their illness. And even if they do, the providers may miss or cause a delay in diagnosis, which can lead to more serious or even deadly consequences," says <a target="_blank" rel="noopener" href="https://www.yalemedicine.org/specialists/monique-rainford">Monique Rainford, MD</a>﻿, a Yale Medicine obstetrician-gynecologist.</p>
+<p>The National Women's Health Network (NWHN) states women with "Comorbidities and Chronic Health Conditions that are linked to obesity or chronic conditions such as hypertension, diabetes, or heart disease <a target="_blank" rel="noopener" href="https://www.cdc.gov/reproductivehealth/maternalinfanthealth/pregnancy-complications.html">are at a higher risk for complications</a> during pregnancy and childbirth. These conditions can lead to gestational diabetes, preeclampsia, and other serious health issues, especially if they are not being properly monitored and treated. Women with <a target="_blank" rel="noopener" href="https://tcf.org/content/commentary/new-fibroids-policy-must-be-part-of-the-black-maternal-health-agenda/">fibroids</a> may also experience pregnancy complications or struggle with fertility. The NWHN outlines systemic reasons for poor outcomes here in 6 Underlining Causes of the Maternal Health Crisis in the U.S. So, we know it's a complicated web, and discrimination, inequity, and racism are factors leading to these poor maternal health outcomes.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_287f7d8280c542258ff917dd21535cfa~mv2.png" /></p>
+<p><strong>Postpartum Depression (PPD)</strong></p>
+<p>According to the Office on Women's Health, Postpartum depression (PPD) is a common mental health condition that can affect anyone. While it can feel hard or lonely, healing from PPD is possible. About 1 in 8 women report symptoms of PPD in the year after giving birth. Everyone experiences PPD differently. Feeling sad, anxious, or overwhelmed are some of the signs. You might not feel connected to your baby, or you might not feel love or care for the baby. If these feelings last longer than two weeks, you may have PPD.</p>
+<p><strong>What Type of Pregnancy Doctor Is Right for You?</strong></p>
+<p>In search for an immediate solution, the article <a target="_blank" rel="noopener" href="https://www.whattoexpect.com/pregnancy/your-health/prenatal-care-doctors">What Type of Pregnancy Doctor Is Right for You</a> is comprehensive and may help women or birthing individuals search for the proper care. In addition, the role of an ObGyn Hospitalist, also called a laborist, "performs the dedicated role of providing care to pregnant women during labor and delivery in a hospital setting."</p>
+<p>According to <a target="_blank" rel="noopener" href="https://obhg.com/">The Ob Hospitalist Group</a>, "Even with a due date, you can never truly predict when the baby will arrive. Many women may see the same provider from the beginning of their pregnancy journey to delivery and post-pregnancy. However, based on timing, that may only sometimes be possible. In these instances, an ObGyn hospitalist can provide their expertise. Since they focus solely on labor and delivery, they're especially agile in adapting to quickly changing conditions that can accompany a delivery. See the infographic that shares critical facts and figures at a glance – including the most common causes of preventable maternal death and how health systems, clinicians, advocates, and agencies can work together to address the issue.</p>
+<p>Explore the resources below using the drop-down arrows <strong>(&gt;)</strong> to find help in your area or to learn more about mental health.</p>
+<h3><strong>Connect to Community Resources</strong></h3>
+<h3><a target="_blank" rel="noopener" href="https://www.nami.org/">National Alliance on Mental Illness</a></h3>
+<p>NAMI, the National Alliance on Mental Illness, is a mental health organization dedicated to building better lives for the millions of Americans affected by mental illness.</p>
+<h3><a target="_blank" rel="noopener" href="https://988lifeline.org/">988 Suicide &amp; Crisis Lifeline</a></h3>
+<p>The 988 Suicide &amp; Crisis Lifeline is a 24-hour, toll-free, confidential suicide prevention hotline available to anyone in suicidal crisis or emotional distress.</p>
+<h3><a target="_blank" rel="noopener" href="http://www.postpartum.net/">Postpartum Support International</a></h3>
+<p>This organization seeks to increase awareness among the public and professional communities about the emotional changes women experience during pregnancy and postpartum.</p>
+<h3><strong>Learn More about Mental Health</strong></h3>
+<h3><a target="_blank" rel="noopener" href="https://www.womenshealth.gov/TalkingPPD">Office on Women's Health – Talking Postpartum Depression</a></h3>
+<p>Talking Postpartum Depression</p>
+<h3><a target="_blank" rel="noopener" href="https://www.nichd.nih.gov/ncmhep/initiatives/moms-mental-health-matters/moms">Moms' Mental Health Matters</a></h3>
+<p>This initiative is designed to educate consumers and healthcare providers about who is at risk for depression and anxiety during and after pregnancy, the signs of these problems, and how to get help.</p>
+<h3><a target="_blank" rel="noopener" href="http://www.nimh.nih.gov/health/publications/depression-in-women/index.shtml">Depression in Women</a></h3>
+<p>Learn about depression in women (including causes, symptoms, and treatment) from the National Institute of Mental Health.</p>
+<h3><a target="_blank" rel="noopener" href="https://www.womenshealth.gov/mental-health/mental-health-conditions/depression">Depression Fact Sheet</a></h3>
+<p>This fact sheet from the Office of Women's Health discusses the types, signs, and treatment of depression.</p>
+<h3><a target="_blank" rel="noopener" href="https://www.cdc.gov/mentalhealth/index.htm">Mental Health</a></h3>
+<p>Content provided by the CDC's Mental Health website includes links to tools and resources and <a target="_blank" rel="noopener" href="https://www.cdc.gov/mentalhealth/stress-coping/index.html">information on coping with COVID-19</a>.</p>
+<h3><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4rR6tBXRLJI">Feeling Sad After Your Baby is Born?</a></h3>
+<p>This video from the American Academy of Pediatrics encourages parents who are sad or anxious to talk with their pediatricians.</p>
+<h3>Additional Resources</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.henryford.com/blog/2024/02/pregnancy-self-advocacy-tips-for-black-women">Henry Ford Health Pregnancy Health Advocacy Tips for Black Women</a></li>
+<li><strong>Office of Women's Health Talking Postpartum Depression (PPD) | a Group Discussion: Five women from</strong> different backgrounds have one thing in common: they decided to get help for PPD. Watch them discuss their PPD experiences together and the ways they found support at <a target="_blank" rel="noopener" href="http://www.womenshealth.gov/talkingPPD">www.womenshealth.gov/talkingPPD</a>.</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=s5HeqSCeKMs">Talking Postpartum Depression | Shawlette's Story – Full-Length</a>(Office on Women's Health)</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.usnews.com/opinion/articles/2024-05-14/american-hospitals-are-failing-expectant-mothers-midwives-offer-a-solution">American Hospitals are Failing Expectant Mothers: Midwives Offer a Solution</a></p>
+</li>
+<li>
+<p><strong>Feeling Ignored is Never Good for Our Health: </strong>If you've ever felt you've been ignored, you're not alone. These stories gathered by <a target="_blank" rel="noopener" href="https://www.today.com/health/women-speak-out-about-feeling-dismissed-doctors-t153701">NBC's Today Show are</a> like the band of sisterhood that lock arm in arm and confirm, "It's <strong>not all in our heads." They inspire us to use our voices, especially about our health.</strong> Women speak out about how doctors dismissed their pain, downplayed their symptoms, or sent them to a psychiatrist, and you should, too.</p>
+</li>
+</ul>
+<hr />
+<p>Janine E. Payne, MPH</p>
+<p>Co-Executive Director</p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on May 31, 2024 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2024-05-23-menopause-out-loud.html">&larr; Menopause Out Loud</a><a class="next" href="2024-06-17-this-heat-can-kill-you-what-s-your-plan.html">This Heat Can Kill You. What&#x27;s Your Plan? &rarr;</a></div>
+    <p class="back"><a href="../2024.html">&larr; All 2024 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

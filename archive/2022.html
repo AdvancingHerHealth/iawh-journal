@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2022 Archive | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .page-wrapper { max-width: 1000px; margin: 0 auto; }
+  .journal-masthead { background: var(--plum-deep); padding: 3.4rem 3rem 2.8rem; text-align: center; border-bottom: 4px solid var(--gold); }
+  .masthead-eyebrow { font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
+  .masthead-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 3.2rem; font-weight: 400; color: var(--white); line-height: 1.05; }
+  .masthead-rule { width: 48px; height: 1px; background: var(--gold); margin: 1rem auto; opacity: 0.7; }
+  .masthead-tagline { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; font-style: italic; font-weight: 300; color: rgba(255,255,255,0.82); }
+  .year-bar { padding: 1.6rem 1.6rem 0.4rem; }
+  .list-section { padding: 2rem 2rem 3rem; }
+  .list-inner { max-width: 720px; margin: 0 auto; }
+  .entry { display: flex; gap: 1.2rem; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: padding-left 0.2s ease; }
+  .entry:hover { padding-left: 0.4rem; }
+  .entry:hover .entry-title { color: var(--plum); }
+  .thumb { flex: 0 0 104px; height: 78px; background: linear-gradient(135deg, var(--plum) 0%, var(--navy) 100%); overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .entry-date { font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+  .entry-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 500; color: var(--text); line-height: 1.25; }
+  .entry-meta { font-size: 0.68rem; color: var(--gold); letter-spacing: 0.06em; margin-top: 0.3rem; }
+  .list-foot { padding: 0 1.6rem 2.6rem; }
+  .back { text-align: center; font-size: 0.8rem; margin-top: 1.4rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .journal-masthead { padding: 2.6rem 1.4rem 2.2rem; }
+    .masthead-title { font-size: 2.3rem; }
+    .list-section { padding: 1.4rem 1.2rem 2.4rem; }
+    .thumb { flex-basis: 76px; height: 64px; }
+    .entry-title { font-size: 1.12rem; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="page-wrapper">
+  <div class="journal-masthead">
+    <p class="masthead-eyebrow">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="masthead-title">2022</h1>
+    <div class="masthead-rule"></div>
+    <p class="masthead-tagline">17 articles published in 2022</p>
+  </div>
+  <div class="year-bar"><div class="year-nav"><a href="2026.html">2026</a><a href="2025.html">2025</a><a href="2024.html">2024</a><a href="2023.html">2023</a><span class="current">2022</span><a href="2021.html">2021</a><a href="2020.html">2020</a></div></div>
+  <div class="list-section">
+    <div class="list-inner">
+      <a class="entry" href="posts/2022-11-03-your-medicine-can-cut-the-risk-of-dementia.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_55ccabd1e386431d9edfee5b50c9e104~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">November 3, 2022</div>
+          <div class="entry-title">Your Antihypertensive Medicine Can Cut Your Risk of Dementia</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-07-09-mini-is-maximizing-her-health.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_b5d47ac25c024bdab25631a4a2334b1a~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">July 9, 2022</div>
+          <div class="entry-title">Mini is Maximizing Her Health</div>
+          <div class="entry-meta">HERStories, Hypertension, SMBP, Women&#x27;s Health</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-07-01-all-heart-health-and-hope-catching-up-with-carlotta.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_5cb449ac483d4852b57f0cea56825370~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">July 1, 2022</div>
+          <div class="entry-title">All Heart, Health, and Hope - Catching Up with Carlotta</div>
+          <div class="entry-meta">HERStories, Hypertension, Mental Health, SMBP</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-06-24-life-partners-in-love-and-health.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_2df1bb65e89341658b68d52f9a341945~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">June 24, 2022</div>
+          <div class="entry-title">Partners in Life, Love, and Health</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-06-16-finding-her-balance-physical-mental-and-spiritual-health.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_48bd9d4ae8b4401bbc37fee594c1b9f5~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">June 16, 2022</div>
+          <div class="entry-title">Finding Her Balance - Physical, Mental, and Spiritual Health</div>
+          <div class="entry-meta">HERStories, Women&#x27;s Health, Hypertension, SMBP</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-06-15-quinn-s-story-one-method-of-relief-from-difficult-periods.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_fc5355414ddc4682a03faaeb888ebf5b~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">June 15, 2022</div>
+          <div class="entry-title">Quinn&#x27;s Story - One Method of Relief from Difficult Periods</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-06-09-sisters-on-a-mission-hypertension-management-and-control.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_c0523d01dfc545a2b4b90a951ec9feb5~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">June 9, 2022</div>
+          <div class="entry-title">Sisters on a Health Mission – Hypertension Management and Control</div>
+          <div class="entry-meta">HERStories, Women&#x27;s Health, Hypertension, SMBP</div>
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-05-20-let-s-get-moving.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_419ac3195b2e4a91ada5c99dd94b0f0f~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">May 20, 2022</div>
+          <div class="entry-title">Let’s Get Moving!</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-05-20-extreme-heat-events-what-are-they-and-how-to-stay-healthy-during-one.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_2c47d3ed0ea14286bf303bd59e3d2800~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">May 20, 2022</div>
+          <div class="entry-title">Extreme Heat Events: What Are They and How to Stay Healthy During One</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-05-05-the-link-between-menopause-and-high-blood-pressure.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_41889d11873e43cca2a22f9976ce0ee5~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">May 5, 2022</div>
+          <div class="entry-title">The Link Between Menopause and High Blood Pressure</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-05-05-stroke-risk-in-women-how-can-we-lower-it.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_ca98e95eda144811aac1e41ffaff8f86~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">May 5, 2022</div>
+          <div class="entry-title">Stroke Risk in Women: How Can We Lower It?</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-04-21-not-all-plant-based-foods-are-created-equal.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_ff3fa717c8d4445488e5090aa5588fc1~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">April 21, 2022</div>
+          <div class="entry-title">Not all Plant-Based Foods are Created Equal</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-04-06-eating-a-variety-of-plant-and-animal-proteins-may-reduce-the-risk-of-hypertensio.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_ae97f1541a9f47e786959c441d335638~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">April 6, 2022</div>
+          <div class="entry-title">Eating a Variety of Plant and Animal Proteins May Reduce the Risk of Hypertension</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-03-24-consuming-a-plant-based-diet-for-your-health.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_0beb43d4018f48f7bd35f9746c9ba920~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">March 24, 2022</div>
+          <div class="entry-title">Consuming a Plant-Based Diet for Your Health</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-03-10-stress-may-increase-the-risk-for-stroke-in-patients-treated-for-hypertension.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_a79227ff67544b24ac3dc7f179110b1f~mv2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">March 10, 2022</div>
+          <div class="entry-title">Stress May Increase the Risk for Stroke in Patients Treated for Hypertension</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-02-23-controlling-blood-pressure-can-reduce-the-risk-of-cognitive-decline.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/11062b_f5ab5669f0494541a7f3c0a37f710353~mv2_d_5000_3335_s_4_2.jpg" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">February 23, 2022</div>
+          <div class="entry-title">Controlling Blood Pressure Can Reduce the Risk of Cognitive Decline</div>
+          
+        </div>
+      </a>
+      <a class="entry" href="posts/2022-02-04-can-better-sleep-help-regulate-blood-pressure.html">
+        <div class="thumb"><img src="https://static.wixstatic.com/media/621b05_bca36b884a9b4c4a83633ba331a71341~mv2.png" alt="" loading="lazy" /></div>
+        <div>
+          <div class="entry-date">February 4, 2022</div>
+          <div class="entry-title">Can Better Sleep Help Regulate Blood Pressure?</div>
+          
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="list-foot">
+    <div class="year-nav"><a href="2026.html">2026</a><a href="2025.html">2025</a><a href="2024.html">2024</a><a href="2023.html">2023</a><span class="current">2022</span><a href="2021.html">2021</a><a href="2020.html">2020</a></div>
+    <p class="back"><a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">&larr; Back to the IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Making the “Connection”: Women Reducing Loneliness and Social-Isolation | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Making the “Connection”: Women Reducing Loneliness and Social-Isolation</h1>
+    <p class="article-byline">Originally published <span>September 1, 2020</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_388f2ea3b0bb4695bfa7b543e9493f3f~mv2.jpg" alt="Making the “Connection”: Women Reducing Loneliness and Social-Isolation" /></div>
+  <div class="article-body">
+<p><strong>By Janine Payne</strong></p>
+<p>It seems that loneliness and social isolation have been topics that are rocking the airwaves, especially since COVID-19, and that’s understandable. However, I recently read an article about a woman in the United Kingdom who in 2017 tossed out a question to her friends and followers on social media asking if they’d ever experienced loneliness. The response was overwhelming, with many people acknowledging and sharing brief examples of personal loneliness; several people commented that for whatever reason, they didn’t really talk about it with anyone. That was three years ago.</p>
+<p>Today, I’ve started to delve into this topic even more since learning that our organization would host Dr. Alice Chen, an internal medicine physician to talk about loneliness and social isolation (<a target="_blank" rel="noopener" href="http://www.iawh.org/events">learn more and register here</a>). Dr. Chen &amp; Dr. Vivek Murthy co-wrote an article, “Coronavirus Could Cause a Social Recession” (The Atlantic), and says that “The pandemic could trigger something else: a <em>social recession</em>—a fraying of social bonds that further unravel the longer we go without human interaction. This can have harmful effects on people’s mood, health, ability to work and learn, and sense of community.”</p>
+<p>That’s not all, they also said that young adults share a large burden of loneliness and social isolation, and “More adults in the United States struggle with loneliness than smoke or have diabetes. And this is not unique to the United States. Australia, the United Kingdom, Denmark, the Netherlands, and a growing list of other countries, recognizing a profound and widespread problem, have started anti-loneliness initiatives to educate the public and promote community-building practices.”</p>
+<p>So, I thought – wait, hold on – not on our watch!  The Institute for the Advancement of Women’s Health (IAWH) is <em>designed </em>to address health issues – that’s why we’re here. Women can serve as change agents to help each other get through loneliness and social-isolation – but through platforms (yes, online) where we can gather, share, say “Hello From the Other Side” (come on Adele) with each other. We can learn from women in Africa, India, China, UK, Denmark, Canada, and other countries what they are doing to combat loneliness…surviving, and not just during the pandemic, but moving forward. Period.</p>
+<p>Take this example of how connections can help save lives:</p>
+<p><em>Dixon Chibanda, MD, is one of 12 psychiatrists in Harare, Zimbabwe with a population of more than 16 million and founder of the</em> <a target="_blank" rel="noopener" href="https://www.friendshipbenchzimbabwe.org/"><em>Friendship Bench program</em></a><em>. He trained elderly Zimbabwean women to deliver evidence-based talk therapy on benches under trees to bring care and hope to those in need. Dr. Chibanda is passionate about connecting with ordinary people in ways that improve their lives using simple but effective programs that can be carried out by non-specialists or professionals. He likes to think outside the box as he explores ways of helping people with conditions such as depression, PTSD and ADHD.</em></p>
+<p><strong>In case you didn’t know…humans are the key to helping other humans.</strong> </p>
+<p>Listen, I know how it feels to be encouraged by a text from a friend that includes a Bible scripture, quote from Brene Brown, Maya Angelou (yep, she’s one of my favorites too), or a matter of fact line from a poem by Nikki Giovanni has shifted my mood or outlook. The smallest intervention can help. Dr. Chen says, “Loneliness is more than a bad feeling. It harms our health, our ability to perform, and our sense of fulfillment.”</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_fd4ecbaf97514149a5c3bc2b544b2d64~mv2.png" /></p>
+<p>I don’t know about you, but I believe that a Woman’s Secret Weapon is even more potent when she’s being authentic – that’s when the connection with others, happens. We know it when we feel it, see it, read it or hear it!</p>
+<p><strong>IAWH is calling for a Movement of Connection Driven by Women from Around the World. Four (4) designed spaces are shared below to help us connect with one another. Choose the one (or all) that fits your style of communicating. Let’s Do THIS! Connect 1</strong>: Share your health journey by visiting <a target="_blank" rel="noopener" href="http://www.iawh.org/herstory"><strong>HerStory</strong></a> on our website - whether it’s your story about how you fought cancer, survived <strong><em>_</em></strong> (you fill in the blank, girl!), or to demonstrate how you overcome feelings of loneliness/anxiety/isolation, the hobby or activity that you adopted that helped you cope after a relationship ended - there is a story in each of us that can help inspire strength and the ability to <em>move on</em> for another woman. Submit a short video or written story <a target="_blank" rel="noopener" href="http://www.iawh.org/herstory">here</a>!</p>
+<p><strong>Connect 2</strong>: “<a target="_blank" rel="noopener" href="https://www.facebook.com/groups/641263496827081/">IAWH Connection</a>” is our private Facebook group. The name says it all. It’s a place to chill, share and gain encouragement, show pics of your walking path, you cooking (eh-hem, but also sharing your recipe), or what you do in your chill time that makes you feel like you. IAWH will be in the housekeeping things tidy but adding interesting and inspiring content regularly. <a target="_blank" rel="noopener" href="https://www.facebook.com/groups/641263496827081/">Visit here and join the group</a>.</p>
+<p><strong>Connect 3</strong>: Sign up to <a target="_blank" rel="noopener" href="https://www.iawh.org/copy-of-fundraising"><strong>Volunteer with IAWH</strong></a>. You can be from anyplace from around the world, and perhaps you desire to be featured as one of our guest bloggers, serve as a guest speaker at one of our Saturday Morning Ladies Lounge <a target="_blank" rel="noopener" href="http://www.iawh.org/events">events</a>, or help us design more events to get women involved in helping other women fulfill their fullest health and life potential. These are ideas – you tell us how you’d like to <a target="_blank" rel="noopener" href="https://www.iawh.org/copy-of-fundraising">Get Involved</a>.</p>
+<p><strong>Connect 4</strong>. In the near future, IAWH will host a focus group chat via Zoom about other ways to build a network of women to connect, and you are invited to be a part of it. Sign up to <a target="_blank" rel="noopener" href="https://www.iawh.org/copy-of-fundraising">STAY INFORMED</a> by receiving our newsletter, and we will notify you of the day and time. We need your voice and ideas on how to reduce loneliness, social isolation, and work to help make women stronger all around the world.</p>
+<p><strong>With your help, IAWH will make small steps all around the world with an aim to encourage shared learning between women for one goal:  Better Health, Connectivity, and Wellness.Remember to register for our upcoming event on Loneliness and Social Isolation: </strong><a target="_blank" rel="noopener" href="http://www.iawh.org/Events"><strong>www.IAWH.org/Events</strong></a><strong>. See you there!References:</strong> </p>
+<p><a target="_blank" rel="noopener" href="https://www.theatlantic.com/ideas/archive/2020/03/america-faces-social-recession/608548/">Murthy, Vivek H., Chen, Alice T. Coronavirus Could Cause a Social Recession. The Atlantic. 2020.</a></p>
+<p><a target="_blank" rel="noopener" href="https://jamanetwork.com/journals/jama/fullarticle/2594719">Chibanda D, Weiss HA, Verhey R, et al. Effect of a Primary Care–Based Psychological Intervention on Symptoms of Common Mental Disorders in Zimbabwe: A Randomized Clinical Trial. JAMA. 2016;316(24):2618–2626. doi:10.1001/jama.2016.19102</a></p>
+<hr />
+<p><img alt="" src="https://static.wixstatic.com/media/dbc884_46c2dca90f0544109baa745078118523~mv2.jpg" /></p>
+<p><strong>Janine E. Payne, M.P.H</strong>., is Co-Executive Director of IAWH | Get more IAWH news <a target="_blank" rel="noopener" href="https://www.iawh.org/about">via email</a> and follow IAWH on <a href="www.instagram.com/Advancingherhealth">Instagram</a>, <a href="www.Twitter.com/IAWH_HerHealth">Twitter</a>, <a href="www.linkedin.com/Advancingherhealth">LinkedIn</a>, <a href="www.facebook.com/Advancingherhealth">Facebook </a>and <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC6SdzaYa28W47M3aKu0b6OQ">Youtube </a></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on September 1, 2020 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.<br />Topics: Loneliness, Isolation, Women&#x27;s Health, Mental Health, Connection, Social, Social Isolation, Chen, Murthy</p>
+    <div class="post-nav"><a class="prev" href="2020-07-28-let-s-keep-writing.html">&larr; Let&#x27;s Keep Writing...</a><a class="next" href="2020-12-06-let-s-talk-about-lupus-symptoms-diagnosis-and-treatment.html">Let&#x27;s Talk About Lupus: Symptoms, Diagnosis, and Treatment &rarr;</a></div>
+    <p class="back"><a href="../2020.html">&larr; All 2020 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

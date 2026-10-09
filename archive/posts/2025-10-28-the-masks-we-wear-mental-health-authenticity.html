@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The “Masks We Wear” -  Mental Health &amp; Authenticity | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive &nbsp;|&nbsp; Mental Health</p>
+    <h1 class="article-title">The “Masks We Wear” -  Mental Health &amp; Authenticity</h1>
+    <p class="article-byline">Originally published <span>October 28, 2025</span></p>
+  </div>
+  <p class="hero-video"><a href="https://youtu.be/KGvW4QIN9QU" target="_blank">&#9654; Watch the featured video</a></p>
+  <div class="article-body">
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=KGvW4QIN9QU">▶ Watch the video</a></p>
+<p><em>A conversation with Marita Golden (2022)</em></p>
+<p>The spookiest day of spooky season is upon us, Halloween, with trick or treating, scary movies, fall winds that hiss and howl. It is the perfect time of year to reflect on a scary question many women carry silently: what mask am I wearing?</p>
+<p>As we deck doorsteps with jack-o-lanterns and ghosts, we are reminded of the masks we don not just on Halloween, but every day: the “I’m fine” face, the S - cape of the ever-strong woman, the silence when what we may really be feeling is fatigue, fear, or frustration.</p>
+<p>What makes this season even more meaningful is that October has also become a time of heightened visibility for mental health. The first full week of October is nationally known as <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mental_Illness_Awareness_Week">Mental Illness Awareness Week</a>, but I have noticed that because much of the nation is reeling from sudden upheaval, loss of sure footing, and a foreboding uncertainness, mental wellness and wellbeing articles and self-caring reminders are being observed the entire month.</p>
+<p>The myth of the ever-caped superwoman, the idea that you must always be strong, always hold it together, never show weakness, is particularly pervasive among Black women. In her book <a target="_blank" rel="noopener" href="https://www.storycircle.org/book_review/an-interview-with-marita-golden-author-of-the-strong-black-woman/"><em>The Strong Black Woman: How a Myth Endangers the Physical and Mental Health of Black Women</em></a>, Marita Golden explores how this “superwoman” narrative wears on the body and soul. It becomes armor at first, but over time that armor can feel like prison. Add to that the concept of <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Weathering_hypothesis"><em>weathering</em></a>, the theory that chronic exposure to discrimination, stress, and socioeconomic hardship accelerates biological aging, especially among Black women. This is how we begin to understand how invisible burdens turn into measurable harm.</p>
+<p><img alt="Spooky Season - Jack-o-lanterns, ghosts, full moon, and masks." src="https://static.wixstatic.com/media/621b05_1dfe4116de6746a49fd9024b40e729ba~mv2.jpg" /></p>
+<p><em>Spooky Season - Jack-o-lanterns, ghosts, full moon, and masks.</em></p>
+<p>When we wear the mask of “strong” while the world is shifting beneath our feet, from socio-political displacement, economic uncertainty, and climate emergencies (as I write this a category 5 hurricane is in the Atlantic hoping to make believers out of nay-sayers) to renewed debates over reproductive rights, it’s no wonder the toll is heavy. Since January 2025, we’ve witnessed sweeping policy changes that threaten bodily autonomy, proposed rollbacks in public-health protections, and volatile global events that compound stress and insecurity. The social weather is turbulent, and the stress shows up in our hearts, blood pressure, and mental well-being.</p>
+<h3>Scary Truths</h3>
+<p>While we talk about spookiness and costumes this time of year, let’s get real: the real frights in women’s health aren’t ghosts, they’re for real and structural.</p>
+<h3>The Real Monsters in the Room</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cdc.gov/womens-health/features/maternal-mortality.html"><strong>Maternal mortality &amp; birth outcomes</strong></a>: Black women in the U.S. are still at significantly higher risk of dying from pregnancy-related causes than white women. The long shadow of weathering and bias in care continues to haunt every delivery room.</li>
+<li><a target="_blank" rel="noopener" href="https://www.theguardian.com/society/2023/feb/02/womens-pain-dismissed-medical-bias"><strong>Dismissed pain &amp; symptoms</strong></a>: Women, especially women of color, who report pain, fatigue, or troubling symptoms are more likely to be minimized or misdiagnosed. The expectation to be stoic and “strong” discourages self-advocacy and reinforces inequity.</li>
+<li><a target="_blank" rel="noopener" href="https://wtop.com/dc/2022/03/dc-native-activist-author-discusses-black-womens-mental-health-in-new-book/"><strong>Mental health and hidden burdens</strong></a>: The superwoman myth often silences stress and trauma, even as data show maternal and post-partum mental-health crises worsening nationwide.</li>
+<li><a target="_blank" rel="noopener" href="https://www.themedicalcareblog.com/weathering-and-its-impacts-on-health/"><strong>Cumulative wear (weathering) and social stressors</strong></a>: The body doesn’t forget. Chronic stress from caregiving, discrimination, and environmental injustice alters hormones, immunity, and vascular health—aging us from the inside out.</li>
+<li><a target="_blank" rel="noopener" href="https://www.nytimes.com/2025/03/14/us/womens-rights-health-policy-changes.html"><strong>Socio-political shifts since January 2025</strong></a>: The year’s legislative turbulence, around reproductive access, environmental rollbacks, and public-health funding, has only intensified these pressures, disproportionately affecting women already stretched thin.</li>
+</ul>
+<p>These aren’t metaphorical monsters, they are measurable, urgent, and addressable.</p>
+<h3>When “Strong” Becomes a Disguise</h3>
+<p>Masking may feel protective. Saying “I’ve got this” may sound like strength. Yet when we suppress fatigue, grief, or pain, our bodies respond with hypertension, insomnia, autoimmune flares, and chronic illness. The mask becomes a disguise for symptoms screaming for attention.</p>
+<p>What if we treated it differently? This Halloween, and beyond, what if the bravest costume we wore was no costume at all? What if our most radical act was to shed the mask and take off the cape?</p>
+<p>Imagine bringing the same creativity and courage we pour into Halloween into reclaiming our health and our truth. Imagine saying: <em>I am not invisible. My pain matters. My rest is sacred. My story belongs.</em> To unmask is not weakness, it is radical self-care and collective resistance.</p>
+<h3>A Call to Unmask</h3>
+<p>The invitation this spooky season isn’t just to face what frightens us, but to recognize that sometimes the scariest thing is silence, the silence of unmet needs because no one knows that we even have a need, unspoken pain because we never tell anyone we are in pain, or delayed care, because we suffered in silence, thinking somehow that self-denial is noble; or that the silent suffering makes you stronger, or even putting yourself last, while you tend to everyone else’s needs makes you a good partner, parent, or friend. Taking off the mask can feel vulnerable, but it is also a form of allowing yourself and those around you know who you are. It is how to make visible what has been ignored.</p>
+<p><img alt="We wear the mask and the superwoman cape." src="https://static.wixstatic.com/media/621b05_963419a5895e472385efb40b95536a08~mv2.png" /></p>
+<p><em>We wear the mask and the superwoman cape.</em></p>
+<p>Imagine bringing the same energy and creativity we pour into Halloween into re-imagining our health narratives and the systems that serve us. What if we asked ourselves: <em>What masks am I wearing? What am I tolerating? What’s wearing me down? </em>What if we said out loud: I<em> am not invisible. My pain matters. My rest is sacred. My story belongs</em>.</p>
+<p>Here are some small steps to start unmasking</p>
+<ul>
+<li><strong>Schedule the check-up/mammogram/wellness visit</strong> you’ve been postponing, whether it’s physical, mental, or reproductive. Prevention and awareness are the antidotes to neglect.</li>
+<li><strong>Let’s be honest with our providers</strong>: name your symptoms, your stressors, your family history. Tell them you’d like them to listen to you. This transparency is a step toward changing the culture of dismissal that too often surrounds women’s health.</li>
+<li><strong>Share your story</strong> with another woman, a family member, friend, or trusted group. You are not alone, and each story shared makes space for another truth to emerge.</li>
+<li><strong>Advocate and hold space</strong>: talk with your community, contact policymakers, and support organizations pushing for equity in women’s health. Every voice adds weight to the demand for justice.</li>
+<li><strong>Reflect on the mask</strong>: ask yourself, <em>When do I wear the “I’m fine” mask – at home, in the office, at church? What would happen if I removed it?</em></li>
+</ul>
+<p><strong>Reflection Prompts</strong></p>
+<ul>
+<li>What masks do I wear most days, caregiver, professional, mother, partner, constant fixer, and how might those masks impact my body, mind, and spirit?</li>
+<li>What ongoing stressors, social, economic, relational, might be quietly wearing me down, not just draining my weeks but aging my body?</li>
+<li>What is one small act of unmasking I commit to this season, book the appointment, talk about it, rest without apology, ask for help?</li>
+</ul>
+<p>This season let’s turn down the volume on fear and turn up our courage: to unmask, to witness, to demand better for our bodies, our minds, our lives. Because the greatest power doesn’t always lie in the cape—it often lies in putting it gently aside and saying, <em>“My story. My body. My truth.”</em></p>
+<h3>Additional Resources</h3>
+<ul>
+<li>
+<p>Research on the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Weathering_hypothesis">weathering hypothesis</a> and its relationship to racial and gender health disparities.</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://youtu.be/KGvW4QIN9QU">IAWH’s Interview with Marita Golden</a>.</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.storycircle.org/book_review/an-interview-with-marita-golden-author-of-the-strong-black-woman/">Marita Golden’s work</a> on dismantling the superwoman myth.</p>
+</li>
+<li>
+<p>National data on <a target="_blank" rel="noopener" href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2834318">maternal mental health trends</a> and systemic inequities.</p>
+</li>
+</ul>
+<hr />
+<p><strong>Cheryl J. Thompson, MSPHCo-Executive Director</strong></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on October 28, 2025 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.<br />Topics: Unmasking Truths, Mental Wellness, Authentic Living</p>
+    <div class="post-nav"><a class="prev" href="2025-09-28-staying-up-to-date-on-covid-flu-rsv-and-childhood-vaccines.html">&larr; Staying Up to Date on COVID, Flu, RSV, and Childhood Vaccines</a><a class="next" href="2025-11-28-prioritize-your-health-essential-screenings-for-women-40-85-especially-when-life.html">Prioritize Your Health: Essential Screenings for Women 40–85, Especially When Life Feels Overwhelming &rarr;</a></div>
+    <p class="back"><a href="../2025.html">&larr; All 2025 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

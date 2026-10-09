@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Let&#x27;s Shift the Energy! | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">Let&#x27;s Shift the Energy!</h1>
+    <p class="article-byline">Originally published <span>April 4, 2024</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/f4a2eb10b3154a8a8c1bcda2e37e94c0.jpg" alt="Let&#x27;s Shift the Energy!" /></div>
+  <div class="article-body">
+<p>Can you believe it's April already? One third of this year is already behind us. While the air is literally full of pollen, my car and everything in the yard is covered in a soft powdery pea green, this season represents the birth of new possibilities, new growth, change, and fresh starts. How are you feeling this Spring? Are you willing and able to position yourself to learn something new, to embrace new opportunities, to focus on your health and wellness?</p>
+<p><strong>April Health and Wellness Focus</strong></p>
+<p>This month there is so much to get smarter about on the wellness calendar, starting out with <strong>Sexually Transmitted Infection (STI) Awareness</strong>. Did you know that over the last 10 years the rates and the number of cases of some STIs are silently rising in the U.S.? This is across all age groups. You can expect to learn more about this and how to prevent the spread of STIs from IAWH throughout the month.</p>
+<p>During the month of April, every year, we celebrate <strong>National Minority Health Month</strong>, a time to raise awareness about the health disparities that persist among racial and ethnic minority populations. The theme for this year's observance is "Be the Source for Better Health: Improving Health Outcomes Through Our Cultures, Communities, and Connections," emphasizing the importance of cultural competence in healthcare and the power of community to foster better health outcomes.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_71ac44a5bd544b529ef4ba5f569a1d4b~mv2.jpg" /></p>
+<p>April also marks <strong>Stress Awareness Month</strong>. This is a big one. It was established in 1992 to highlight the dangers of stress and to promote effective coping strategies. In today's world, stressors are all around us driven by situations that take root in our immediate space and the worry and angst driven by circumstances way beyond our control, but still have an impact on our psychological health. Large-scale stressors like foreign wars, innocent casualties of war, and famine, anxiety induced by high-profile legal trials and election season wall to wall coverage on 24-hour news networks can cause and trigger invisible stress. These things coupled with everyday pressures like job insecurity, family issues and conflicts with friends, financial worries, and health challenges can take a significant toll on mental and physical health. The Centers for Disease Control and Prevention (CDC) reports that 12.5% of adults experience regular feelings of worry, nervousness, or anxiety, while 5.0% suffer from feelings of depression. These statistics underscore the need for comprehensive strategies to manage stress and promote mental well-being. Since the onset of the COVID-19 pandemic in 2020, depression, anxiety, and loneliness continue to linger even today.</p>
+<p><strong>Let's Shift the Energy!</strong></p>
+<p>In response to these challenges, the Institute for the Advancement of Women’s Health (IAWH) is extending an open invitation to join us in exploring healing processes that complement traditional Western medicine. Beginning this month and continuing throughout the year, we will delve into the practices of reiki, acupuncture, forest bathing, and sound bathing. These virtual sessions offer a deep dive into alternative therapies, providing a platform to learn from certified and experienced practitioners, dispel myths, and experience the benefits firsthand.</p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_05fa38b6b51d46c3b43b38f61bd9b509~mv2.jpg" /></p>
+<p>We believe in the transformative power of integrative medicine and the role it plays in overall healing. By combining conventional treatments with evidence-based complementary therapies, we can address health holistically, considering the mind, body, and spirit.</p>
+<p>Join us on this journey of discovery and empowerment. Tell your friends and family. Let's embrace the vibrant spirit of April, a time for growth and renewal, and commit to being the source of better health for ourselves and our communities. Here's to a month filled with hope, healing, and the joy of Spring. Let's shift the energy!</p>
+<p>Cheryl Thompson, MSPH</p>
+<p>Co-Director</p>
+<hr />
+<p><strong>Sources</strong>:</p>
+<p>U.S. Department of Health and Human Services: <a target="_blank" rel="noopener" href="https://www.hhs.gov/national-minority-health-month/index.html">https://www.hhs.gov/national-minority-health-month/index.html</a>)</p>
+<p>CDC Mental Health FastStats: <a target="_blank" rel="noopener" href="https://www.cdc.gov/nchs/fastats/mental-health.htm">https://www.cdc.gov/nchs/fastats/mental-health.htm</a>)</p>
+<p>Mayo Clinic Press: <a target="_blank" rel="noopener" href="https://mcpress.mayoclinic.org/living-well/a-holistic-approach-to-integrative-medicine/">https://mcpress.mayoclinic.org/living-well/a-holistic-approach-to-integrative-medicine/</a>)</p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on April 4, 2024 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2024-03-13-just-the-facts-ma-am-everything-you-need-to-know-about-colorectal-cancer-colon.html">&larr; Just the Facts, Ma&#x27;am – “Everything” You Need to Know About Colorectal Cancer (Colon)</a><a class="next" href="2024-04-11-are-we-prepared-for-the-resurgence-of-syphilis.html">Are We Prepared for the Resurgence of Syphilis? &rarr;</a></div>
+    <p class="back"><a href="../2024.html">&larr; All 2024 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>

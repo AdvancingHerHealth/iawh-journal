@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How&#x27;s Your Health? | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum: #4A1942; --plum-deep: #35102f; --plum-light: #f5eef4;
+    --gold: #C9A84C; --gold-light: #e2c97e; --gold-pale: #faf3e0;
+    --navy: #1B2A4A; --cream: #F8F5F0; --white: #ffffff;
+    --text: #2a2a2a; --muted: #6b6b6b; --rule: rgba(74,25,66,0.12);
+  }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; }
+  .site-nav { background: var(--plum-deep); border-bottom: 2px solid var(--gold); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+  .nav-brand { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: 0.04em; }
+  .nav-links { display: flex; gap: 1.6rem; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.82); text-decoration: none; }
+  .nav-links a.current { color: var(--gold); }
+  .page-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .year-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .year-nav a, .year-nav span { font-size: 0.72rem; letter-spacing: 0.12em; padding: 0.45rem 0.9rem; border: 1px solid var(--rule); color: var(--plum); text-decoration: none; background: var(--white); }
+  .year-nav a:hover { border-color: var(--gold); }
+  .year-nav span.current { background: var(--plum); color: var(--gold-light); border-color: var(--plum); }
+  @media (max-width: 600px) { .site-nav { padding: 0 1rem; } .page-footer { padding: 1.6rem 1.4rem; } }
+
+  .article-wrapper { max-width: 780px; margin: 0 auto; }
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+  .hero img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .hero-video { padding: 1.2rem 3rem 0; font-size: 0.8rem; }
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p, .article-body li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: 1.2rem; }
+  .article-body h1, .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+  .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--plum); margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  .article-body a { color: var(--plum); }
+  .article-body img { display: block; margin: 1.2rem auto 0.4rem; }
+  .article-body p img { display: inline-block; margin: 0.4rem; vertical-align: top; max-width: calc(50% - 0.8rem); }
+  .article-body p img:only-child { display: block; margin: 1.2rem auto 0.4rem; max-width: 100%; }
+  .article-body p em:only-child { display: block; text-align: center; font-family: 'DM Sans', Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .article-body ul, .article-body ol { margin: 0.8rem 0 1.2rem 1.4rem; }
+  .article-body li { margin-bottom: 0.4rem; }
+  .article-body blockquote { border-left: 3px solid var(--gold); padding: 0.4rem 1.2rem; margin: 1.6rem 0; }
+  .article-body blockquote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); }
+  .article-body hr { border: none; height: 1px; background: var(--rule); margin: 2rem 0; }
+  .article-body table { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: 0.88rem; }
+  .article-body th, .article-body td { border: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .archive-note { border-top: 1px solid var(--rule); margin-top: 2.5rem; padding-top: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
+  .post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.8rem; }
+  .post-nav a { color: var(--plum); text-decoration: none; max-width: 48%; }
+  .post-nav .next { text-align: right; margin-left: auto; }
+  .back { font-size: 0.8rem; margin-top: 1.6rem; }
+  .back a { color: var(--plum); }
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .hero-video { padding: 1rem 1.4rem 0; }
+    .article-body p img { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="https://www.iawh.org">IAWH Health</a>
+    <div class="nav-links">
+      <a href="https://www.iawh.org">Home</a>
+      <a class="current" href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">Health Journal</a>
+    </div>
+  </nav>
+<div class="article-wrapper">
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; From the Archive</p>
+    <h1 class="article-title">How&#x27;s Your Health?</h1>
+    <p class="article-byline">Originally published <span>March 3, 2026</span></p>
+  </div>
+  <div class="hero"><img src="https://static.wixstatic.com/media/621b05_7082c73db1ff4e9c9a86e8cb0ed92057~mv2.png" alt="How&#x27;s Your Health?" /></div>
+  <div class="article-body">
+<p><strong><em>We are the evidence — not the anecdote.</em></strong></p>
+<p><em>Black History Month AND Heart Health Month ended a few days ago. But the story of Black women’s heart health in America does not end with the calendar. It continues, as it always has, in waiting rooms and in doctor’s offices and in community circles, in the bodies of women who have been underserved, under-researched, and under-informed for generations. This piece is a few days late and overdue by decades at the same time.</em></p>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_7082c73db1ff4e9c9a86e8cb0ed92057~mv2.png" /></p>
+<p>Picture this. You're sitting on the exam table. The blood pressure cuff tightens. The number comes registers high, again. The provider barely mentions anything about it, writes a prescription, maybe adds a second medication to one you're already taking.</p>
+<p>What you do not get is an explanation, not a real one. You are not told how the medication they have prescribed actually works inside your body; what it is doing to your blood pressure at the cellular level; what side effects to watch for, or whether they will resolve on their own or signal something that needs attention. You are not told how long you will be on the medication, whether it is for life or something that might change with lifestyle changes. You are not offered alternatives. There are structured programs, community-based monitoring, nutrition coaching, and physical activity strategies that research shows can meaningfully reduce blood pressure, alongside medication. Nobody mentions them during your appointment. You leave with a prescription and a poorly photocopied handout about sodium, and a follow-up in three months.</p>
+<p>This, is not care. This is management. And for Black women, who face higher rates of uncontrolled hypertension <strong>even when already medicated</strong>, the gap between management and care is exactly where the real damage accumulates.</p>
+<table>
+<thead>
+<tr>
+<th>50% HYPERTENSION IN BLACK WOMEN Nearly 50% of Black women in the United States have high blood pressure, the highest rate of any demographic group in the country. That is not a statistic at a distance. That is the woman in the next pew, the colleague down the hall, the friend you text every morning, the mother you call on Sundays. Source: Virani SS et al. “Heart Disease and Stroke Statistics — 2023 Update.” Circulation. 2023;147:e93–e621. American Heart Association.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>The Cluster That Nobody Names All at Once</h2>
+<p>Hypertension rarely travels alone. For many women, and particularly for Black women, it arrives as part of a cluster of chronic conditions that reinforce one another, share common roots in stress and inflammation, and compound in ways that a single fifteen-minute appointment cannot adequately address. Women deserve to have these connections named, in plain language, by people who have the time to explain them.</p>
+<blockquote></blockquote>
+<h5><strong>🩸  </strong>TYPE 2 DIABETES <strong>— 60% higher risk</strong></h5>
+<p>Black adults are 60% more likely to be diagnosed with Type 2 diabetes than white adults. Diabetes and hypertension together significantly elevate cardiovascular and kidney disease risk, yet the two conditions are routinely managed separately in clinical settings.</p>
+<h5><strong>🫀  </strong>HIGH CHOLESTEROL —<strong> 58% of Black women affected</strong></h5>
+<p>More than half of Black women have high cholesterol or are on lipid-lowering therapy. High LDL combined with uncontrolled blood pressure accelerates arterial stiffening, increasing stroke and heart attack risk at younger ages than in other populations.</p>
+<h5><strong>⚖️  </strong>OVERWEIGHT OR OBESITY<strong> — 57% prevalence</strong></h5>
+<p>Black women have the highest rates of obesity of any group in the United States. Excess weight raises blood pressure, worsens insulin resistance, and increases inflammation. Stress hormones from chronic activation also promote weight gain, particularly around the abdomen.</p>
+<hr />
+<p>Consider what happens when hypertension, type 2 diabetes, and obesity are present in the same body at the same time. Each condition worsens the others. Hypertension strains the kidneys, and kidney dysfunction raises blood pressure further. Insulin resistance promotes weight gain, and excess weight increases cardiovascular load. Chronic inflammation, the biological signature of prolonged stress, runs underneath all three, a slow fire that no single prescription is designed to put out. Black women are disproportionately managing all three simultaneously, often without a care team that has ever looked at the full picture in one room.</p>
+<p>This is not a failure of individual women to manage their health. It is a failure of design. When the same woman is told by her cardiologist to reduce sodium, by her endocrinologist to lose weight, and by her primary care physician to manage stress, with no one coordinating those conversations, and no one asking what her life actually looks like, the advice does not resonate. It dissipates. She leaves each appointment with more to do and less clarity about how to do it. The cluster that nobody names all at once is also, too often, the cluster that nobody treats all at once. Most primary care providers treat each condition separately rather than treating the whole person.</p>
+<h3>What IAWH Knows That the Data Is Still Catching Up To</h3>
+<p>In 2022, IAWH ran two cohorts of a community-based hypertension control program. There was no hospital system behind the effort, no pharmaceutical sponsor, no clinical trial infrastructure. What existed was a group of women, an OMRON Bluetooth blood pressure monitor, evidence-based curriculum, grounded in American Heart Association and CDC Target BP frameworks, and expert faculty from Johns Hopkins School of Nursing, Tulane School of Medicine, Howard University, and George Washington University.</p>
+<p>What participants received went far beyond what any clinic visit had offered them. They got real explanations of how their medications work, what the numbers on the cuff actually mean, and what lifestyle changes the research supports alongside or instead of medication escalation. They received virtual learning sessions led by clinicians who spoke plainly and stayed to answer every question. They received individual coaching that looked at their whole lives, not just their readings. They walked together, counted steps together, completed community-based challenges, and built relationships that made accountability feel like care rather than surveillance.</p>
+<p>The results were measurable. Seventy-seven percent of participants reduced their systolic blood pressure. The average reduction among those who improved was 12.9 mmHg, a change clinically equivalent to adding a second antihypertensive medication. The most dramatic result was a woman who moved from 163 to 119 mmHg over six months. Most participants who enrolled were already on antihypertensive medication and still had uncontrolled blood pressure when they arrived. Medication alone was not the missing piece. <strong>Community, knowledge, and sustained support were.</strong></p>
+<table>
+<thead>
+<tr>
+<th>77% IAWH PROGRAM OUTCOMES · COHORTS 1 &amp; 2 · 2022 of participants reduced their systolic blood pressure over six months. Average reduction among improvers: 12.9 mmHg, equivalent to a second antihypertensive medication. Results held at the six-month follow-up. Community-based care, done right, changed their numbers.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The Institute for the Advancement of Women's Health (IAWH) was built on the belief that Black women deserve more than the medicine this country has historically been willing to give them. Not just treatment, but attention. Not just diagnosis but understanding. Not just survival, but the kind of sustained, relational care that sees a whole woman and not just a cluster of symptoms. That belief is what drives our work and it is what will drive what comes next.</p>
+<p>We are not done with this conversation. More opportunities to learn, to ask questions, to walk and talk in community with other women who are navigating these same bodies and these same systems are coming. So, if this article stirred something in you, that feeling is worth following. Share this with your sister, your mother, your friend who keeps saying she's fine but whose blood pressure you've been quietly worrying about. The heart that has carried so much deserves to be cared for too. We are here for that work, and we are honored to do it with you.</p>
+<hr />
+<h2></h2>
+<p><img alt="" src="https://static.wixstatic.com/media/621b05_7e14c95c9f314d3db25e1f19555f2c91~mv2.jpg" /></p>
+<h2>Books for Every Woman’s Library</h2>
+<table>
+<thead>
+<tr>
+<th>Medical Apartheid: The Dark History of Medical Experimentation on Black Americans from Colonial Times to the Present Harriet A. Washington · 2006 The most comprehensive history of medical experimentation on Black Americans ever written. Washington documents how the U.S. medical establishment used Black bodies as research subjects while withholding the benefits of that research. Essential reading for understanding why distrust of the medical system is not irrational. It is historically earned.</th>
+<th>Under the Skin: The Hidden Toll of Racism on American Lives and on the Health of Our Nation Linda Villarosa · 2022 New York Times journalist Linda Villarosa draws on decades of research and reporting to show how racism, not race, is making Black Americans sick and dying young. One of the most important health equity books of the past decade. Rigorous, readable, and impossible to put down or dismiss.</th>
+<th>The Immortal Life of Henrietta Lacks Rebecca Skloot · 2010 The story of the Black woman whose cancer cells changed medicine forever, told through the lens of her family, who learned about her contribution decades after the fact and never benefited from it. Part science, part biography, and a complete reckoning with medical ethics, consent, and race.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Sources &amp; References</h3>
+<ol>
+<li>
+<p>Virani SS et al. “Heart Disease and Stroke Statistics — 2023 Update.” Circulation. 2023;147:e93–e621. American Heart Association.</p>
+</li>
+<li>
+<p>CDC. “National Diabetes Statistics Report.” National Center for Chronic Disease Prevention and Health Promotion, 2022.</p>
+</li>
+<li>
+<p>CDC National Center for Health Statistics. “Obesity and Overweight.” NCHS Data Brief No. 474, 2023.</p>
+</li>
+<li>
+<p>Geronimus AT, Hicken M, Keene D, Bound J. “Weathering and Age Patterns of Allostatic Load Scores Among Blacks and Whites in the United States.” American Journal of Public Health. 2006;96(5):826–833.</p>
+</li>
+<li>
+<p>Jones CP. “Levels of Racism: A Theoretic Framework and a Gardener’s Tale.” American Journal of Public Health. 2000;90(8):1212–1215.</p>
+</li>
+<li>
+<p>CDC Office of Minority Health and Health Equity. “Health Disparities Among Racial and Ethnic Minorities.” <a target="_blank" rel="noopener" href="http://cdc.gov/minorityhealth">cdc.gov/minorityhealth</a>. 2023.</p>
+</li>
+<li>
+<p>Washington HA. Medical Apartheid. Doubleday, 2006.</p>
+</li>
+<li>
+<p>Villarosa L. Under the Skin. Doubleday, 2022.</p>
+</li>
+<li>
+<p>Skloot R. The Immortal Life of Henrietta Lacks. Crown Publishers, 2010.</p>
+</li>
+<li>
+<p>IAWH Internal Program Evaluation Data. Hypertension Control Program, Cohorts 1 &amp; 2. 2022–2023.</p>
+</li>
+</ol>
+<p><strong><em>This article is for educational purposes only and does not constitute medical advice. Please consult your healthcare provider for guidance specific to your health situation.</em></strong></p>
+    <p class="archive-note">This article first appeared on the IAWH Health blog on March 3, 2026 and is preserved here as part of the IAWH Health Journal archive. Information reflects what was known at the time of publication. This article is for general education and is not medical advice.</p>
+    <div class="post-nav"><a class="prev" href="2026-01-27-you-re-not-losing-your-mind-you-re-just-buffering.html">&larr; You&#x27;re Not Losing Your Mind, You’re Just Buffering.</a></div>
+    <p class="back"><a href="../2026.html">&larr; All 2026 articles</a> &nbsp;|&nbsp; <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">IAWH Health Journal Archive</a></p>
+  </div>
+  <div class="page-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+      <a href="https://iawhhealth.substack.com">Substack</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+</div>
+  <script>
+    window.addEventListener('load', function () {
+      window.scrollTo(0, 0);
+      if (window.parent) { window.parent.postMessage({ scrollTo: 0 }, '*'); }
+    });
+    function notifyHeight() {
+      var h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,
+                       document.body.offsetHeight, document.documentElement.offsetHeight);
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function () { notifyHeight(); setTimeout(notifyHeight, 500); setTimeout(notifyHeight, 1500); });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') { new ResizeObserver(notifyHeight).observe(document.body); }
+  </script>
+</body>
+</html>
