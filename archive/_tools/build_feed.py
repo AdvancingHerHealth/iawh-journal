@@ -63,5 +63,6 @@ def write(name, files, title):
 
 
 posts = sorted((f for f in os.listdir(os.path.join(ROOT, 'posts')) if f.endswith('.html')), reverse=True)
-write('feed.xml', posts, 'IAWH Health Journal Archive')
+# The test post was already imported to Substack on 2026-10-09, so the full feed leaves it out.
+write('feed.xml', [p for p in posts if p != TEST_POST], 'IAWH Health Journal Archive')
 write('feed-test.xml', [TEST_POST], 'IAWH Health Journal Archive (test)')
