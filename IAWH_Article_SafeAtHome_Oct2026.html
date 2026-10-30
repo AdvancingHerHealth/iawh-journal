@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Do You Feel Safe at Home? What Your Heart Already Knows | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum:      #4A1942;
+    --plum-deep: #35102f;
+    --gold:      #C9A84C;
+    --gold-light:#e2c97e;
+    --navy:      #1B2A4A;
+    --cream:     #F8F5F0;
+    --white:     #ffffff;
+    --text:      #2a2a2a;
+    --muted:     #6b6b6b;
+  }
+  html { overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  .article-wrapper { max-width: 780px; margin: 0 auto; background: var(--cream); }
+
+  /* HEADER */
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+
+  /* HERO IMAGE - full bleed, dreamy */
+  .hero-placeholder {
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(160deg, #35102f 0%, #4A1942 45%, #1B2A4A 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .hero-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,168,76,0.1) 0%, transparent 70%);
+  }
+  .hero-placeholder-label {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(226,201,126,0.75);
+    text-align: center;
+    padding: 0.8rem 1.6rem;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(201,168,76,0.25);
+  }
+  .hero-caption {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.68rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    padding: 0.6rem 3rem;
+    background: var(--cream);
+  }
+
+  /* BODY */
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); margin-bottom: 1.2rem; }
+  .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+
+  /* INLINE FULL-BLEED IMAGE */
+  .inline-image-wrap { margin: 2rem -3rem; overflow-x: hidden; }
+  .inline-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inline-placeholder span {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 1px dashed rgba(74,25,66,0.15);
+  }
+  .inline-caption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.68rem; color: var(--muted); font-style: italic; text-align: center; padding: 0.5rem 3rem 1.5rem; }
+
+  /* FLOAT IMAGE */
+  .float-right { float: right; width: 220px; margin: 0.4rem 0 1rem 1.8rem; }
+  .float-placeholder {
+    width: 220px;
+    height: 240px;
+    background: linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .float-placeholder span { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; padding: 0.8rem; }
+  .float-caption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; color: var(--muted); font-style: italic; text-align: center; margin-top: 0.3rem; }
+
+  /* PULL QUOTE */
+  .pull-quote { border-left: 3px solid var(--gold); padding: 0.6rem 1.2rem; margin: 1.8rem 0; }
+  .pull-quote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); line-height: 1.55; margin-bottom: 0; }
+
+  /* BULLET LIST */
+  .article-body ul { list-style: none; margin: 0.8rem 0 1.2rem; padding: 0; }
+  .article-body ul li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.72; color: var(--text); padding: 0.45rem 0 0.45rem 1.4rem; position: relative; border-bottom: 1px solid rgba(74,25,66,0.06); }
+  .article-body ul li:last-child { border-bottom: none; }
+  .article-body ul li::before { content: ''; position: absolute; left: 0; top: 0.88em; width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  /* SOURCES */
+  .sources-section { border-top: 1px solid rgba(74,25,66,0.12); margin-top: 2.5rem; padding-top: 1.5rem; }
+  .sources-label { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin-bottom: 0.8rem; }
+  .sources-section p { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.76rem; line-height: 1.65; color: var(--muted); margin-bottom: 0.4rem; }
+  .sources-section a { color: var(--plum); }
+
+  /* FOOTER */
+  .article-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .clearfix::after { content: ''; display: table; clear: both; }
+
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .article-footer { padding: 1.6rem 1.4rem; }
+    .hero-placeholder { height: 280px; }
+    .inline-image-wrap { margin: 1.5rem -1.4rem; }
+    .inline-placeholder { height: 220px; }
+    .float-right { float: none; width: 100%; margin: 0 0 1.2rem 0; }
+    .float-placeholder { width: 100%; height: 200px; }
+  }
+
+  /* WIDTH AND OVERFLOW FIX */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  * { max-width: 100%; }
+  img { max-width: 100%; height: auto; }
+</style>
+<style>
+  .qa-q { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.98rem !important; font-weight:500; color:#4A1942 !important; line-height:1.6 !important; margin:1.8rem 0 0.6rem !important; }
+  .qa-q strong, .qa-a strong { font-weight:600; }
+  .qa-a strong { color:#4A1942; font-family:'DM Sans', Arial, sans-serif; font-size:0.92rem; }
+  .intro { font-style:italic; color:#4a4a4a !important; }
+  .glance { background:#ffffff; border-left:3px solid #C9A84C; padding:1.4rem 1.6rem; margin:2.2rem 0; }
+  .glance-label { font-family:'DM Sans', Arial, sans-serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:#4A1942; margin-bottom:0.6rem; font-weight:500; }
+  .glance ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.9rem !important; }
+  .about { border-top:1px solid rgba(74,25,66,0.12); margin-top:2.2rem; padding-top:1.4rem; }
+  .about p { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.86rem !important; line-height:1.65 !important; color:#4a4a4a !important; }
+  .note-small { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.78rem !important; color:#6b6b6b !important; font-style:italic; }
+  .recipe-meta { display:flex; gap:2rem; flex-wrap:wrap; border-top:1px solid rgba(74,25,66,0.12); border-bottom:1px solid rgba(74,25,66,0.12); padding:0.9rem 0; margin:0 0 1.6rem; }
+  .recipe-meta div { font-family:'DM Sans', Arial, sans-serif; font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; color:#6b6b6b; }
+  .recipe-meta span { display:block; font-family:'Cormorant Garamond', Georgia, serif; font-size:1.4rem; letter-spacing:0; text-transform:none; color:#4A1942; }
+  ol.steps { list-style:none; counter-reset:step; margin:0.8rem 0 1.2rem; padding:0; }
+  ol.steps li { counter-increment:step; font-family:Georgia, serif; font-size:1rem; line-height:1.72; color:#2a2a2a; padding:0.6rem 0 0.6rem 2.6rem; position:relative; border-bottom:1px solid rgba(74,25,66,0.06); }
+  ol.steps li::before { content:counter(step); position:absolute; left:0; top:0.6rem; width:1.7rem; height:1.7rem; border-radius:50%; background:#4A1942; color:#e2c97e; font-family:'DM Sans', Arial, sans-serif; font-size:0.8rem; display:flex; align-items:center; justify-content:center; }
+  .back { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.8rem !important; margin-top:2rem !important; }
+</style>
+<style>
+  .img-pair { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:2rem 0 0.4rem; }
+  .img-slot { aspect-ratio:4 / 3; background:linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .img-slot img { width:100%; height:100%; object-fit:cover; display:block; }
+  .img-slot span { font-family:'DM Sans', Arial, sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b6b6b; text-align:center; padding:1rem; border:1px dashed rgba(74,25,66,0.18); margin:1rem; line-height:1.6; }
+  .pair-caption { font-family:'DM Sans', Arial, sans-serif; font-size:0.68rem; color:#6b6b6b; font-style:italic; text-align:center; margin:0 0 1.8rem; }
+  .stat-band { display:grid; grid-template-columns:repeat(3,1fr); background:#35102f; margin:1.8rem 0 0.5rem; }
+  .stat-band div { padding:1.3rem 0.8rem; text-align:center; }
+  .stat-band b { display:block; font-family:'Cormorant Garamond', Georgia, serif; font-size:2.6rem; font-weight:500; color:#e2c97e; line-height:1; }
+  .stat-band small { display:block; font-family:'DM Sans', Arial, sans-serif; font-size:0.78rem; line-height:1.45; color:#F8F5F0; margin-top:0.5rem; }
+  .stat-note { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.74rem !important; color:#6b6b6b !important; margin-bottom:1.6rem !important; }
+  .portrait { background:#ffffff; border-left:3px solid #C9A84C; padding:1.1rem 1.4rem; margin:0 0 1rem; }
+  .portrait p { margin:0 !important; }
+  .portrait-name { font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.35rem !important; color:#4A1942 !important; margin-bottom:0.3rem !important; }
+  .help { background:#ffffff; border-top:3px solid #C9A84C; padding:1.6rem 1.8rem 0.8rem; margin:2.4rem 0 0; }
+  .help h2 { margin-top:0 !important; }
+  .article-body p.help-label { font-family:'DM Sans', Arial, sans-serif; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#4A1942; font-weight:500; margin:1.4rem 0 0.2rem; }
+  .help a, .article-body a { color:#4A1942; }
+  .help ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.92rem !important; }
+  .refs ol { margin:0 0 0 1.1rem; }
+  .refs li { font-family:'DM Sans', Arial, sans-serif; font-size:0.76rem; line-height:1.65; color:#6b6b6b; margin-bottom:0.5rem; }
+  @media (max-width:600px) {
+    .img-pair { grid-template-columns:1fr; }
+    .stat-band { grid-template-columns:1fr; }
+    .stat-band div { padding:1rem; }
+    .help { padding:1.3rem 1.1rem 0.6rem; }
+  }
+</style>
+</head>
+<body>
+  <!-- IAWH NAVIGATION BAR -->
+  <nav style="
+    background: #35102f;
+    border-bottom: 2px solid #C9A84C;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+  ">
+    <a href="https://www.iawh.org" style="
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    ">IAWH Health</a>
+    <div style="display: flex; gap: 1.6rem; align-items: center;">
+      <a href="https://www.iawh.org" style="
+        font-family: 'DM Sans', Arial, sans-serif;
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.82);
+        text-decoration: none;
+      ">Home</a>
+      <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html" style="
+        font-family: 'DM Sans', Arial, sans-serif;
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #C9A84C;
+        text-decoration: none;
+      ">Health Journal</a>
+    </div>
+  </nav>
+
+<div class="article-wrapper">
+
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; Volume 8, Issue 10 &nbsp;|&nbsp; October 2026</p>
+    <h1 class="article-title">Do You Feel Safe at Home? What Your Heart Already Knows</h1>
+    <p class="article-byline">Domestic Violence Awareness Month &nbsp;|&nbsp; October 2026</p>
+  </div>
+
+  <div class="article-body">
+    <div class="img-pair">
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-safe-at-home/leslie-exam.jpg" alt="A woman talking with her provider during an exam" loading="lazy"></div>
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-safe-at-home/sharon-exam.jpg" alt="A worried woman listening to her provider" loading="lazy"></div>
+    </div>
+    <div style="height:1.4rem"></div>
+    <p>When you sit on the examination table for an annual physical or a cardiac workup, your healthcare provider will often look up from a tablet and ask a standard screening question: &ldquo;Do you feel safe in your home?&rdquo;</p>
+    <p>It is a vital question, designed to catch the hidden signs of intimate partner violence. But for many women, the question calls up a specific picture: a volatile spouse, a controlling partner, or physical violence. If those elements aren&rsquo;t present, a woman may quickly answer, &ldquo;Yes.&rdquo;</p>
+    <p>Your cardiovascular system, however, doesn&rsquo;t read relationship labels. Your heart does not know the difference between the fear of an abusive partner and the constant, crushing anxiety of living with an aggressive, volatile teenager or adult child. To your nervous system, fear is fear, threat is threat, and a home without peace is a real hazard to your health.</p>
+    <p>This October, for Domestic Violence Awareness Month (DVAM), the Institute for the Advancement of Women&rsquo;s Health (IAWH) is looking past the relationship labels to explore how chronic hostility in the home, whether from a partner or a child, can take a toll on a woman&rsquo;s heart.</p>
+    <h2>Leslie and Sharon: Two Realities, One Biological Response</h2>
+    <p>To understand why the heart makes no distinction, consider Leslie and Sharon. They are composite portraits, not real patients, but their stories will be familiar to many women. Both arrive at the same DMV cardiology practice with worrying numbers: high blood pressure, a racing resting heart rate, and signs of inflammation.</p>
+    <div class="portrait"><p class="portrait-name">Leslie</p><p>Leslie exercises, watches what she eats, and has never smoked. Yet her blood pressure keeps climbing. At home, she lives in the shadow of an unpredictable, controlling partner. There are no bruises, but she spends her evenings walking on eggshells, on high alert for the next emotional explosion.</p></div>
+    <div class="portrait"><p class="portrait-name">Sharon</p><p>Sharon follows the same healthy habits. She, too, has never been hit by a spouse. But she lives in quiet fear of her high school-aged child, whose volatile, aggressive outbursts have left her afraid to parent, set limits, or speak up in her own home.</p></div>
+    <p>When asked, &ldquo;Do you feel safe at home?&rdquo; Leslie might hesitate, because she recognizes her partner&rsquo;s behavior as abuse. Sharon will likely say &ldquo;Yes,&rdquo; because she sees her situation as a private parenting struggle or a family mental health crisis, not &ldquo;abuse.&rdquo;</p>
+    <div class="pull-quote">
+      <p>Yet their bodies are responding to the same thing: ongoing threat.</p>
+    </div>
+    <div class="img-pair">
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-safe-at-home/leslie-home.jpg" alt="A woman sits tense on her couch as a man gestures angrily behind her" loading="lazy"></div>
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-safe-at-home/sharon-home.jpg" alt="A mother rests her head in her hand as her daughter shouts behind her" loading="lazy"></div>
+    </div>
+    <div style="height:1.4rem"></div>
+    <p>The brain&rsquo;s alarm system does not sort threats by their source. When a woman senses danger at home, her body releases stress hormones like cortisol and adrenaline. Her heart rate rises, her blood vessels tighten, and her blood pressure climbs. That response is meant to protect us in a short emergency. But when the fear never lets up, the body stays on alert, and over time that strain can fuel inflammation, damage blood vessels, and raise the risk of heart disease, heart attack, and stroke.</p>
+    <p>The research on partner abuse is clear. A large study published in the <em>Journal of the American Heart Association</em> followed more than 18,000 women whose medical records showed domestic abuse. Compared with similar women, they had a 31% higher risk of cardiovascular disease, a 51% higher risk of type 2 diabetes, and a 44% higher risk of dying from any cause (1).</p>
+    <div class="stat-band"><div><b>31%</b><small>higher risk of cardiovascular disease</small></div><div><b>51%</b><small>higher risk of type 2 diabetes</small></div><div><b>44%</b><small>higher risk of dying from any cause</small></div></div>
+    <p class="stat-note">Women with recorded domestic abuse, compared with similar women. Chandan et al., <em>Journal of the American Heart Association</em>, 2020.</p>
+    <p>Researchers are now asking the same questions about stress that comes from children. A new study funded by the National Heart, Lung, and Blood Institute is examining whether teens&rsquo; stress &ldquo;crosses over&rdquo; to their parents&rsquo; heart health. Early pilot data found that on days when teens faced stressful events, their parents reported more negative mood and physical symptoms, and showed higher levels of cortisol (2). And child-to-parent aggression is more common than many realize: a 2025 review of studies from around the world estimated that about one in three young people studied had directed some form of violence toward a parent, most often psychological, such as threats, insults, and intimidation, rather than physical (3).</p>
+    <h2>Redefining Safety: Beyond the Labels</h2>
+    <p>Advancing women&rsquo;s health means widening how both patients and providers think about stress at home. Coercive control, manipulation, and intimidation do not require physical contact to harm a woman&rsquo;s health.</p>
+    <p>We must recognize that:</p>
+    <ul>
+      <li><strong>Living on edge is a health risk.</strong> Constant vigilance in your own home, no matter who is causing it, keeps the body&rsquo;s stress response switched on, and chronic stress is linked to higher blood pressure and heart disease.</li>
+      <li><strong>Shame keeps women silent.</strong> Women often hide the aggression of a teen or adult child out of deep shame, which can cut them off from both mental health support and heart care.</li>
+      <li><strong>The coping trap compounds the risk.</strong> Living with fear often leads to lost sleep, depression, and leaning on comfort foods, salt, or alcohol to numb the pain, all of which add to heart disease risk.</li>
+    </ul>
+    <div class="img-pair">
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-safe-at-home/supportive-visit.jpg" alt="A provider places a reassuring hand on her patient's shoulder" loading="lazy"></div>
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-safe-at-home/hopeful-visit.jpg" alt="A woman smiles as her provider offers support" loading="lazy"></div>
+    </div>
+    <div style="height:1.4rem"></div>
+    <h2>Protecting the Hearts of Our Community</h2>
+    <p>At IAWH, we believe you cannot fully care for a woman&rsquo;s heart without considering the peace of the home in which it beats. If a provider asks whether you feel safe, know that your emotional peace, your daily anxiety, and your freedom from fear under your own roof are all part of the answer. It is okay to say, &ldquo;Not always,&rdquo; and to explain.</p>
+    <p>If you, a patient, or someone you love is living with partner abuse or a volatile family crisis, confidential help is available, including support, safety planning, and local advocates who can help restore peace to your home and your health.</p>
+    <div class="help">
+    <h2>Where to Find Help</h2>
+    <p><strong>If you are in immediate danger, call 911.</strong> All services below are free and confidential.</p>
+    <p class="help-label">National (available anywhere in the U.S.)</p>
+    <ul>
+      <li><strong>National Domestic Violence Hotline:</strong> call 1-800-799-SAFE (7233), text START to 88788, or chat at <a href="https://www.thehotline.org" target="_blank">thehotline.org</a>. Available 24/7, and can connect you to local programs.</li>
+      <li><strong>StrongHearts Native Helpline</strong> (for Native American and Alaska Native survivors): call or text 1-844-762-8483, or chat at <a href="https://strongheartshelpline.org" target="_blank">strongheartshelpline.org</a>. Available 24/7.</li>
+      <li><strong>Love Is Respect</strong> (teens and young adults): call 1-866-331-9474 or text LOVEIS to 22522.</li>
+      <li><strong>National Parent and Youth Helpline</strong> (for parents struggling with a child&rsquo;s behavior or a family crisis): call, text, or chat 1-855-427-2736. Available 24/7 in English, Spanish, and many other languages.</li>
+      <li><strong>NAMI HelpLine</strong> (when a family member&rsquo;s behavior is tied to a mental health crisis): call 1-800-950-6264 or text &ldquo;helpline&rdquo; to 62640.</li>
+      <li><strong>988 Suicide and Crisis Lifeline:</strong> call or text 988, 24/7.</li>
+    </ul>
+    <p class="help-label">Washington, DC</p>
+    <ul>
+      <li><strong>DC Victim Hotline:</strong> 1-844-4HELP-DC (1-844-443-5732), 24/7, or chat at <a href="https://dcvictim.org" target="_blank">dcvictim.org</a>.</li>
+      <li><strong>DC SAFE 24/7 Crisis Response Line:</strong> 1-800-407-5048. The District&rsquo;s 24/7 domestic violence crisis intervention agency. <a href="https://dcsafe.org" target="_blank">dcsafe.org</a></li>
+      <li><strong>My Sister&rsquo;s Place:</strong> 24-hour hotline 202-529-5991. Emergency shelter, safety planning, and counseling. <a href="https://mysistersplacedc.org" target="_blank">mysistersplacedc.org</a></li>
+    </ul>
+    <p class="help-label">Maryland (DC suburbs)</p>
+    <ul>
+      <li><strong>Montgomery County Family Justice Center:</strong> 240-773-0444.</li>
+      <li><strong>Montgomery County 24-Hour Crisis Center:</strong> 240-777-4000.</li>
+      <li><strong>Prince George&rsquo;s County Family Justice Center:</strong> 301-780-8088.</li>
+      <li><strong>Prince George&rsquo;s County 24-hour crisis hotline</strong> (Community Crisis Services): 301-731-1203.</li>
+      <li><strong>Other Maryland counties:</strong> find local programs at <a href="https://mnadv.org" target="_blank">mnadv.org</a>.</li>
+    </ul>
+    <p class="help-label">Northern Virginia</p>
+    <ul>
+      <li><strong>Virginia Statewide Hotline:</strong> call 1-800-838-8238 or text 804-793-9999, 24/7. LGBTQ+ Helpline: 1-866-365-6998. <a href="https://vsdvalliance.org" target="_blank">vsdvalliance.org</a></li>
+      <li><strong>Arlington County (Doorways):</strong> 24-hour hotline 703-237-0881. <a href="https://doorwaysva.org" target="_blank">doorwaysva.org</a></li>
+      <li><strong>Fairfax County Domestic and Sexual Violence Services:</strong> 24-hour hotline 703-360-7273. <a href="https://www.fairfaxcounty.gov" target="_blank">fairfaxcounty.gov</a></li>
+    </ul>
+    </div>
+    <div class="sources-section refs">
+      <p class="sources-label">References</p>
+      <ol>
+        <li>Chandan JS, et al. Risk of Cardiometabolic Disease and All-Cause Mortality in Female Survivors of Domestic Abuse. <em>Journal of the American Heart Association</em>. 2020. (UK cohort of 18,547 women with recorded domestic abuse matched to 72,231 women without; 31% higher risk of cardiovascular disease, 51% higher risk of type 2 diabetes, 44% higher all-cause mortality.)</li>
+        <li>University of Georgia and University of North Carolina at Chapel Hill. Examining the Crossover Effects of Adolescent Stress on Parent Cardiovascular Health. Funded by the National Heart, Lung, and Blood Institute; launched 2025. (Pilot findings only; the main study is ongoing.)</li>
+        <li>Dahouri A, Mirghafourvand M, Zahedi H, et al. Prevalence of child to parent violence and its determinants: a systematic review and meta-analysis. <em>BMC Public Health</em>. 2025;25. (Pooled prevalence of about 35% across 12 studies; psychological violence far more common than physical.)</li>
+      </ol>
+    </div>
+    <div class="about">
+      <p>Leslie and Sharon are composite portraits, not real patients. This article is for general education and is not medical advice. Talk with your health care provider about your own heart health.</p>
+    </div>
+
+    <p class="back"><a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">&larr; Back to the IAWH Health Journal Archive</a></p>
+  </div>
+
+  <div class="article-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+
+</div>
+
+  <script>
+    // Scroll to top on load and auto-resize iframe
+    // Scroll to top on page load
+    window.addEventListener('load', function() {
+      window.scrollTo(0, 0);
+      if (window.parent) {
+        window.parent.postMessage({scrollTo: 0}, '*');
+      }
+    });
+    // Auto-resize iframe to content height
+    function notifyHeight() {
+      var h = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight
+      );
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function() {
+      notifyHeight();
+      setTimeout(notifyHeight, 500);
+      setTimeout(notifyHeight, 1500);
+    });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') {
+      new ResizeObserver(notifyHeight).observe(document.body);
+    }
+  </script>
+</body>
+</html>
