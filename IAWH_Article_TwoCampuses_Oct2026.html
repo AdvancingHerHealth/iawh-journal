@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Two Women, Two Campuses, One System | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum:      #4A1942;
+    --plum-deep: #35102f;
+    --gold:      #C9A84C;
+    --gold-light:#e2c97e;
+    --navy:      #1B2A4A;
+    --cream:     #F8F5F0;
+    --white:     #ffffff;
+    --text:      #2a2a2a;
+    --muted:     #6b6b6b;
+  }
+  html { overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  .article-wrapper { max-width: 780px; margin: 0 auto; background: var(--cream); }
+
+  /* HEADER */
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+
+  /* HERO IMAGE - full bleed, dreamy */
+  .hero-placeholder {
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(160deg, #35102f 0%, #4A1942 45%, #1B2A4A 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .hero-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,168,76,0.1) 0%, transparent 70%);
+  }
+  .hero-placeholder-label {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(226,201,126,0.75);
+    text-align: center;
+    padding: 0.8rem 1.6rem;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(201,168,76,0.25);
+  }
+  .hero-caption {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.68rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    padding: 0.6rem 3rem;
+    background: var(--cream);
+  }
+
+  /* BODY */
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); margin-bottom: 1.2rem; }
+  .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+
+  /* INLINE FULL-BLEED IMAGE */
+  .inline-image-wrap { margin: 2rem -3rem; overflow-x: hidden; }
+  .inline-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inline-placeholder span {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 1px dashed rgba(74,25,66,0.15);
+  }
+  .inline-caption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.68rem; color: var(--muted); font-style: italic; text-align: center; padding: 0.5rem 3rem 1.5rem; }
+
+  /* FLOAT IMAGE */
+  .float-right { float: right; width: 220px; margin: 0.4rem 0 1rem 1.8rem; }
+  .float-placeholder {
+    width: 220px;
+    height: 240px;
+    background: linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .float-placeholder span { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; padding: 0.8rem; }
+  .float-caption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; color: var(--muted); font-style: italic; text-align: center; margin-top: 0.3rem; }
+
+  /* PULL QUOTE */
+  .pull-quote { border-left: 3px solid var(--gold); padding: 0.6rem 1.2rem; margin: 1.8rem 0; }
+  .pull-quote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); line-height: 1.55; margin-bottom: 0; }
+
+  /* BULLET LIST */
+  .article-body ul { list-style: none; margin: 0.8rem 0 1.2rem; padding: 0; }
+  .article-body ul li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.72; color: var(--text); padding: 0.45rem 0 0.45rem 1.4rem; position: relative; border-bottom: 1px solid rgba(74,25,66,0.06); }
+  .article-body ul li:last-child { border-bottom: none; }
+  .article-body ul li::before { content: ''; position: absolute; left: 0; top: 0.88em; width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  /* SOURCES */
+  .sources-section { border-top: 1px solid rgba(74,25,66,0.12); margin-top: 2.5rem; padding-top: 1.5rem; }
+  .sources-label { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin-bottom: 0.8rem; }
+  .sources-section p { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.76rem; line-height: 1.65; color: var(--muted); margin-bottom: 0.4rem; }
+  .sources-section a { color: var(--plum); }
+
+  /* FOOTER */
+  .article-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .clearfix::after { content: ''; display: table; clear: both; }
+
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .article-footer { padding: 1.6rem 1.4rem; }
+    .hero-placeholder { height: 280px; }
+    .inline-image-wrap { margin: 1.5rem -1.4rem; }
+    .inline-placeholder { height: 220px; }
+    .float-right { float: none; width: 100%; margin: 0 0 1.2rem 0; }
+    .float-placeholder { width: 100%; height: 200px; }
+  }
+
+  /* WIDTH AND OVERFLOW FIX */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  * { max-width: 100%; }
+  img { max-width: 100%; height: auto; }
+</style>
+<style>
+  .qa-q { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.98rem !important; font-weight:500; color:#4A1942 !important; line-height:1.6 !important; margin:1.8rem 0 0.6rem !important; }
+  .qa-q strong, .qa-a strong { font-weight:600; }
+  .qa-a strong { color:#4A1942; font-family:'DM Sans', Arial, sans-serif; font-size:0.92rem; }
+  .intro { font-style:italic; color:#4a4a4a !important; }
+  .glance { background:#ffffff; border-left:3px solid #C9A84C; padding:1.4rem 1.6rem; margin:2.2rem 0; }
+  .glance-label { font-family:'DM Sans', Arial, sans-serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:#4A1942; margin-bottom:0.6rem; font-weight:500; }
+  .glance ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.9rem !important; }
+  .about { border-top:1px solid rgba(74,25,66,0.12); margin-top:2.2rem; padding-top:1.4rem; }
+  .about p { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.86rem !important; line-height:1.65 !important; color:#4a4a4a !important; }
+  .note-small { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.78rem !important; color:#6b6b6b !important; font-style:italic; }
+  .recipe-meta { display:flex; gap:2rem; flex-wrap:wrap; border-top:1px solid rgba(74,25,66,0.12); border-bottom:1px solid rgba(74,25,66,0.12); padding:0.9rem 0; margin:0 0 1.6rem; }
+  .recipe-meta div { font-family:'DM Sans', Arial, sans-serif; font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; color:#6b6b6b; }
+  .recipe-meta span { display:block; font-family:'Cormorant Garamond', Georgia, serif; font-size:1.4rem; letter-spacing:0; text-transform:none; color:#4A1942; }
+  ol.steps { list-style:none; counter-reset:step; margin:0.8rem 0 1.2rem; padding:0; }
+  ol.steps li { counter-increment:step; font-family:Georgia, serif; font-size:1rem; line-height:1.72; color:#2a2a2a; padding:0.6rem 0 0.6rem 2.6rem; position:relative; border-bottom:1px solid rgba(74,25,66,0.06); }
+  ol.steps li::before { content:counter(step); position:absolute; left:0; top:0.6rem; width:1.7rem; height:1.7rem; border-radius:50%; background:#4A1942; color:#e2c97e; font-family:'DM Sans', Arial, sans-serif; font-size:0.8rem; display:flex; align-items:center; justify-content:center; }
+  .back { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.8rem !important; margin-top:2rem !important; }
+</style>
+<style>
+  .img-pair { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:2rem 0 0.4rem; }
+  .img-slot { aspect-ratio:1 / 1; background:linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .img-slot img { width:100%; height:100%; object-fit:cover; display:block; }
+  .img-slot span { font-family:'DM Sans', Arial, sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b6b6b; text-align:center; padding:1rem; border:1px dashed rgba(74,25,66,0.18); margin:1rem; line-height:1.6; }
+  .pair-caption { font-family:'DM Sans', Arial, sans-serif; font-size:0.68rem; color:#6b6b6b; font-style:italic; text-align:center; margin:0 0 1.8rem; }
+  .stat-band { display:grid; grid-template-columns:repeat(3,1fr); background:#35102f; margin:1.8rem 0 0.5rem; }
+  .stat-band div { padding:1.3rem 0.8rem; text-align:center; }
+  .stat-band b { display:block; font-family:'Cormorant Garamond', Georgia, serif; font-size:2.6rem; font-weight:500; color:#e2c97e; line-height:1; }
+  .stat-band small { display:block; font-family:'DM Sans', Arial, sans-serif; font-size:0.78rem; line-height:1.45; color:#F8F5F0; margin-top:0.5rem; }
+  .stat-note { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.74rem !important; color:#6b6b6b !important; margin-bottom:1.6rem !important; }
+  .portrait { background:#ffffff; border-left:3px solid #C9A84C; padding:1.1rem 1.4rem; margin:0 0 1rem; }
+  .portrait p { margin:0 !important; }
+  .portrait-name { font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.35rem !important; color:#4A1942 !important; margin-bottom:0.3rem !important; }
+  .help { background:#ffffff; border-top:3px solid #C9A84C; padding:1.6rem 1.8rem 0.8rem; margin:2.4rem 0 0; }
+  .help h2 { margin-top:0 !important; }
+  .article-body p.help-label { font-family:'DM Sans', Arial, sans-serif; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#4A1942; font-weight:500; margin:1.4rem 0 0.2rem; }
+  .help a, .article-body a { color:#4A1942; }
+  .help ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.92rem !important; }
+  .refs ol { margin:0 0 0 1.1rem; }
+  .refs li { font-family:'DM Sans', Arial, sans-serif; font-size:0.76rem; line-height:1.65; color:#6b6b6b; margin-bottom:0.5rem; }
+  @media (max-width:600px) {
+    .img-pair { grid-template-columns:1fr; }
+    .stat-band { grid-template-columns:1fr; }
+    .stat-band div { padding:1rem; }
+    .help { padding:1.3rem 1.1rem 0.6rem; }
+  }
+  .warn { background:#ffffff; border-left:3px solid #D96054; padding:1rem 1.3rem; margin:0 0 1.8rem; }
+  .warn p { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.9rem !important; font-style:italic; margin:0 !important; color:#4a4a4a !important; }
+  .stat-row { display:grid; grid-template-columns:150px 1fr; align-items:center; background:#35102f; margin:1.6rem 0; }
+  .stat-row b { font-family:'Cormorant Garamond', Georgia, serif; font-size:3.2rem; font-weight:500; color:#e2c97e; text-align:center; }
+  .stat-row span { font-family:'DM Sans', Arial, sans-serif; font-size:0.95rem; line-height:1.55; color:#F8F5F0; padding:1.2rem 1.4rem 1.2rem 0; }
+  .tic { background:#ffffff; border-left:3px solid #4A1942; padding:1.4rem 1.6rem 0.6rem; margin:1.8rem 0; }
+  .tic-q { font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.45rem !important; font-style:italic; color:#4A1942 !important; line-height:1.3 !important; margin-bottom:0.8rem !important; }
+  .tic ul li, .faith ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.94rem !important; }
+  .article-body h3 { font-family:'DM Sans', Arial, sans-serif; font-size:0.74rem; letter-spacing:0.2em; text-transform:uppercase; color:#4A1942; font-weight:500; margin:1.8rem 0 0.4rem; }
+  .closing { border-left:3px solid #C9A84C; padding:0.4rem 1.2rem; margin:2rem 0; }
+  .closing p { font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.4rem !important; font-style:italic; color:#4A1942 !important; line-height:1.45 !important; margin:0 !important; }
+  .film { background:#35102f; border-top:3px solid #C9A84C; padding:1.6rem 1.8rem 1.2rem; margin:2.2rem 0; }
+  .film h2 { color:#ffffff !important; margin-top:0 !important; }
+  .film p { color:#F8F5F0 !important; font-family:'DM Sans', Arial, sans-serif !important; font-size:0.95rem !important; line-height:1.65 !important; }
+  .film a { color:#e2c97e !important; }
+  .film-label { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.68rem !important; letter-spacing:0.2em; text-transform:uppercase; color:#E8A0B0 !important; margin-bottom:0.3rem !important; }
+  .video { position:relative; width:100%; aspect-ratio:16 / 9; margin:0.6rem 0 1.2rem; background:#000; }
+  .video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .sources-section h4 { font-family:'DM Sans', Arial, sans-serif; font-size:0.66rem; letter-spacing:0.16em; text-transform:uppercase; color:#4A1942; margin:1.1rem 0 0.4rem; font-weight:500; }
+  @media (max-width:600px) { .stat-row { grid-template-columns:1fr; } .stat-row span { padding:0 1.2rem 1.2rem; text-align:center; } .stat-row b { padding-top:1rem; } .film { padding:1.3rem 1.1rem 1rem; } }
+</style>
+</head>
+<body>
+  <!-- IAWH NAVIGATION BAR -->
+  <nav style="
+    background: #35102f;
+    border-bottom: 2px solid #C9A84C;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+  ">
+    <a href="https://www.iawh.org" style="
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    ">IAWH Health</a>
+    <div style="display: flex; gap: 1.6rem; align-items: center;">
+      <a href="https://www.iawh.org" style="
+        font-family: 'DM Sans', Arial, sans-serif;
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.82);
+        text-decoration: none;
+      ">Home</a>
+      <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html" style="
+        font-family: 'DM Sans', Arial, sans-serif;
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #C9A84C;
+        text-decoration: none;
+      ">Health Journal</a>
+    </div>
+  </nav>
+
+<div class="article-wrapper">
+
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; Volume 8, Issue 10 &nbsp;|&nbsp; October 2026</p>
+    <h1 class="article-title">Two Women, Two Campuses, One System</h1>
+    <p class="article-byline">Women&rsquo;s Health and Safety &nbsp;|&nbsp; October 2026</p>
+  </div>
+
+  <div class="article-body">
+    <div class="warn"><p>Content warning: This piece discusses sexual assault on college campuses and its effects on survivors&rsquo; health. Support is available 24/7 through RAINN&rsquo;s National Sexual Assault Hotline at 800-656-HOPE (4673).</p></div>
+    <div class="img-pair">
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-two-campuses/campus-cornell.jpg" alt="Silhouette of a young woman on an autumn campus with a stone clock tower" loading="lazy"></div>
+      <div class="img-slot"><img src="https://iawh.org/images/journal/2026-10-two-campuses/campus-lsu.jpg" alt="Silhouette of a young woman on a southern campus with a bell tower" loading="lazy"></div>
+    </div>
+    <div style="height:1.4rem"></div>
+    <p>This fall, two young women did something that should never take so much courage. They told the truth about what happened to them, out loud. One is known only as Jane Doe, a former Cornell University student. The other is Kendall Francis, a first-generation student at Louisiana State University. Their stories, told within days of each other in September, opened a door. Women stood up at a Cornell student hearing to describe their own assaults, women across the country posted their stories online, and more than 1,000 Cornell alumni signed a letter describing &ldquo;decades of Jane Does.&rdquo;</p>
+    <p>At IAWH Health, we believe women&rsquo;s health includes the right to be safe in body and mind, and to be believed. This month, we honor these two young women who refused to be silent.</p>
+    <h2>Jane Doe, Cornell University</h2>
+    <p>We cannot tell you Jane Doe&rsquo;s name. We can tell you what she did.</p>
+    <p>In October 2024, when she was 20, she went to the Chi Phi fraternity house to see a friend. According to the lawsuit she filed this September, she was given alcohol and drugs until she could not consent, and then sexually assaulted by several fraternity members. The seven men named deny wrongdoing.</p>
+    <p>She did what survivors are told to do. She reported to campus police and the campus health clinic. Cornell suspended the fraternity and disciplined students, but the local district attorney declined to file charges. Nearly two years later, her lawsuit changed everything: the criminal case was reopened, New York&rsquo;s Attorney General was named special prosecutor, and about 1,000 students and faculty rallied on campus. Cornell has since named Sally Yates to lead an independent review and suspended fraternity social events for the year. As of late October, no charges have been filed, and the facts remain in dispute.</p>
+    <p>What is not in dispute is the cost of speaking. Her attorney says she, and women mistaken for her, have received threats. She has chosen to remain anonymous, and that choice deserves protection.</p>
+    <h2>Kendall Francis, Louisiana State University</h2>
+    <p>Kendall Francis chose to tell her story under her own name. In a September TikTok video, the first-generation LSU student described what she says happened in October 2025, when she visited a football player she had met on social media at his dorm. She has chosen not to name him, and we honor that.</p>
+    <p>She, too, did what survivors are told to do. She went to the hospital for a sexual assault exam and filed a Title IX complaint. LSU found the player responsible for sexual assault and forcible rape and suspended him for a year. Then, on appeal, LSU kept its finding but replaced the suspension with probation without restrictions. He stayed on the team. He maintains his innocence through his attorneys.</p>
+    <p>She learned the outcome by email. She says she has been in treatment for anxiety, and she now takes her classes online. Eight days after her video, the local district attorney opened a criminal investigation, which is ongoing.</p>
+    <h2>What Connects Them</h2>
+    <p>Two campuses, two different cases, one pattern. Both women reported. Both went through campus processes that produced findings but not lasting accountability. Neither saw prosecutors act until she went public. And both carried the cost, while the institutions around the accused, a fraternity system and a football program, stayed largely intact.</p>
+    <div class="stat-row"><b>35%</b><span><strong>They are not exceptions.</strong> Cornell&rsquo;s own 2025 survey found that 35% of undergraduate women reported nonconsensual sexual contact involving force or incapacitation since arriving on campus.</span></div>
+    <h2>The Health Toll</h2>
+    <p>Sexual assault is a public health crisis, and its effects reach far beyond the moment of harm. Survivors face higher rates of post-traumatic stress, depression, and anxiety, along with lost sleep, falling grades, and interrupted degrees. Reporting can add its own harm: retelling trauma again and again, waiting months, and sometimes watching a sanction reversed.</p>
+    <p><strong>The body keeps the record.</strong> The harm does not stay in the mind. In a 2018 University of Pittsburgh study of 304 midlife women, published in <em>JAMA Internal Medicine</em>, women with a history of sexual assault had nearly three times the odds of clinically elevated depressive symptoms, and more than twice the odds of anxiety and poor sleep. Workplace sexual harassment was linked to more than twice the odds of high blood pressure. Chronic stress, broken sleep, and depression are all risk factors for heart disease, diabetes, and other chronic conditions that shape women&rsquo;s health for decades.</p>
+    <p><strong>Often, it is not the first trauma.</strong> Adverse childhood experiences (ACEs), such as abuse, neglect, and growing up with violence in the home, are common. The CDC reports that more than half of U.S. adults have had at least one, and about one in six have had four or more. Women and Black Americans are more likely to report four or more. ACEs are linked to at least five of the 10 leading causes of death, including heart disease, cancer, and diabetes. The CDC estimates that preventing ACEs could avoid up to 1.9 million cases of heart disease and 21 million cases of depression.</p>
+    <p>And race and class shape who is believed. Kendall Francis is a Black, first-generation student, and Black women are too often seen as less credible and less in need of protection. These are equity issues, and IAWH&rsquo;s mission compels us to name them.</p>
+    <div class="tic">
+      <p class="glance-label">What trauma-informed care looks like</p>
+      <p class="tic-q">Not &ldquo;What&rsquo;s wrong with you?&rdquo; but &ldquo;What happened to you?&rdquo;</p>
+    <p>The federal Substance Abuse and Mental Health Services Administration (SAMHSA) asks health systems, schools, and agencies to realize how widespread trauma is, recognize its signs, respond with that knowledge built into policy and practice, and resist retraumatizing the people they serve. SAMHSA&rsquo;s six guiding principles look like this for a survivor:</p>
+    <ul>
+      <li><strong>Safety:</strong> a private space, and an exam or interview she can pause or stop at any time.</li>
+      <li><strong>Trustworthiness and transparency:</strong> being told what will happen next, who will see her records, and what each choice means.</li>
+      <li><strong>Peer support:</strong> access to advocates and other survivors who understand.</li>
+      <li><strong>Collaboration and mutuality:</strong> health care, counseling, and campus offices that work together, so she does not have to retell her story again and again.</li>
+      <li><strong>Empowerment, voice, and choice:</strong> deciding whether to report, to whom, and when, without pressure.</li>
+      <li><strong>Cultural, historical, and gender issues:</strong> care that recognizes how race, gender, and history shape trust in institutions.</li>
+    </ul>
+    </div>
+    <h2>What We Can Do</h2>
+    <ul>
+      <li><strong>Students:</strong> Title IX and the criminal justice system are separate tracks; choosing one does not start the other. A forensic exam preserves evidence and keeps your options open, even if you are not ready to decide about reporting. A confidential advocate works for you, not the institution.</li>
+      <li><strong>Parents and families:</strong> Talk with your student before college about consent and how to get help. If she tells you something happened, believe her first. Questions can come later.</li>
+      <li><strong>Campuses:</strong> Make the line between campus discipline and criminal reporting clear to every student. Treat a finding of rape as a finding of rape, no matter the student&rsquo;s athletic or social standing. Fund advocates and mental health care so survivors can stay enrolled.</li>
+    </ul>
+    <h3>Journal readers and the wider community</h3>
+    <ul>
+      <li><strong>Stay informed:</strong> Follow these cases and the changing federal rules on Title IX, which have shifted with each administration. If you have a college-bound student, read the school&rsquo;s Annual Security Report, which the federal Clery Act requires every college that receives federal aid to publish, and ask whether it shares campus climate survey results.</li>
+      <li><strong>Advocate:</strong> Ask your alma mater, your local colleges, and your elected officials how they support survivors and what happens when a student is found responsible. Support survivor-led groups such as <a href="https://www.knowyourix.org" target="_blank">Know Your IX</a> and <a href="https://endrapeoncampus.org" target="_blank">End Rape on Campus</a>.</li>
+      <li><strong>Educate:</strong> Host a screening of <em>The Hunting Ground</em> with your book club, congregation, sorority, or community group, and talk about it afterward. Share this issue with someone who needs it.</li>
+      <li><strong>Respond with care:</strong> If someone confides in you, start with: &ldquo;I believe you. It&rsquo;s not your fault. How can I help?&rdquo; Let her decide what comes next.</li>
+      <li><strong>Step in:</strong> Learn simple bystander strategies, like creating a distraction or checking in with a friend who seems at risk. <a href="https://www.itsonus.org" target="_blank">It&rsquo;s On Us</a> offers free resources.</li>
+    </ul>
+    <h3>Churches and faith communities</h3>
+    <p>For many women, a pastor, imam, rabbi, or trusted church mother is the first person they tell. Faith communities can be places of refuge, or places where survivors are told to stay quiet and forgive. They can choose to be a refuge.</p>
+    <ul>
+      <li><strong>Speak about it from the pulpit.</strong> Name sexual violence in sermons, prayers, and Bible or scripture study, especially in October and during Sexual Assault Awareness Month in April. Silence from leaders is heard as a message.</li>
+      <li><strong>Believe first, refer second.</strong> Train clergy, ministers, and lay leaders to respond with belief and to connect survivors with advocates, counselors, and medical care. Spiritual support works alongside professional help, not instead of it. Forgiveness is never a requirement for safety or healing.</li>
+      <li><strong>Know your local resources.</strong> Keep the RAINN hotline and the number of your local rape crisis center in bulletins, restrooms, and on your website, where people can find them privately.</li>
+      <li><strong>Prepare your students.</strong> Before college send-offs, use youth ministry and college prayer services to talk with young people about consent, safety, and how to get help.</li>
+      <li><strong>Partner and open your doors.</strong> Host a screening of <em>The Hunting Ground</em>, a support group, or a training led by a local sexual assault program.</li>
+      <li><strong>Protect people inside your walls, too.</strong> Adopt clear safeguarding policies, screening, and reporting procedures for staff and volunteers, and follow them even when the person accused is respected.</li>
+    </ul>
+    <p><a href="https://faithtrustinstitute.org" target="_blank">FaithTrust Institute</a> and the <a href="https://www.nsvrc.org" target="_blank">National Sexual Violence Resource Center</a> offer free guides for faith leaders.</p>
+    <div class="closing"><p>Silence has never protected women. These two young women understood that. Our job is to make sure the next woman who speaks is met with belief, care, and action.</p></div>
+    <div class="film">
+      <p class="film-label">Watch</p>
+      <h2>The Hunting Ground</h2>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/GBNHGi36nlM" title="The Hunting Ground official trailer" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+      <p>These stories are not new. In 2015, the documentary <em>The Hunting Ground</em>, directed by Kirby Dick and produced by Amy Ziering (the filmmakers behind <em>The Invisible War</em>), followed survivors at colleges across the country. They reported their assaults and then faced retaliation, while their schools protected reputations, athletic programs, and Greek life. More than a decade later, the pattern the film documented is still playing out. Its anthem, &ldquo;Til It Happens to You,&rdquo; by Diane Warren and Lady Gaga, earned an Oscar nomination.</p>
+      <p><strong>Where to watch:</strong> free with ads on <a href="https://watch.plex.tv/movie/the-hunting-ground" target="_blank">Plex</a>; included with a Lionsgate+ add-on on <a href="https://www.primevideo.com/detail/0SKTFZRWZAR09AK5O31AGEM5JG" target="_blank">Prime Video</a>; or rent or buy on Amazon, <a href="https://tv.apple.com/movie/umc.cmc.1wpzh1n33qgdswpu7nog0z4tr" target="_blank">Apple TV</a>, and Fandango at Home. Rated PG-13. The film includes survivors&rsquo; first-person accounts of assault, so consider watching with someone you trust.</p>
+      <p>Trouble playing the video? <a href="https://www.youtube.com/watch?v=GBNHGi36nlM" target="_blank">Watch the trailer on YouTube</a>.</p>
+    </div>
+    <div class="help">
+    <h2>If You Need Support</h2>
+    <ul>
+      <li><strong>RAINN National Sexual Assault Hotline:</strong> 800-656-HOPE (4673), or chat at <a href="https://online.rainn.org" target="_blank">online.rainn.org</a>. Free, confidential, 24/7.</li>
+      <li><strong>Virginia Statewide Hotline</strong> (Virginia Sexual and Domestic Violence Action Alliance): call 1-800-838-8238 or text 804-793-9999, 24/7.</li>
+      <li><strong>Love Is Respect</strong> (for teens and young adults): call 1-866-331-9474 or text LOVEIS to 22522.</li>
+      <li><strong>988 Suicide and Crisis Lifeline:</strong> call or text 988.</li>
+      <li><strong>Know Your IX:</strong> student-focused guidance on Title IX rights at <a href="https://www.knowyourix.org" target="_blank">knowyourix.org</a>.</li>
+      <li><strong>End Rape on Campus:</strong> survivor support and advocacy at <a href="https://endrapeoncampus.org" target="_blank">endrapeoncampus.org</a>.</li>
+    </ul>
+    </div>
+    <div class="sources-section">
+      <p class="sources-label">Sources</p>
+      <h4>The cases</h4>
+      <p><a href="https://www.wunc.org/2026-10-04/cornell-president-calls-gang-rape-allegations-deeply-disturbing" target="_blank">NPR: Cornell president calls allegations &lsquo;deeply disturbing&rsquo;</a></p>
+      <p><a href="https://www.wunc.org/national/2026-09-28/cornell-fraternity-rape-case-is-reopened-as-new-details-emerge" target="_blank">NPR: Cornell agrees to an independent probe into its handling of a fraternity rape case</a></p>
+      <p><a href="https://keyt.com/?p=1480687" target="_blank">CNN: What Cornell&rsquo;s Jane Doe told investigators in 2024 prompts fresh questions</a></p>
+      <p><a href="https://www.inquirer.com/news/nation-world/cornell-timeline-assault-case-20260930.html" target="_blank">New York Times, via The Philadelphia Inquirer: A timeline of the Cornell University assault case</a></p>
+      <p><a href="https://www.thestar.com.my/news/world/2026/10/03/at-cornell-rape-allegations-spark-outrage-soul-searching-over-campus-culture" target="_blank">Reuters: At Cornell, rape allegations spark outrage, soul-searching</a></p>
+      <p><a href="https://bernama.com/en/world/news.php?id=2616380" target="_blank">Bernama/Xinhua: Cornell taps Sally Yates for review</a></p>
+      <p><a href="https://unherd.com/?p=1077007" target="_blank">UnHerd: The Cornell Seven is fueling a campus media frenzy</a></p>
+      <p><a href="https://www.cornellsun.com/section/cornell-chi-phi-lawsuit" target="_blank">The Cornell Daily Sun: Chi Phi Lawsuit coverage</a></p>
+      <p><a href="https://www.aljazeera.com/news/2026/10/6/cornell-names-sally-yates-to-review-universitys-response-to-rape-case" target="_blank">Al Jazeera: Cornell names Sally Yates to review university&rsquo;s response</a></p>
+      <p><a href="https://www.wafb.com/2026/09/24/exclusive-lsu-student-says-university-failed-her-after-title-ix-finding-alleged-sexual-assault/" target="_blank">WAFB: LSU student says university failed her after Title IX finding</a></p>
+      <p><a href="https://www.wafb.com/2026/09/22/lsu-football-player-accused-sexually-assaulting-student-campus/" target="_blank">WAFB: Criminal investigation opened into LSU case</a></p>
+      <p><a href="https://www.lawcommentary.com/articles/lsu-football-player-rape-title-ix-suspension" target="_blank">Law Commentary: LSU Title IX suspension reduced on appeal</a></p>
+      <p><a href="https://www.nbcconnecticut.com/news/national-international/lsu-student-says-she-was-raped-by-a-football-player/3780399/" target="_blank">NBC News: LSU student says she was raped by a football player still on the team</a></p>
+      <p><a href="https://newsone.com/6872723/kendall-francis-lsu-football-rape/" target="_blank">NewsOne: LSU student shares rape ordeal on TikTok</a></p>
+      <p><a href="https://www.essentiallysports.com/ncaa-college-football-news-lsu-football-player-under-investigation-for-alleged-assault-victim-claims-to-be-a-school-student/" target="_blank">EssentiallySports: LSU criminal investigation</a></p>
+      <p><a href="https://thegrio.com/2026/10/20/kendall-francis-lsu-damien-shanklin-sexual-assault/" target="_blank">theGrio: LSU student says university failed her as criminal investigation opens (Oct. 20)</a></p>
+      <p><a href="https://www.wafb.com/2026/10/01/accused-lsu-football-player-declares-innocence/" target="_blank">WAFB: Accused LSU football player declares innocence</a></p>
+      <h4>Health toll</h4>
+      <p><a href="https://mdedge.com/content/sexual-assault-and-harassment-linked-hypertension-depression-and-anxiety" target="_blank">Thurston et al., JAMA Internal Medicine, 2018 (via MDedge)</a></p>
+      <p><a href="https://archive.cdc.gov/www_cdc_gov/media/releases/2019/p1105-prevent-aces.html" target="_blank">CDC: Preventing Adverse Childhood Experiences to improve U.S. health (2019)</a></p>
+      <p><a href="https://youth.gov/feature-article/samhsas-concept-trauma-and-guidance-trauma-informed-approach" target="_blank">youth.gov: SAMHSA&rsquo;s Concept of Trauma and Guidance for a Trauma-Informed Approach</a></p>
+      <h4>The Hunting Ground</h4>
+      <p><a href="https://en.wikipedia.org/wiki/The_Hunting_Ground" target="_blank">Wikipedia: The Hunting Ground (2015)</a></p>
+      <p><a href="https://takeback.lib.virginia.edu/items/show/130" target="_blank">University of Virginia archive: The Hunting Ground official trailer</a></p>
+      <h4>Faith communities</h4>
+      <p><a href="https://faithtrustinstitute.org" target="_blank">FaithTrust Institute</a></p>
+      <p><a href="https://www.nsvrc.org/wp-content/uploads/2018/04/faith_FINAL508.pdf" target="_blank">NSVRC: Guide for faith communities</a></p>
+      <p><a href="https://pcar.org/sites/default/files/resource-pdfs/making_connections_with_faith_communities_factsheet_part_2.pdf" target="_blank">PCAR: Making Connections with Faith Communities</a></p>
+    </div>
+    <div class="about">
+      <p>This article is for general education and is not medical or legal advice. If you or someone you love needs support, the resources above are free and confidential.</p>
+    </div>
+
+    <p class="back"><a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">&larr; Back to the IAWH Health Journal Archive</a></p>
+  </div>
+
+  <div class="article-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; 1 Northampton Road, Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+
+</div>
+
+  <script>
+    // Scroll to top on load and auto-resize iframe
+    // Scroll to top on page load
+    window.addEventListener('load', function() {
+      window.scrollTo(0, 0);
+      if (window.parent) {
+        window.parent.postMessage({scrollTo: 0}, '*');
+      }
+    });
+    // Auto-resize iframe to content height
+    function notifyHeight() {
+      var h = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight
+      );
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function() {
+      notifyHeight();
+      setTimeout(notifyHeight, 500);
+      setTimeout(notifyHeight, 1500);
+    });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') {
+      new ResizeObserver(notifyHeight).observe(document.body);
+    }
+  </script>
+</body>
+</html>
