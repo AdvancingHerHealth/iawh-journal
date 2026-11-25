@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="IAWH Health Journal" />
+<meta property="og:title" content="Around Our Tables" />
+<meta property="og:description" content="Because We Are: Cheryl J. Thompson, MSPH, on Thanksgiving, gratitude and the family health stories we carry and pass on." />
+<meta property="og:url" content="https://advancingherhealth.github.io/iawh-journal/IAWH_Column_AroundOurTable_Nov2026.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="description" content="Because We Are: Cheryl J. Thompson, MSPH, on Thanksgiving, gratitude and the family health stories we carry and pass on." />
+<title>Around Our Tables | IAWH Health Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --plum:      #4A1942;
+    --plum-deep: #35102f;
+    --gold:      #C9A84C;
+    --gold-light:#e2c97e;
+    --navy:      #1B2A4A;
+    --cream:     #F8F5F0;
+    --white:     #ffffff;
+    --text:      #2a2a2a;
+    --muted:     #6b6b6b;
+  }
+  html { overflow-x: hidden; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: var(--text); -webkit-font-smoothing: antialiased; }
+  .article-wrapper { max-width: 780px; margin: 0 auto; background: var(--cream); }
+
+  /* HEADER */
+  .article-header { background: var(--plum-deep); padding: 3rem 3rem 2.4rem; border-bottom: 3px solid var(--gold); }
+  .article-kicker { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem; }
+  .article-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.6rem; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .article-byline { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.72rem; font-weight: 300; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .article-byline span { color: var(--gold-light); }
+
+  /* HERO IMAGE - full bleed, dreamy */
+  .hero-placeholder {
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(160deg, #35102f 0%, #4A1942 45%, #1B2A4A 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .hero-placeholder::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,168,76,0.1) 0%, transparent 70%);
+  }
+  .hero-placeholder-label {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(226,201,126,0.75);
+    text-align: center;
+    padding: 0.8rem 1.6rem;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(201,168,76,0.25);
+  }
+  .hero-caption {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.68rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    padding: 0.6rem 3rem;
+    background: var(--cream);
+  }
+
+  /* BODY */
+  .article-body { padding: 2.5rem 3rem; }
+  .article-body p { font-family: Georgia, serif; font-size: 1rem; line-height: 1.78; color: var(--text); margin-bottom: 1.2rem; }
+  .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.65rem; font-weight: 500; color: var(--plum); margin: 2.2rem 0 0.8rem; line-height: 1.2; }
+
+  /* INLINE FULL-BLEED IMAGE */
+  .inline-image-wrap { margin: 2rem -3rem; overflow-x: hidden; }
+  .inline-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inline-placeholder span {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 1px dashed rgba(74,25,66,0.15);
+  }
+  .inline-caption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.68rem; color: var(--muted); font-style: italic; text-align: center; padding: 0.5rem 3rem 1.5rem; }
+
+  /* FLOAT IMAGE */
+  .float-right { float: right; width: 160px; margin: 0.4rem 0 1rem 1.8rem; }
+  .float-placeholder {
+    width: 160px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .float-placeholder span { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; padding: 0.8rem; }
+  .float-caption { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; color: var(--muted); font-style: italic; text-align: center; margin-top: 0.3rem; }
+
+  /* PULL QUOTE */
+  .pull-quote { border-left: 3px solid var(--gold); padding: 0.6rem 1.2rem; margin: 1.8rem 0; }
+  .pull-quote p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--plum); line-height: 1.55; margin-bottom: 0; }
+
+  /* BULLET LIST */
+  .article-body ul { list-style: none; margin: 0.8rem 0 1.2rem; padding: 0; }
+  .article-body ul li { font-family: Georgia, serif; font-size: 1rem; line-height: 1.72; color: var(--text); padding: 0.45rem 0 0.45rem 1.4rem; position: relative; border-bottom: 1px solid rgba(74,25,66,0.06); }
+  .article-body ul li:last-child { border-bottom: none; }
+  .article-body ul li::before { content: ''; position: absolute; left: 0; top: 0.88em; width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); }
+
+  /* SOURCES */
+  .sources-section { border-top: 1px solid rgba(74,25,66,0.12); margin-top: 2.5rem; padding-top: 1.5rem; }
+  .sources-label { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--plum); margin-bottom: 0.8rem; }
+  .sources-section p { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.76rem; line-height: 1.65; color: var(--muted); margin-bottom: 0.4rem; }
+  .sources-section a { color: var(--plum); }
+
+  /* FOOTER */
+  .article-footer { background: var(--plum-deep); padding: 2rem 3rem; text-align: center; border-top: 3px solid var(--gold); }
+  .footer-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
+  .footer-tagline { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+  .footer-links a { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.74rem; color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.6rem; }
+  .footer-legal { font-family: 'DM Sans', Arial, sans-serif; font-size: 0.62rem; color: rgba(255,255,255,0.5); margin-top: 0.8rem; line-height: 1.6; }
+  .clearfix::after { content: ''; display: table; clear: both; }
+
+  @media (max-width: 600px) {
+    .article-header { padding: 2rem 1.4rem 1.8rem; }
+    .article-title { font-size: 1.9rem; }
+    .article-body { padding: 1.8rem 1.4rem; }
+    .article-footer { padding: 1.6rem 1.4rem; }
+    .hero-placeholder { height: 280px; }
+    .inline-image-wrap { margin: 1.5rem -1.4rem; }
+    .inline-placeholder { height: 220px; }
+    .float-right { float: none; width: 140px; margin: 0 auto 1.2rem auto; }
+    .float-placeholder { width: 140px; height: 175px; }
+  }
+
+  /* WIDTH AND OVERFLOW FIX */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  * { max-width: 100%; }
+  img { max-width: 100%; height: auto; }
+</style>
+<style>
+  .qa-q { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.98rem !important; font-weight:500; color:#4A1942 !important; line-height:1.6 !important; margin:1.8rem 0 0.6rem !important; }
+  .qa-q strong, .qa-a strong { font-weight:600; }
+  .qa-a strong { color:#4A1942; font-family:'DM Sans', Arial, sans-serif; font-size:0.92rem; }
+  .intro { font-style:italic; color:#4a4a4a !important; }
+  .glance { background:#ffffff; border-left:3px solid #C9A84C; padding:1.4rem 1.6rem; margin:2.2rem 0; }
+  .glance-label { font-family:'DM Sans', Arial, sans-serif; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:#4A1942; margin-bottom:0.6rem; font-weight:500; }
+  .glance ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.9rem !important; }
+  .about { border-top:1px solid rgba(74,25,66,0.12); margin-top:2.2rem; padding-top:1.4rem; }
+  .about p { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.86rem !important; line-height:1.65 !important; color:#4a4a4a !important; }
+  .note-small { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.78rem !important; color:#6b6b6b !important; font-style:italic; }
+  .recipe-meta { display:flex; gap:2rem; flex-wrap:wrap; border-top:1px solid rgba(74,25,66,0.12); border-bottom:1px solid rgba(74,25,66,0.12); padding:0.9rem 0; margin:0 0 1.6rem; }
+  .recipe-meta div { font-family:'DM Sans', Arial, sans-serif; font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; color:#6b6b6b; }
+  .recipe-meta span { display:block; font-family:'Cormorant Garamond', Georgia, serif; font-size:1.4rem; letter-spacing:0; text-transform:none; color:#4A1942; }
+  ol.steps { list-style:none; counter-reset:step; margin:0.8rem 0 1.2rem; padding:0; }
+  ol.steps li { counter-increment:step; font-family:Georgia, serif; font-size:1rem; line-height:1.72; color:#2a2a2a; padding:0.6rem 0 0.6rem 2.6rem; position:relative; border-bottom:1px solid rgba(74,25,66,0.06); }
+  ol.steps li::before { content:counter(step); position:absolute; left:0; top:0.6rem; width:1.7rem; height:1.7rem; border-radius:50%; background:#4A1942; color:#e2c97e; font-family:'DM Sans', Arial, sans-serif; font-size:0.8rem; display:flex; align-items:center; justify-content:center; }
+  .back { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.8rem !important; margin-top:2rem !important; }
+</style>
+<style>
+  .img-pair { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:2rem 0 0.4rem; }
+  .img-slot { aspect-ratio:4 / 3; background:linear-gradient(135deg, rgba(74,25,66,0.08) 0%, rgba(27,42,74,0.08) 100%); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .img-slot img { width:100%; height:100%; object-fit:cover; display:block; }
+  .img-slot span { font-family:'DM Sans', Arial, sans-serif; font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b6b6b; text-align:center; padding:1rem; border:1px dashed rgba(74,25,66,0.18); margin:1rem; line-height:1.6; }
+  .pair-caption { font-family:'DM Sans', Arial, sans-serif; font-size:0.68rem; color:#6b6b6b; font-style:italic; text-align:center; margin:0 0 1.8rem; }
+  .stat-band { display:grid; grid-template-columns:repeat(3,1fr); background:#35102f; margin:1.8rem 0 0.5rem; }
+  .stat-band div { padding:1.3rem 0.8rem; text-align:center; }
+  .stat-band b { display:block; font-family:'Cormorant Garamond', Georgia, serif; font-size:2.6rem; font-weight:500; color:#e2c97e; line-height:1; }
+  .stat-band small { display:block; font-family:'DM Sans', Arial, sans-serif; font-size:0.78rem; line-height:1.45; color:#F8F5F0; margin-top:0.5rem; }
+  .stat-note { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.74rem !important; color:#6b6b6b !important; margin-bottom:1.6rem !important; }
+  .portrait { background:#ffffff; border-left:3px solid #C9A84C; padding:1.1rem 1.4rem; margin:0 0 1rem; }
+  .portrait p { margin:0 !important; }
+  .portrait-name { font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.35rem !important; color:#4A1942 !important; margin-bottom:0.3rem !important; }
+  .help { background:#ffffff; border-top:3px solid #C9A84C; padding:1.6rem 1.8rem 0.8rem; margin:2.4rem 0 0; }
+  .help h2 { margin-top:0 !important; }
+  .article-body p.help-label { font-family:'DM Sans', Arial, sans-serif; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#4A1942; font-weight:500; margin:1.4rem 0 0.2rem; }
+  .help a, .article-body a { color:#4A1942; }
+  .help ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.92rem !important; }
+  .refs ol { margin:0 0 0 1.1rem; }
+  .refs li { font-family:'DM Sans', Arial, sans-serif; font-size:0.76rem; line-height:1.65; color:#6b6b6b; margin-bottom:0.5rem; }
+  @media (max-width:600px) {
+    .img-pair { grid-template-columns:1fr; }
+    .stat-band { grid-template-columns:1fr; }
+    .stat-band div { padding:1rem; }
+    .help { padding:1.3rem 1.1rem 0.6rem; }
+  }
+  .hero-img { margin:0 0 2rem; }
+  .hero-img img { width:100%; aspect-ratio:4 / 3; object-fit:cover; display:block; }
+  .change { display:grid; grid-template-columns:3.2rem 1fr; gap:0.6rem; margin:1.6rem 0; }
+  .change-n { font-family:'Cormorant Garamond', Georgia, serif; font-size:3rem; line-height:1; color:#C9A84C; }
+  .change h2 { margin:0 0 0.5rem !important; }
+  .qbox { background:#ffffff; border:2px solid #E8A0B0; padding:1.4rem 1.6rem 0.8rem; margin:2rem 0; }
+  .qbox ol { margin:0.4rem 0 0.8rem 1.2rem; }
+  .qbox li { font-family:'DM Sans', Arial, sans-serif; font-size:0.98rem; line-height:1.6; color:#2a2a2a; padding:0.4rem 0; border-bottom:1px dashed rgba(232,160,176,0.6); }
+  .qbox li:last-child { border-bottom:none; }
+  .callout { background:#ffffff; border-left:3px solid #D96054; padding:1.1rem 1.4rem; margin:1.4rem 0; }
+  .callout.gold { border-left-color:#C9A84C; }
+  .article-body p.glance-label { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.72rem !important; color:#4A1942 !important; }
+  .callout p { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.95rem !important; line-height:1.65 !important; margin:0 !important; }
+</style>
+<style>.article-body .float-caption { font-size:0.72rem !important; line-height:1.4 !important; margin-top:0.4rem !important; }</style>
+<style>.article-body .inline-image-wrap { margin:2.2rem 0 0.4rem !important; width:100%; } .article-body .inline-placeholder { width:100%; height:340px; } .article-body .inline-caption { padding:0.5rem 1rem 1.6rem; } @media (max-width:600px){ .article-body .inline-placeholder { height:220px; } }</style>
+<style>
+  .article-body .qa-q { font-weight:700 !important; font-size:1.02rem !important; border-left:3px solid #4A1942; padding:0.15rem 0 0.15rem 0.9rem; margin:2rem 0 0.8rem !important; }
+  .article-body .pull-quote { border-left:4px solid var(--gold); padding:0.8rem 1.4rem; margin:2.2rem 0; }
+  .article-body .pull-quote p { font-size:1.5rem !important; line-height:1.4 !important; }
+  .article-body .pull-quote p.pq-attr { font-family:'DM Sans', Arial, sans-serif !important; font-style:normal !important; font-size:0.72rem !important; letter-spacing:0.14em; text-transform:uppercase; color:#8a7a3a !important; margin-top:0.6rem !important; }
+  .article-body .pull-quote p.pq-attr::before { content:"— "; }
+</style>
+<style>
+  .subscribe { background:#35102f; border-top:4px solid #C9A84C; text-align:center; padding:2.2rem 1.8rem 2.4rem; margin:2.8rem 0 1.4rem; }
+  .article-body .subscribe .sub-eyebrow { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.66rem !important; letter-spacing:0.22em; text-transform:uppercase; color:#E8A0B0 !important; margin:0 0 0.5rem !important; }
+  .article-body .subscribe h2 { color:#ffffff !important; margin:0 0 0.6rem !important; font-size:1.9rem !important; }
+  .article-body .subscribe p.sub-text { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.95rem !important; color:#F8F5F0 !important; max-width:460px; margin:0 auto 1.4rem !important; line-height:1.6 !important; }
+  .subscribe a.sub-btn { display:inline-block; background:#C9A84C; color:#1E1E2A !important; font-family:'DM Sans', Arial, sans-serif; font-weight:500; font-size:0.9rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.95rem 2.1rem; }
+  .subscribe a.sub-btn:hover { background:#e2c97e; }
+  .article-body .subscribe p.sub-note { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.78rem !important; color:#E8A0B0 !important; margin:0.9rem 0 0 !important; }
+</style>
+<style>.article-body a.cite { text-decoration:none; color:#4A1942; } .article-body a.cite sup { font-size:0.62em; font-family:"DM Sans", Arial, sans-serif; font-weight:600; padding-left:1px; } .sources-section p[id] { scroll-margin-top:80px; }</style>
+<style>
+  .article-body .float-right.wide-side { width:240px; }
+  .article-body .float-right.wide-side .float-placeholder { width:240px; height:180px; }
+  @media (max-width:600px){ .article-body .float-right.wide-side { width:100%; } .article-body .float-right.wide-side .float-placeholder { width:100%; height:200px; } }
+  .article-body table { width:100%; border-collapse:collapse; margin:1.2rem 0 1.6rem; font-family:'DM Sans', Arial, sans-serif; font-size:0.86rem; }
+  .article-body th { background:#4A1942; color:#fff; text-align:left; padding:0.6rem 0.7rem; font-weight:500; }
+  .article-body td { padding:0.6rem 0.7rem; border-bottom:1px solid rgba(74,25,66,0.12); vertical-align:top; }
+  .article-body tr:nth-child(even) td { background:#fbf6f1; }
+  ol.steps { list-style:none; padding-left:0; margin:1rem 0 1.4rem; }
+  ol.steps li { overflow:hidden; }
+  .article-body ol.steps li { font-family:Georgia, serif; }
+  .article-body td p { margin:0 0 0.4rem; font-family:'DM Sans', Arial, sans-serif; font-size:0.86rem; line-height:1.5; }
+  .article-body td p.tbl-note { background:#fbf3dc; border-left:3px solid #C9A84C; padding:0.5rem 0.6rem; font-size:0.8rem; color:#2a2a2a; margin-top:0.5rem; }
+  .table-wrap { overflow-x:auto; }
+  .sidebar { background:#fff; border:1px solid #E8A0B0; border-top:4px solid #4A1942; padding:1.4rem 1.6rem 1.2rem; margin:2.4rem 0; }
+  .article-body .sidebar .sidebar-title { font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.45rem !important; color:#4A1942 !important; margin:0 0 0.6rem !important; }
+  .article-body .sidebar h3 { font-family:'DM Sans', Arial, sans-serif; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:#4A1942; margin:1.2rem 0 0.5rem; font-weight:600; }
+  .sidebar li, .sidebar p, .sidebar ol li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.88rem !important; line-height:1.6 !important; }
+  .sidebar .shade { background:#fbf1f3; padding:0.8rem 1rem; margin:1rem 0; }
+  .sidebar .sb-sources { font-size:0.74rem !important; color:#6b6b6b; }
+  .stat-band { display:grid; grid-template-columns:repeat(3,1fr); background:#35102f; margin:1.8rem 0 0.5rem; }
+  .stat-band div { padding:1.3rem 0.8rem; text-align:center; }
+  .stat-band b { display:block; font-family:'Cormorant Garamond', Georgia, serif; font-size:2.6rem; font-weight:500; color:#e2c97e; line-height:1; }
+  .stat-band small { display:block; font-family:'DM Sans', Arial, sans-serif; font-size:0.78rem; line-height:1.45; color:#F8F5F0; margin-top:0.5rem; }
+  @media (max-width:600px){ .stat-band { grid-template-columns:1fr; } }
+  .three { counter-reset:none; }
+  .three p { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.95rem !important; margin:0 0 0.7rem !important; }
+  .subscribe { background:#35102f; border-top:4px solid #C9A84C; text-align:center; padding:2.2rem 1.8rem 2.4rem; margin:2.8rem 0 1.4rem; }
+  .article-body .subscribe .sub-eyebrow { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.66rem !important; letter-spacing:0.22em; text-transform:uppercase; color:#E8A0B0 !important; margin:0 0 0.5rem !important; }
+  .article-body .subscribe h2 { color:#ffffff !important; margin:0 0 0.6rem !important; font-size:1.9rem !important; }
+  .article-body .subscribe p.sub-text { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.95rem !important; color:#F8F5F0 !important; max-width:460px; margin:0 auto 1.4rem !important; line-height:1.6 !important; }
+  .subscribe a.sub-btn { display:inline-block; background:#C9A84C; color:#1E1E2A !important; font-family:'DM Sans', Arial, sans-serif; font-weight:500; font-size:0.9rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.95rem 2.1rem; }
+  .article-body .toolkit p.toolkit-note { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.85rem !important; color:#E8A0B0 !important; margin:0.9rem 0 0 !important; font-style:italic; }
+  .subscribe a.sub-btn:hover { background:#e2c97e; }
+  .article-body .subscribe p.sub-note { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.78rem !important; color:#E8A0B0 !important; margin:0.9rem 0 0 !important; }
+</style>
+<style>
+  .column-band { font-family:'Cormorant Garamond', Georgia, serif; font-size:1.05rem; letter-spacing:0.16em; color:#ffffff; font-weight:600; margin-bottom:0.2rem; }
+  .column-sub { font-family:'DM Sans', Arial, sans-serif; font-size:0.72rem; color:rgba(255,255,255,0.7); margin-bottom:0.3rem; }
+  .column-ubuntu { font-family:'Cormorant Garamond', Georgia, serif; font-style:italic; font-size:1rem; color:#e2c97e; margin-bottom:1.6rem; }
+  .article-subtitle { font-family:'Cormorant Garamond', Georgia, serif; font-style:italic; font-size:1.5rem; color:#e2c97e; margin:-0.4rem 0 1rem; }
+  .hero-img { display:block; width:100%; height:auto; }
+  .fig { margin:2rem 0; }
+  .fig img { display:block; width:100%; height:auto; }
+  .fig-framed img { border:6px solid #ffffff; box-shadow:0 2px 14px rgba(53,16,47,0.10); }
+  .fig figcaption { font-family:'Cormorant Garamond', Georgia, serif; font-style:italic; font-size:1.05rem; color:#4A1942; text-align:center; margin-top:0.6rem; }
+  sup.ref { font-family:'DM Sans', Arial, sans-serif; font-size:0.65rem; color:#4A1942; }
+  .three { background:#ffffff; border-top:3px solid #C9A84C; padding:1.6rem 1.8rem 0.6rem; margin:2.2rem 0; }
+  .three h2 { margin-top:0 !important; }
+  .three p { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.98rem !important; }
+  .three .num { color:#D96054; font-weight:700; }
+  .toolkit { background:#35102f; border-top:4px solid #C9A84C; text-align:center; padding:2.2rem 1.8rem 2.4rem; margin:2.4rem 0; }
+  .toolkit-eyebrow { font-family:'DM Sans', Arial, sans-serif; font-size:0.66rem; letter-spacing:0.22em; text-transform:uppercase; color:#E8A0B0; margin-bottom:0.5rem; }
+  .toolkit h2 { color:#ffffff !important; margin:0 0 0.2rem !important; font-size:1.9rem !important; }
+  .toolkit-tag { font-family:'Cormorant Garamond', Georgia, serif; font-style:italic; font-size:1.15rem; color:#e2c97e; margin-bottom:1.4rem; }
+  .toolkit img { display:block; width:100%; max-width:520px; height:auto; margin:0 auto 1.4rem; }
+  .toolkit ul { text-align:left; max-width:440px; margin:0 auto 1.6rem !important; }
+  .toolkit ul li { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.94rem !important; color:#FBF8F5 !important; border-bottom:1px solid rgba(255,255,255,0.08) !important; }
+  .toolkit ul li strong { color:#ffffff; }
+  .toolkit-btn { display:inline-block; background:#C9A84C; color:#1E1E2A; font-family:'DM Sans', Arial, sans-serif; font-weight:500; font-size:0.95rem; letter-spacing:0.06em; text-decoration:none; padding:0.95rem 2.1rem; }
+  .toolkit-btn:hover { background:#e2c97e; }
+  .toolkit-note { font-family:'DM Sans', Arial, sans-serif; font-size:0.8rem; color:#E8A0B0; margin-top:0.8rem; }
+  .signoff-name { font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.15rem !important; font-weight:600; color:#2a2a2a !important; margin:0 !important; }
+  .signoff-title { font-family:'DM Sans', Arial, sans-serif !important; font-size:0.85rem !important; color:#4A1942 !important; }
+  .article-body .toolkit-eyebrow { color:#E8A0B0 !important; font-family:'DM Sans', Arial, sans-serif !important; font-size:0.66rem !important; margin-bottom:0.5rem !important; }
+  .article-body .toolkit-tag { color:#e2c97e !important; font-family:'Cormorant Garamond', Georgia, serif !important; font-size:1.15rem !important; margin-bottom:1.4rem !important; }
+</style>
+<style>.column-band { font-style:italic; letter-spacing:0.04em !important; font-size:1.35rem !important; font-weight:500 !important; color:#e2c97e !important; margin-bottom:0.35rem !important; } .column-sub { margin-bottom:1.4rem !important; }</style>
+<style>.inline-image-wrap img.journal-img { display:block; width:100%; height:auto; } .float-right img.journal-img { display:block; width:100%; height:auto; }</style>
+</head>
+
+<body>
+  <!-- IAWH NAVIGATION BAR -->
+  <nav style="
+    background: #35102f;
+    border-bottom: 2px solid #C9A84C;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+  ">
+    <a href="https://www.iawh.org" style="
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    ">IAWH Health</a>
+    <div style="display: flex; gap: 1.6rem; align-items: center;">
+      <a href="https://www.iawh.org" style="
+        font-family: 'DM Sans', Arial, sans-serif;
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.82);
+        text-decoration: none;
+      ">Home</a>
+      <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html" style="
+        font-family: 'DM Sans', Arial, sans-serif;
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #C9A84C;
+        text-decoration: none;
+      ">Health Journal</a>
+    </div>
+  </nav>
+
+<div class="article-wrapper">
+
+  <div class="article-header">
+    <p class="article-kicker">IAWH Health Journal &nbsp;|&nbsp; Volume 8, Issue 11 &nbsp;|&nbsp; November 2026</p>
+    <p class="column-band">&ldquo;I am because we are.&rdquo;</p>
+    <p class="column-sub">From the Executive Director &nbsp;&middot;&nbsp; Inspired by the Ubuntu philosophy</p>
+    <h1 class="article-title">Around Our Tables</h1>
+    <p class="article-subtitle">The stories we carry, and the ones we pass on</p>
+    <p class="article-byline">By Cheryl J. Thompson, MSPH &nbsp;|&nbsp; November 2026 &nbsp;|&nbsp; Thanksgiving &amp; National Family Health History Day</p>
+  </div>
+
+  <div class="article-body">
+
+
+
+
+
+
+
+<div class="inline-image-wrap">
+<img class="journal-img" src="images/nov2026/feast.jpg" alt="Several generations of a family laughing together around a Thanksgiving table">
+</div>
+<p class="inline-caption">However your table looks this year, there’s room for gratitude.</p>
+<p>This month, many of us will gather around a table. Some tables will be crowded and loud. Some will be quiet. Some will have an empty chair that still takes our breath away. However your table looks this year, I hope you’ll find a moment of gratitude there.</p>
+<p>Like last year and maybe years before that, this has been one heck of a year. I am grateful for you. Thank you for reading, for sharing the Journal with the women you love, and for continuing to trust IAWH to provide you with evidence-based information that can help you better advocate for your health and the health of your family.</p>
+<h2>The Stories at Our Tables</h2>
+<p>Thanksgiving Day is also <strong>National Family Health History Day</strong>. In October, I shared how high blood pressure has impacted many women in my family: my grandmother, my mother, her sisters, my sisters. Similarly, you probably have a family health story. Every family has stories like that. Who had “sugar.” Whose heart gave out too soon. Which aunt had the surgery that nobody really talked about, but she had to stay in bed for weeks, not going to work. We tend to whisper these things, or not say them at all. But to your doctor, your nurse, or other health professionals, they are clues. Knowing these stories and conveying them when you need to can change when you get a health screening, which test you are given, and what you may need to watch for in yourself.</p>
+<p>For many families, that unexplained surgery was a hysterectomy for uterine fibroids. In this issue, Sateria Venable, Founder and CEO of The Fibroid Foundation, talks with IAWH about why fibroids are so often missed and why hysterectomy should not be the only option women hear about. Read <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_Article_FibroidsQA_Nov2026.html"><em>A Conversation on Uterine Fibroids with Sateria Venable</em></a>. It is a preview of our July 2027 Special Issue on uterine fibroids.</p>
+<div class="pull-quote"><p>Our family’s story is not our fate. It is our head start.</p></div>
+<p>A family history of a disease does not mean you will get it or experience the same outcome. A family health history can help you know where to look first. And that knowledge is a gift we can pass on to the next generation, too.</p>
+<div class="inline-image-wrap">
+<img class="journal-img" src="images/nov2026/album.jpg" alt="A woman looking through an old family photo album">
+</div>
+<p class="inline-caption">Some of the best conversations happen away from the crowd.</p>
+
+<h2>Start the Conversation</h2>
+<p>You don’t need a formal sit-down. Ask a question before you go for that second helping of macaroni and cheese, or after dinner. Pull out the photo album. (Yes, the physical photo album because many relatives’ images pre-date our smart phone photo albums.)</p>
+<p>For more ways to get the conversation going, and how a family health history can change your care, read <a href="https://advancingherhealth.github.io/iawh-journal/IAWH_Article_FamilyHistory_Nov2026.html"><em>Your Family’s Health Story Is Your Best Head Start</em></a>.</p>
+<div class="callout gold">
+<p><strong>To help, we made something for you:</strong> the free, printable <em>Around the Table</em> Family Health History Kit. <a href="https://iawh.org/downloads/Around_the_Table_Family_Health_History_Kit.pdf">Download your free kit.</a> Then share a copy with your sisters and brothers. It’s their story, too.</p>
+</div>
+<h2>This Thanksgiving, Do Three Things</h2>
+<div class="stat-band"><div><b>1.</b><small>Ask one Health History question to kick off the conversation. Just one. Write down the answer. (Does anyone in our family tree, past and present, have Type 2 Diabetes or “Sugar”?)</small></div><div><b>2.</b><small>Take a walk after the meal. Even a few minutes helps your blood sugar, and it’s a perfect time to talk.</small></div><div><b>3.</b><small>Look out for each other. If someone you love has Medicare or Medicaid, make sure they know about the changes coming in 2027. This issue’s Coverage Check explains what to do.</small></div></div>
+<p>The name of this column comes from Ubuntu: I am because we are. Our health histories have never belonged to just one of us. They are written across generations, at kitchen tables and church picnics and family reunions. When we share them, we protect each other.</p>
+<div class="pull-quote"><p>So pass the stories along with the sweet potato pie. With gratitude, from my family’s table to yours.</p></div>
+<p class="signoff-name">Cheryl J. Thompson, MSPH</p>
+<p class="signoff-title">Executive Director, IAWH Health</p>
+<div class="glance"><p class="glance-label">In This Issue | November 2026</p><ul>
+<li>
+<a href="https://advancingherhealth.github.io/iawh-journal/IAWH_Article_FamilyHistory_Nov2026.html"><strong>Your Family’s Health Story Is Your Best Head Start</strong></a> · National Family Health History Day, with the free <em>Around the Table</em> kit
+</li>
+<li>
+<a href="https://advancingherhealth.github.io/iawh-journal/IAWH_Article_HeartDiabetes_Nov2026.html"><strong>A Grateful Heart: The Diabetes–Heart Connection Every Woman Should Know This Thanksgiving</strong></a> · American Diabetes Month
+</li>
+<li>
+<a href="https://advancingherhealth.github.io/iawh-journal/IAWH_Article_OpenSeason_Nov2026.html"><strong>Coverage Check: It’s Open Season. Don’t Let Your Plan Renew on Autopilot.</strong></a> · Medicare &amp; Marketplace
+</li>
+<li>
+<a href="https://advancingherhealth.github.io/iawh-journal/IAWH_Article_Medicaid_Nov2026.html"><strong>Coverage Check: Medicaid Is Changing. How to Keep Your Coverage.</strong></a> · Medicaid
+</li>
+<li>
+<a href="https://advancingherhealth.github.io/iawh-journal/IAWH_Article_FibroidsQA_Nov2026.html"><strong>A Conversation on Uterine Fibroids with Sateria Venable</strong></a> · Feature Q&amp;A
+</li>
+</ul></div>
+
+<div class="about"><p>This column is for general education and is not medical advice. Talk with your health care provider about your family health history and your own health.</p></div>
+
+
+    <div class="subscribe">
+      <p class="sub-eyebrow">Free &middot; Monthly &middot; Evidence-Based</p>
+      <h2>Get the IAWH Health Journal</h2>
+      <p class="sub-text">Health news and practical guidance for women, delivered to your inbox once a month. Subscribe and never miss an issue.</p>
+      <a class="sub-btn" href="mailto:advancingherhealth@iawh.org?subject=Please%20subscribe%20me%20to%20the%20IAWH%20Health%20Journal&amp;body=Please%20add%20me%20to%20the%20IAWH%20Health%20Journal%20mailing%20list.%0A%0AName%3A%20%0AEmail%3A%20">Subscribe to the Journal</a>
+      <p class="sub-note">Already a subscriber? Share this page with a woman you love.</p>
+    </div>
+    <p class="back"><a href="https://advancingherhealth.github.io/iawh-journal/IAWH_HealthJournal_Archive.html">&larr; Back to the IAWH Health Journal Archive</a></p>
+  </div>
+
+  <div class="article-footer">
+    <div class="footer-name">IAWH Health</div>
+    <div class="footer-tagline">Institute for the Advancement of Women's Health</div>
+    <div class="footer-links">
+      <a href="https://iawh.org">iawh.org</a>
+      <a href="mailto:advancingherhealth@iawh.org">advancingherhealth@iawh.org</a>
+    </div>
+    <p class="footer-legal">
+      IAWH Health &nbsp;|&nbsp; Petersburg, Virginia 23805<br />
+      &copy; 2026 Institute for the Advancement of Women's Health. All rights reserved.<br />
+      HeartStrong is a service mark of IAWH Health.
+    </p>
+  </div>
+
+</div>
+
+  <script>
+    // Scroll to top on load and auto-resize iframe
+    // Scroll to top on page load
+    window.addEventListener('load', function() {
+      window.scrollTo(0, 0);
+      if (window.parent) {
+        window.parent.postMessage({scrollTo: 0}, '*');
+      }
+    });
+    // Auto-resize iframe to content height
+    function notifyHeight() {
+      var h = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight
+      );
+      window.parent.postMessage({ height: h }, '*');
+    }
+    window.addEventListener('load', function() {
+      notifyHeight();
+      setTimeout(notifyHeight, 500);
+      setTimeout(notifyHeight, 1500);
+    });
+    window.addEventListener('resize', notifyHeight);
+    if (typeof ResizeObserver !== 'undefined') {
+      new ResizeObserver(notifyHeight).observe(document.body);
+    }
+  </script>
+</body>
+</html>
